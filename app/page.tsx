@@ -1,13 +1,13 @@
 'use client';
-import { CardsIdentidad } from './components/cards/cardsIdentidad/CardsIdentidad';
-import { CardsServicios } from './components/cards/CardsServicios';
+import { CardsIdentidad } from '../components/cards/cardsIdentidad/CardsIdentidad';
+import { CardsServicios } from '../components/cards/CardsServicios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './ui/home.css';
-import { FormContact } from './components/formContact/FormContact';
+import './home.css';
+import { FormContact } from '../components/formContact/FormContact';
 import { Col } from 'react-bootstrap';
-import { CardContact } from './components/cards/cardContact/CardContact';
-import { CardMap } from './components/cards/cardMap/CardMap';
+import { CardContact } from '../components/cards/cardContact/CardContact';
+import { CardMap } from '../components/cards/cardMap/CardMap';
 
 export default function Page() {
   const address =

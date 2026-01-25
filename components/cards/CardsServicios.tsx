@@ -1,11 +1,23 @@
 import React from 'react';
 import './cardsServicios.css';
-import { GrAdd } from 'react-icons/gr';
-import { RiMoreFill } from 'react-icons/ri';
+import Button from '../button/Button';
+import { useRouter } from 'next/navigation';
+import { servicios } from '../../data/servicios';
 
 export const CardsServicios = () => {
+  const router = useRouter();
+
   return (
     <>
+      {servicios.map((servicio) => {
+        return (
+          <div>
+            <h2>{servicio.title}</h2>
+            <p>{servicio.description}</p>
+          </div>
+        );
+      })}
+      
       <div className=" container cards-grid-servicio container mt-5">
         <div className="card-servicio">
           <img src="./images/imagenesServices/laboral.jpg" alt="" />
@@ -17,7 +29,11 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button
+                text="SABER menos"
+                type="primary"
+                onClick={() => router.push('/servicio-laboral')}
+              />
             </div>
           </div>
         </div>
@@ -31,10 +47,15 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button
+                text="SABER MÁS"
+                type="secondary"
+                onClick={() => router.push('/servicio-civil-y-familiar')}
+              />
             </div>
           </div>
         </div>
+
         <div className="card-servicio">
           <img src="./images/imagenesServices/penal.jpg" alt="" />
           <div className="card-body">
@@ -45,7 +66,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>
@@ -59,7 +80,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>
@@ -73,7 +94,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>
@@ -87,7 +108,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>
@@ -103,7 +124,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>
@@ -117,7 +138,7 @@ export const CardsServicios = () => {
               ...
             </p>
             <div className="d-flex justify-content-center">
-              <button className="card-btn">SABER MÁS</button>
+              <Button text="SABER MÁS" />
             </div>
           </div>
         </div>

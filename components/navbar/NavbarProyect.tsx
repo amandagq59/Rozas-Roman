@@ -30,21 +30,21 @@ export const NavbarProyect = () => {
   return (
     <nav>
       <div className="navbar-container">
-        <a href="#inicio">
+        <a href="/">
           <img src="./images/logos/logoCompleto.png" alt="" className="navbar-logo" />
         </a>
 
         <div className="navbar-links">
-          <a href="#inicio" className={`nav-link ${active === 'inicio' ? 'active' : ''}`}>
+          <a href="/" className={`nav-link ${active === 'inicio' ? 'active' : ''}`}>
             INICIO
           </a>
-          <a href="#servicios" className={`nav-link ${active === 'servicios' ? 'active' : ''}`}>
+          <a href="/#servicios" className={`nav-link ${active === 'servicios' ? 'active' : ''}`}>
             SERVICIOS
           </a>
-          <a href="#identidad" className={`nav-link ${active === 'identidad' ? 'active' : ''}`}>
+          <a href="/#identidad" className={`nav-link ${active === 'identidad' ? 'active' : ''}`}>
             LA FIRMA
           </a>
-          <a href="#actualidad" className={`nav-link ${active === 'actualidad' ? 'active' : ''}`}>
+          <a href="/actualidad" className={`nav-link ${active === 'actualidad' ? 'active' : ''}`}>
             ACTUALIDAD
           </a>
           <a href="#contacto" className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}>
