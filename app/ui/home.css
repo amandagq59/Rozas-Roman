@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'EB Garamond Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/eb-garamond:vf@latest/latin-wght-normal.woff2)
+    format('woff2-variations');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+.section-portada {
+  background-image:
+    linear-gradient(rgba(29, 29, 33, 0.548)), url('/images/portada/portada.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 85vh;
+
+  span {
+    color: #b89047;
+  }
+  h1 {
+    font-size: 40px;
+    font-family: 'EB Garamond Variable';
+    text-shadow:
+      2px 2px 4px rgba(0, 0, 0, 0.3),
+      4px 4px 8px rgba(0, 0, 0, 0.2),
+      0 0 10px rgba(45, 45, 42, 0.5);
+  }
+
+  p {
+    font-weight: 200;
+    width: 40%;
+  }
+
+  .button-consulta,
+  .button-servicios {
+    background-color: hsl(150, 82%, 7%);
+    padding: 0.5rem 1rem;
+    border-color: transparent;
+    color: white;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'Montserrat Variable', sans-serif;
+  }
+
+  .button-consulta {
+    background-color: #c5a059;
+    text-decoration: none;
+  }
+  .button-servicios {
+    background-color: rgba(255, 255, 255, 0.228);
+    border: 1px solid blanchedalmond;
+    margin-right: 10rem;
+    text-decoration: none;
+  }
+
+  .button-consulta:hover,
+  .button-servicios:hover {
+    text-decoration: underline;
+    transform: translateY(-2px); /* levanta un poquito */
+  }
+}
+
+.section-portada p {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff; /* o el color que uses */
+}
+
+.section-portada .d-flex.align-items-center {
+  max-width: 1200px; /* opcional para limitar ancho */
+}
+-------- .section-servicios {
+  background-color: #fdfcf9;
+}
+.section-identidad,
+.section-servicios,
+.section-contact {
+  h2 {
+    font-size: 25px;
+    text-align: center;
+
+    span {
+      color: #b89047;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
+
+.section-identidad {
+  background-color: #06211c;
+
+  h2 {
+    color: white;
+  }
+}
+
+.section-contact {
+  background-color: #f8fafc;
+}
+
+hr {
+  width: 80%;
+  margin: auto;
+  padding-bottom: 2rem;
+}

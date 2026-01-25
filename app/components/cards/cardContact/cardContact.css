@@ -1,0 +1,23 @@
+.card-contact {
+  .icons {
+    color: #c5a059;
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+
+}
+
+  .a-redes a{
+    color: #c5a059;
+    font-size: 20px;
+
+  }
