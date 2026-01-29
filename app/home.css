@@ -31,6 +31,7 @@
   }
 
   p {
+    font-size: 15px;
     font-weight: 200;
     width: 40%;
   }
@@ -41,7 +42,7 @@
     padding: 0.5rem 1rem;
     border-color: transparent;
     color: white;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 400;
     font-family: 'Montserrat Variable', sans-serif;
   }
@@ -53,7 +54,7 @@
   .button-servicios {
     background-color: rgba(255, 255, 255, 0.228);
     border: 1px solid blanchedalmond;
-    margin-right: 10rem;
+    margin-right: 8rem;
     text-decoration: none;
   }
 
@@ -66,7 +67,7 @@
 
 .section-portada p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 17px;
   color: #fff; /* o el color que uses */
 }
 
@@ -78,14 +79,15 @@
 }
 .section-identidad,
 .section-servicios,
-.section-contact {
+.section-contact, 
+.section-reseñas{
   h2 {
     font-size: 25px;
     text-align: center;
 
     span {
       color: #b89047;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 600;
     }
   }

@@ -1,0 +1,121 @@
+
+.google-review-card {
+  width: 100%;              
+  min-height: 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+@media (min-width: 1024px) {
+  .google-review-card {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+
+
+.review-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.reviewer-profile {
+  display: flex;
+  gap: 12px;
+}
+
+.profile-image-container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image {
+  object-fit: cover;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #757575;
+  margin-bottom: 4px;
+}
+
+
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #e0e0e0;
+  font-size: 16px;
+}
+
+.star.filled {
+  color: #fbc02d;
+}
+
+
+
+.review-content {
+  margin-top: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #212121;
+}
+
+
+
+.google-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+
+.reviews-carousel-container {
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+
+.carousel-slide {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+
+
+a {
+  text-decoration: none;
+}
+.reviews-wrapper {
+  width: 100%;
+  display: block;
+}

@@ -5,6 +5,7 @@ import './navbar.css';
 
 export const NavbarProyect = () => {
   const [active, setActive] = useState('inicio');
+  const [dropdownOpen, setDropdownOpen] = useState(false); // controla el dropdown
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
@@ -17,7 +18,7 @@ export const NavbarProyect = () => {
           }
         });
       },
-      { threshold: 0.3 } 
+      { threshold: 0.3 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -31,23 +32,90 @@ export const NavbarProyect = () => {
     <nav>
       <div className="navbar-container">
         <a href="/">
-          <img src="./images/logos/logoCompleto.png" alt="" className="navbar-logo" />
+          <img
+            src="./images/logos/logoCompleto.png"
+            alt="Logo"
+            className="navbar-logo"
+          />
         </a>
 
         <div className="navbar-links">
-          <a href="/" className={`nav-link ${active === 'inicio' ? 'active' : ''}`}>
+          <a
+            href="/"
+            className={`nav-link ${active === 'inicio' ? 'active' : ''}`}
+          >
             INICIO
           </a>
-          <a href="/#servicios" className={`nav-link ${active === 'servicios' ? 'active' : ''}`}>
-            SERVICIOS
-          </a>
-          <a href="/#identidad" className={`nav-link ${active === 'identidad' ? 'active' : ''}`}>
+
+          {/* Dropdown para Servicios */}
+          <div
+            className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
+            onMouseEnter={() => setDropdownOpen(true)}
+            onMouseLeave={() => setDropdownOpen(false)}
+            onClick={() => setDropdownOpen(!dropdownOpen)} // toggle para mobile
+          >
+            <span>SERVICIOS</span>
+            <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
+              {' '}
+              <a href="/#servicios" onClick={() => setDropdownOpen(false)}>
+                Todos los servicios
+              </a>
+              <a
+                href="/servicio-laboral"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Laboral
+              </a>
+              <a
+                href="/servicio-civil-familiar"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Civil y Familiar
+              </a>
+              <a href="/servicio-penal" onClick={() => setDropdownOpen(false)}>
+                Penal
+              </a>
+              <a
+                href="/servicio-administrativo"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Administrativo
+              </a>
+              <a
+                href="/servicio-extranjeria"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Extranjería
+              </a>
+              <a
+                href="/servicio-trafico"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Tráfico
+              </a>
+              <a
+                href="/servicio-gestion-inmobiliaria"
+                onClick={() => setDropdownOpen(false)}
+              >
+                Gestión Inmobiliaria
+              </a>
+              <a href="/servicio-mercantil" onClick={() => setDropdownOpen(false)}>
+                Mercantil
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="/#identidad"
+            className={`nav-link ${active === 'identidad' ? 'active' : ''}`}
+          >
             LA FIRMA
           </a>
-          <a href="/actualidad" className={`nav-link ${active === 'actualidad' ? 'active' : ''}`}>
-            ACTUALIDAD
-          </a>
-          <a href="#contacto" className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}>
+
+          <a
+            href="#contacto"
+            className={`btn-contacto ${active === 'active' ? 'active' : ''}`}
+          >
             CONTACTO
           </a>
         </div>
@@ -55,4 +123,3 @@ export const NavbarProyect = () => {
     </nav>
   );
 };
-

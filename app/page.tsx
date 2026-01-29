@@ -1,6 +1,4 @@
 'use client';
-import { CardsIdentidad } from '../components/cards/cardsIdentidad/CardsIdentidad';
-import { CardsServicios } from '../components/cards/CardsServicios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './home.css';
@@ -8,6 +6,9 @@ import { FormContact } from '../components/formContact/FormContact';
 import { Col } from 'react-bootstrap';
 import { CardContact } from '../components/cards/cardContact/CardContact';
 import { CardMap } from '../components/cards/cardMap/CardMap';
+import { CardsServicios } from '@/components/cards/cardServicios/CardsServicios';
+import { CardsIdentidad } from '../components/cards/cardsIdentidad/CardsIdentidad';
+import CardReview from '@/components/cards/cardsReview/CardReview';
 
 export default function Page() {
   const address =
@@ -53,7 +54,7 @@ export default function Page() {
       <section className="section-identidad p-5" id="identidad">
         <div className="mx-5">
           <h2>
-            <span>NUESTRA IDENTIDAD</span> <br />
+            <span>LA FIRMA</span> <br />
             ¿Por qué confiar en nosotros?
           </h2>
           <CardsIdentidad />
@@ -77,6 +78,15 @@ export default function Page() {
             <FormContact />
           </Col>
         </Col>
+      </section>
+      <section className="section-reseñas py-5">
+        <div className="d-flex flex-column align-items-center">
+          <h2>
+            <span>RESEÑAS</span> <br />
+            Experiencias reales
+          </h2>
+        </div>
+        <CardReview />
       </section>
     </main>
   );

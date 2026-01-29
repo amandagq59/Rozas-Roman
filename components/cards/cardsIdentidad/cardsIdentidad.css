@@ -31,14 +31,12 @@
   }
 
   .card-title {
-    font-size: 15px;
     font-weight: 700;
     margin: 0 0 8px;
     text-align: center;
   }
 
   .card-text {
-    font-size: 14px;
     line-height: 1.4;
     margin: 0;
   }
@@ -47,29 +45,62 @@
     font-size: 30px;
   }
 
-  .card-identidad:nth-child(4),
-  .card-identidad:nth-child(5),
-  .card-identidad:nth-child(6) {
-    border-top: none;
-  }
 
-  .card-identidad:nth-child(2),
-  .card-identidad:nth-child(5) {
-    border-left: none;
-    border-right: none;
-  }
 }
 
 .text-container {
   color: white;
 
   h3 {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     font-family: 'Montserrat Variable', sans-serif;
   }
   p {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 100;
   }
+
+
+  
+}
+@media (max-width: 992px) {
+  .cards-grid-identidad {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .card-identidad {
+    max-width: 100%;
+    padding: 15px;
+     
+  }
+  .icon-container {
+    font-size: 2.2rem;
+  }
+}
+
+/* Móvil: 1 columna */
+@media (max-width: 768px) {
+  .cards-grid-identidad {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 15px;
+    padding: 1rem;
+  }
+  .card-identidad {
+    flex-direction: row;
+    max-width: 100%;
+    padding: 15px;
+  
+  }
+  .icon-container {
+    font-size: 2rem;
+  }
+  .text-container h3 {
+    font-size: 1rem;
+  }
+  .text-container p {
+    font-size: 0.9rem;
+  }
+
+ 
 }

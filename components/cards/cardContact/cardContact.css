@@ -13,11 +13,45 @@
     color: black;
     font-size: 15px;
   }
-
 }
 
-  .a-redes a{
-    color: #c5a059;
-    font-size: 20px;
-
+.a-redes a {
+  color: #c5a059;
+  font-size: 20px;
+}
+@media (max-width: 992px) {
+  .card-contact {
+    gap: 20px;
   }
+  .card-contact > .col {
+    flex: 0 0 45%; /* dos columnas aproximadas */
+  }
+}
+
+@media (max-width: 992px) {
+  .card-contact {
+    gap: 30px;
+  }
+  .icons {
+    font-size: 1.8rem;
+  }
+  .a-redes a {
+    font-size: 1.3rem;
+  }
+}
+
+/* Móvil: 1 columna, todo centrado */
+@media (max-width: 768px) {
+  .card-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact-left, .contact-right {
+    align-items: center;
+  }
+  .contact-item {
+    justify-content: center;
+  }
+
+}

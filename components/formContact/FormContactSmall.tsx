@@ -1,25 +1,11 @@
-'use client';
-import React from 'react';
-import './formContact.css';
-import { Row, Col, Form, Button } from 'react-bootstrap';
-import { BsPencil } from 'react-icons/bs';
+import React from 'react'
+import { Button, Col, Form, Row } from 'react-bootstrap'
 
-export const FormContact = () => {
+import './formContact.css'
+
+export default function FormContactSmall() {
   return (
-    <div className=" container card-form d-flex flex-column align-items-start">
-      <div className="d-flex justify-content-start gap-2">
-        <div className="icons">
-          <BsPencil />
-        </div>
-        <div className="d-flex flex-column">
-          <span className="text-muted">FORMULARIO</span>
-          <a className="cc-data" href="">
-            Rellena nuestro formulario
-          </a>
-        </div>
-      </div>
-
-      <Form className="form-container mt-3">
+    <Form className="form-container-small mt-3">
         <Row className="mb-3">
           <Col lg={12} md={6}>
             <Form.Group controlId="nameInput">
@@ -118,6 +104,5 @@ export const FormContact = () => {
           </Button>
         </div>
       </Form>
-    </div>
-  );
-};
+  )
+}
