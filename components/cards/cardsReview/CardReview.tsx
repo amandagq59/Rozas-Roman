@@ -5,12 +5,14 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 
 import { AiFillStar } from 'react-icons/ai';
+import dynamic from 'next/dynamic';
 import { reviews } from '../../../data/reviews';
 import './cardReview.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { GoArrowRight } from 'react-icons/go';
+
 
 export default function ReviewsCarousel() {
   const settings = {
@@ -59,7 +61,6 @@ export default function ReviewsCarousel() {
                     </div>
                     <div className="reviewer-info">
                       <h3 className="reviewer-name">{review?.name}</h3>
-                      <span className="review-date">{review?.date}</span>
                       <div className="rating-stars">
                         {Array.from({ length: 5 }, (_, i) => (
                           <AiFillStar
