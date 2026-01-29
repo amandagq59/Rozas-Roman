@@ -4,6 +4,15 @@ h2,
   font-family: 'Montserrat Variable', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .content {
   min-height: fit-content;
 }

@@ -9,7 +9,7 @@ import { IoStarOutline } from "react-icons/io5";
 
 export const CardsIdentidad = () => {
   return (
-    <div className=" container cards-grid-identidad p-5">
+    <div className=" container cards-grid-identidad p-3 p-md-5">
       <div className=" card-identidad d-flex gap-3">
         <div className="icon-container">
           <MdOutlineWorkspacePremium />

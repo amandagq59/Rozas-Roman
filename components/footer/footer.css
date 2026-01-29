@@ -11,18 +11,46 @@
     U+2215, U+FEFF, U+FFFD;
 }
 
+h5 .footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
 footer {
   background-color: #06211c;
   color: white;
 
+  .footer-heading-block {
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+
+    .nav-list {
+      margin: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+
+  .footer-heading-block p,
+  .footer-heading-block a {
+    text-align: left;
+  }
+
   .footer-logo {
-  display: block; /* Asegura que sea bloque */
-  margin-bottom: 0.5rem; /* Ajusta espacio debajo del logo */
-  vertical-align: top; /* Alinea al top de la línea de texto si estuviera inline */
-}
+    display: block; /* Asegura que sea bloque */
+    margin-bottom: 0.5rem; /* Ajusta espacio debajo del logo */
+    vertical-align: top; /* Alinea al top de la línea de texto si estuviera inline */
+  }
 
   img {
     width: 250px;
+    max-width: 100%;
+    height: auto;
   }
   p {
     font-size: 15px;
@@ -36,11 +64,11 @@ footer {
     text-underline-offset: 10px;
   }
   .footer-nav {
-  height: 100%; /* Ocupa toda la altura de la fila */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrado vertical */
-}
+    height: 100%; /* Ocupa toda la altura de la fila */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+  }
   ul {
     list-style: none;
     padding: 0;

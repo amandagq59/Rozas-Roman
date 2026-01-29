@@ -20,39 +20,38 @@ export default function Page() {
         className="section-portada d-flex flex-column justify-content-center align-items-center"
         id="inicio"
       >
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <h1 className="text-start me-5">
+        <div className="hero-heading-block">
+          <h1>
             Tu solución legal comienza
             <br />
             <span>con Rozas & Román</span>
           </h1>
-          <p className="text-start">
+          <p>
             Acompañamos a cada cliente con asesoría legal clara y efectiva,
             protegiendo sus derechos y garantizando soluciones adaptadas a sus
             necesidades.
           </p>
-        </div>
 
-        <div className="d-flex gap-4 mt-3 ">
-          <a href="#contacto" className="button-consulta">
-            {' '}
-            SOLICITAR CONSULTA
-          </a>
-          <a href="#servicios" className="button-servicios">
-            NUESTROS SERVICIOS
-          </a>
+          <div className="hero-cta-group">
+            <a href="#contacto" className="button-consulta">
+              SOLICITAR CONSULTA
+            </a>
+            <a href="#servicios" className="button-servicios">
+              NUESTROS SERVICIOS
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="section-servicios p-5" id="servicios">
+      <section className="section-servicios p-3 p-md-5" id="servicios">
         <h2>
           <span>NUESTRAS ESPECIALIDADES</span> <br />
           Servicios Jurídicos Integrales
         </h2>
         <CardsServicios />
       </section>
-      <section className="section-identidad p-5" id="identidad">
-        <div className="mx-5">
+      <section className="section-identidad p-3 p-md-5" id="identidad">
+        <div className="mx-2 mx-md-5">
           <h2>
             <span>LA FIRMA</span> <br />
             ¿Por qué confiar en nosotros?
@@ -70,8 +69,8 @@ export default function Page() {
         <CardContact />
         <hr className="d-flex justify-content-center" />
 
-        <Col lg={12} className="container d-flex">
-          <Col lg={6} className=" d-flex justify-content-center mb-3 ">
+        <Col lg={12} className="container d-flex flex-column flex-lg-row gap-4">
+          <Col lg={6} className="d-flex justify-content-center mb-3 mb-lg-0">
             <CardMap />
           </Col>
           <Col lg={6} className="d-flex justify-content-center">

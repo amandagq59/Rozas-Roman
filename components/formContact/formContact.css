@@ -19,8 +19,8 @@
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-size: 15px !important;
-  width: 400px;
-  height: 96%;
+  width: 100%;
+  max-width: 420px;
   padding: 2rem;
   h3 {
     font-size: 20px;
@@ -33,13 +33,12 @@
   input[type='email'],
   input[as='textarea'] {
     font-size: 12px;
-    width: 250px;
+    width: 100%;
   }
   textarea {
     font-size: 12px;
     padding: 6px 8px;
-    height: 30px;
-    width: 300px;
+    width: 100%;
   }
 
   span {
@@ -54,7 +53,7 @@
   select {
     font-size: 12px;
     padding: 4px 8px;
-    width: 250px;
+    width: 100%;
   }
   .btn-submit {
     background-color: #c5a059;
@@ -79,8 +78,8 @@
   border-radius: 16px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-size: 15px !important;
-  width: 400px;
-  height: 520px;
+  width: 100%;
+  max-width: 420px;
   padding: 2rem;
   h3 {
     font-size: 20px;
@@ -93,13 +92,12 @@
   input[type='email'],
   input[as='textarea'] {
     font-size: 12px;
-    width: 250px;
+    width: 100%;
   }
   textarea {
     font-size: 12px;
     padding: 6px 8px;
-    height: 30px;
-    width: 300px;
+    width: 100%;
   }
 
   span {
@@ -114,7 +112,7 @@
   select {
     font-size: 12px;
     padding: 4px 8px;
-    width: 250px;
+    width: 100%;
   }
   .btn-submit {
     background-color: #c5a059;

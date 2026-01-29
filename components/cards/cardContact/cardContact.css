@@ -1,4 +1,7 @@
 .card-contact {
+  flex-wrap: wrap;
+  gap: 20px;
+
   .icons {
     color: #c5a059;
     font-size: 20px;
@@ -20,11 +23,8 @@
   font-size: 20px;
 }
 @media (max-width: 992px) {
-  .card-contact {
-    gap: 20px;
-  }
   .card-contact > .col {
-    flex: 0 0 45%; /* dos columnas aproximadas */
+    flex: 1 1 260px;
   }
 }
 

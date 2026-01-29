@@ -19,33 +19,32 @@ export const Footer = () => {
   return (
     <footer className="p-5 d-flex flex-column">
       <Container>
-      
-          {/* Columna de imagen */}
-          <Col lg={12}>
-            <Col lg={4} md={12} sm={12}>
-              <a href="#inicio">
-                <img
-                  className="footer-logo"
-                  src="./images/logos/logoCompleto.png"
-                  alt="Logo"
-                />
-              </a>
-              <p>
-                Tu confianza es nuestra prioridad. <br /> Servicios legales
-                confiables y profesionales.
-              </p>
-            </Col>
-            {/* Enlaces rápidos */}
-            <Col
-              lg={3}
-              md={6}
-              sm={6}
-              className="d-flex flex-column align-items-center"
-            >
+        {/* Columna de imagen */}
+        <Row>
+          <Col lg={4} md={12} sm={12}>
+            <a href="#inicio">
+              <img
+                className="footer-logo"
+                src="./images/logos/logoCompleto.png"
+                alt="Logo"
+              />
+            </a>
+            <p>
+              Tu confianza es nuestra prioridad. <br /> Servicios legales
+              confiables y profesionales.
+            </p>
+          </Col>
+          {/* Enlaces rápidos */}
+          <Col
+            lg={3}
+            md={6}
+            sm={6}
+            className="d-flex flex-column align-items-center text-center"
+          >
+            <div className="footer-heading-block">
               <h5>NAVEGACIÓN</h5>
-              <div className='d-flex align-items-start'>
-            
-                <ul className=" nav-list d-flex flex-column gap-2">
+              <div className="d-flex align-items-start">
+                <ul className="nav-list d-flex flex-column gap-2">
                   <li>
                     <a href="#servicios">Servicios</a>
                   </li>
@@ -56,18 +55,22 @@ export const Footer = () => {
                     <a href="#contacto">Contacto</a>
                   </li>
                   <li>
-                    <a href="#actualidad">Actualidad</a>
+                    <a className="footer-link" href="#actualidad">
+                      Actualidad
+                    </a>
                   </li>
                 </ul>
               </div>
-            </Col>
-            {/* Contacto y redes */}
-            <Col
-              lg={5}
-              md={6}
-              sm={6}
-              className="d-flex flex-column align-items-center"
-            >
+            </div>
+          </Col>
+          {/* Contacto y redes */}
+          <Col
+            lg={5}
+            md={6}
+            sm={6}
+            className="d-flex flex-column align-items-center text-center"
+          >
+            <div className="footer-heading-block">
               <h5>CONTACTO</h5>
               <p>
                 <a
@@ -124,22 +127,20 @@ export const Footer = () => {
                   <PiTiktokLogoLight />
                 </a>
               </div>
-            </Col>
-             </Col>
-               
-            
-                    <hr className="hr" style={{ borderColor: '#333' }} />
-            <Col lg={12}>
-              <div className="d-flex flex-column flex-md-row justify-content-center gap-5">
-                <p className="text-center text-md-start">
-                  © {new Date().getFullYear()} Asesoría Rozas & Román. Todos los
-                  derechos reservados.
-                </p>
-                <p className="text-center text-md-start">PRIVACIDAD</p>
-              </div>
-            </Col>
-         
-        
+            </div>
+          </Col>
+        </Row>
+
+        <hr className="hr" style={{ borderColor: '#333' }} />
+        <Col lg={12}>
+          <div className="d-flex flex-column flex-md-row justify-content-center gap-5">
+            <p className="text-center text-md-start">
+              © {new Date().getFullYear()} Asesoría Rozas & Román. Todos los
+              derechos reservados.
+            </p>
+            <p className="text-center text-md-start">PRIVACIDAD</p>
+          </div>
+        </Col>
       </Container>
     </footer>
   );
