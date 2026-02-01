@@ -2,11 +2,17 @@
 
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
+import { HiChevronDown } from "react-icons/hi";
 
 export const NavbarProyect = () => {
   const [active, setActive] = useState('inicio');
-  const [dropdownOpen, setDropdownOpen] = useState(false); // controla el dropdown
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMobileMenuOpen(false);
+    setDropdownOpen(false);
+  };
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
@@ -19,7 +25,7 @@ export const NavbarProyect = () => {
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -40,132 +46,69 @@ export const NavbarProyect = () => {
           />
         </a>
 
+        {/* Botón hamburguesa */}
         <button
           type="button"
           className="navbar-toggle"
           aria-label="Toggle navigation"
           aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen((v) => !v)}
+          onClick={() => setMobileMenuOpen(true)}
         >
           ☰
         </button>
 
+        {/* Overlay */}
+        <div
+          className={`menu-overlay ${mobileMenuOpen ? 'show' : ''}`}
+          onClick={closeMenu}
+        />
+
+        {/* Menú */}
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
+          {/* Cruz (solo móvil por CSS) */}
+          <button className="menu-close" onClick={closeMenu} aria-label="Cerrar menú">
+            ✕
+          </button>
+
           <a
             href="/"
             className={`nav-link ${active === 'inicio' ? 'active' : ''}`}
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={closeMenu}
           >
             INICIO
           </a>
 
-          {/* Dropdown para Servicios */}
+          {/* Dropdown Servicios */}
           <div
             className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
-            onMouseEnter={() => setDropdownOpen(true)}
-            onMouseLeave={() => setDropdownOpen(false)}
-            onClick={() => setDropdownOpen(!dropdownOpen)} // toggle para mobile
+            onClick={() => setDropdownOpen((v) => !v)}
           >
-            <span>SERVICIOS</span>
+            <span className='nav-link'>SERVICIOS <HiChevronDown /></span>
+
             <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              {' '}
-              <a
-                href="/#servicios"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Todos los servicios
-              </a>
-              <a
-                href="/servicio-laboral"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Laboral
-              </a>
-              <a
-                href="/servicio-civil-familiar"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Civil y Familiar
-              </a>
-              <a
-                href="/servicio-penal"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Penal
-              </a>
-              <a
-                href="/servicio-administrativo"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Administrativo
-              </a>
-              <a
-                href="/servicio-extranjeria"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Extranjería
-              </a>
-              <a
-                href="/servicio-trafico"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Tráfico
-              </a>
-              <a
-                href="/servicio-gestion-inmobiliaria"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
+              <a href="/#servicios" onClick={closeMenu}>Todos los servicios</a>
+              <a href="/servicio-laboral" onClick={closeMenu}>Laboral</a>
+              <a href="/servicio-civil-familiar" onClick={closeMenu}>Civil y Familiar</a>
+              <a href="/servicio-penal" onClick={closeMenu}>Penal</a>
+              <a href="/servicio-administrativo" onClick={closeMenu}>Administrativo</a>
+              <a href="/servicio-extranjeria" onClick={closeMenu}>Extranjería</a>
+              <a href="/servicio-trafico" onClick={closeMenu}>Tráfico</a>
+              <a href="/servicio-gestion-inmobiliaria" onClick={closeMenu}>
                 Gestión Inmobiliaria
               </a>
-              <a
-                href="/servicio-mercantil"
-                onClick={() => {
-                  setDropdownOpen(false);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                Mercantil
-              </a>
+              <a href="/servicio-mercantil" onClick={closeMenu}>Mercantil</a>
             </div>
           </div>
 
           <a
             href="/#identidad"
             className={`nav-link ${active === 'identidad' ? 'active' : ''}`}
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={closeMenu}
           >
             LA FIRMA
           </a>
 
-          <a
-            href="#contacto"
-            className={`btn-contacto ${active === 'active' ? 'active' : ''}`}
-            onClick={() => setMobileMenuOpen(false)}
-          >
+          <a href="#contacto" className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}>
             CONTACTO
           </a>
         </div>

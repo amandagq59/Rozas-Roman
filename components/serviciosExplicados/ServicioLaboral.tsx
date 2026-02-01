@@ -1,17 +1,20 @@
 import React from 'react';
 import './servicioPenal.css';
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import FormContactSmall from '../formContact/FormContactSmall';
 import { CardPasos } from '../cardPasos/CardPasos';
 
 export default function ServicioLaboral() {
   return (
-    <section className=" container section-servicios-descripcion">
-      <Col lg={12} className="d-flex container">
-        <Col lg={6} className="d-flex flex-column  gap-4">
+    <section className="section-servicios-descripcion container">
+      <Row className="align-items-center">
+        
+        {/* TEXTO */}
+        <Col md={12} lg={6} className="d-flex flex-column gap-4">
           <h1>
             SERVICIO <span>LABORAL</span>
           </h1>
+
           <p>
             Nuestro servicio de asesoría laboral uno a uno ofrece un
             acompañamiento integral en todas las áreas del derecho laboral,
@@ -32,17 +35,20 @@ export default function ServicioLaboral() {
               <li>Asesoramiento a empresas y trabajadores</li>
             </ul>
           </div>
-          <div>
-            <CardPasos />
-          </div>
+
+          <CardPasos />
         </Col>
+
+        {/* FORM */}
         <Col
+          md={12}
           lg={6}
-          className="d-flex justify-content-center align-items-center ps-5"
+          className="d-flex justify-content-center align-items-center mt-5 mt-lg-0"
         >
           <FormContactSmall />
         </Col>
-      </Col>
+
+      </Row>
     </section>
   );
 }

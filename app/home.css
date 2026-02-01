@@ -12,7 +12,7 @@
 }
 .section-portada {
   background-image:
-    linear-gradient(rgba(29, 29, 33, 0.548)), url('/images/portada/portada.jpg');
+    linear-gradient(rgba(29, 29, 33, 0.623)), url('/images/portada/portada.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -40,10 +40,12 @@
 
   span {
     color: #b89047;
+    font-size: 35px;
   }
   h1 {
     font-size: 40px;
     font-family: 'EB Garamond Variable';
+    text-decoration: none;
     text-shadow:
       2px 2px 4px rgba(0, 0, 0, 0.3),
       4px 4px 8px rgba(0, 0, 0, 0.2),
@@ -52,14 +54,14 @@
 
   p {
     font-size: 15px;
-    font-weight: 200;
+    font-weight: 300;
     margin: 0;
     color: #fff;
   }
 
   .hero-heading-block p {
     width: 100%;
-    max-width: 38ch;
+    max-width: 45ch;
   }
 
   .button-consulta,
@@ -90,12 +92,16 @@
   }
 
   @media (max-width: 768px) {
+    padding-top: 3rem;
     height: 70vh;
-
+    padding-left: 2rem;
     h1 {
       font-size: 30px;
     }
 
+    .hero-heading-block p {
+      max-width: 35ch;
+    }
     .button-consulta,
     .button-servicios {
       width: 100%;
@@ -116,11 +122,14 @@
 }
 .section-identidad,
 .section-servicios,
-.section-contact, 
-.section-reseñas{
+.section-contact,
+.section-reseñas {
+ 
   h2 {
+   
     font-size: 25px;
     text-align: center;
+    
 
     span {
       color: #b89047;
@@ -128,6 +137,13 @@
       font-weight: 600;
     }
   }
+.linea-title {
+  width: 100px;
+  height: 2px;
+  background-color: #b89047;
+  margin: 10px auto 0;
+}
+
 }
 
 .section-identidad {
@@ -147,3 +163,6 @@ hr {
   margin: auto;
   padding-bottom: 2rem;
 }
+
+
+  

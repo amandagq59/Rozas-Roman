@@ -37,7 +37,7 @@ export const Footer = () => {
           {/* Enlaces rápidos */}
           <Col
             lg={3}
-            md={6}
+            md={2}
             sm={6}
             className="d-flex flex-column align-items-center text-center"
           >
@@ -66,7 +66,7 @@ export const Footer = () => {
           {/* Contacto y redes */}
           <Col
             lg={5}
-            md={6}
+            md={8}
             sm={6}
             className="d-flex flex-column align-items-center text-center"
           >
@@ -78,12 +78,16 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <IoMail /> legal@rozasroman.com
+                  <span>
+                    <IoMail />
+                  </span> legal@rozasroman.com
                 </a>
               </p>
               <p>
                 <a href="tel:+34851800710" target="_blank">
-                  <BsFillTelephoneFill /> +34 851 80 07 10
+                  <span>
+                    <BsFillTelephoneFill />
+                  </span> +34 851 80 07 10
                 </a>
               </p>
               <p>
@@ -93,7 +97,9 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="maps-button"
                 >
-                  <SiGooglemaps /> C/Almería nº1, local 3AB – 29650 Fuengirola
+                  <span>
+                    <SiGooglemaps />
+                  </span> C/Almería nº1, local 3AB – 29650 Fuengirola
                   (Málaga)
                 </a>
               </p>

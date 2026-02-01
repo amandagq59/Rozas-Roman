@@ -48,14 +48,17 @@ export default function Page() {
           <span>NUESTRAS ESPECIALIDADES</span> <br />
           Servicios Jurídicos Integrales
         </h2>
+        <div className='linea-title '></div>
+     
         <CardsServicios />
       </section>
       <section className="section-identidad p-3 p-md-5" id="identidad">
         <div className="mx-2 mx-md-5">
           <h2>
-            <span>LA FIRMA</span> <br />
+            <span className="p-sm-5">LA FIRMA</span> <br />
             ¿Por qué confiar en nosotros?
           </h2>
+            <div className='linea-title '></div>
           <CardsIdentidad />
         </div>
       </section>
@@ -65,10 +68,13 @@ export default function Page() {
             <span>CONTACTO</span> <br />
             Solicita orientación legal
           </h2>
+            <div className='linea-title '></div>
         </div>
         <CardContact />
-        <hr className="d-flex justify-content-center" />
 
+        <div className="p-3">
+          <hr className="d-flex justify-content-center" />
+        </div>
         <Col lg={12} className="container d-flex flex-column flex-lg-row gap-4">
           <Col lg={6} className="d-flex justify-content-center mb-3 mb-lg-0">
             <CardMap />
@@ -80,10 +86,12 @@ export default function Page() {
       </section>
       <section className="section-reseñas py-5">
         <div className="d-flex flex-column align-items-center">
+        
           <h2>
             <span>RESEÑAS</span> <br />
             Experiencias reales
           </h2>
+          <div className='linea-title'></div>
         </div>
         <CardReview />
       </section>
