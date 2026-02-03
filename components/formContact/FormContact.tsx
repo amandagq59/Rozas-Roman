@@ -68,10 +68,10 @@ export const FormContact = () => {
                   Selecciona una opción
                 </option>
                 <option value="Buscar-Inmueble">
-                  Estoy buscando un inmueble
+                  Penal
                 </option>
                 <option value="Venta/Alquiler">
-                  Quiero vender/alquilar mi inmueble
+                  Administrativo
                 </option>
                 <option value="Otro">Otro</option>
               </Form.Select>
