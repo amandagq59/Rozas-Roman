@@ -1,6 +1,7 @@
 import React from 'react';
 import './cardMap.css';
 import { SiGooglemaps } from 'react-icons/si';
+import Link from 'next/link';
 
 export const CardMap = () => {
   const address =
@@ -17,14 +18,14 @@ export const CardMap = () => {
         </div>
         <div className="d-flex flex-column">
           <span className="text-muted">UBICACIÓN</span>
-          <a
+          <Link
             href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
             target="_blank"
             rel="noopener noreferrer"
             className="maps-button"
           >
             C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
-          </a>
+          </Link>
         </div>
       </div>
 

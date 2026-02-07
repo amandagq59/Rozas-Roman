@@ -8,6 +8,7 @@ import { reviews } from '../../../data/reviews';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './cardReview.css';
+import Link from 'next/link';
 
 export default function ReviewsCarousel() {
   const sliderRef = useRef<Slider>(null);
@@ -99,13 +100,13 @@ export default function ReviewsCarousel() {
       </div>
 
       <div className="button-ppl-wrapper text-center pt-4">
-        <a
+        <Link
           href="https://www.google.com/search?..."
           target="_blank"
           className="button-ppl"
         >
           Ver todas las reseñas en Google <GoArrowRight />
-        </a>
+        </Link>
       </div>
     </div>
   );

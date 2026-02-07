@@ -3,6 +3,7 @@ import React from 'react';
 import './formContact.css';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { BsPencil } from 'react-icons/bs';
+import Link from 'next/link';
 
 export const FormContact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -68,9 +69,9 @@ export const FormContact = () => {
         </div>
         <div className="d-flex flex-column">
           <span className="text-muted">FORMULARIO</span>
-          <a className="cc-data" href="">
+          <Link className="cc-data" href="">
             Rellena nuestro formulario
-          </a>
+          </Link>
         </div>
       </div>
 

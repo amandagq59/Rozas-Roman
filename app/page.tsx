@@ -3,12 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './home.css';
 import { FormContact } from '../components/formContact/FormContact';
-import { Col } from 'react-bootstrap';
+import { Col, Row, Container } from 'react-bootstrap';
 import { CardContact } from '../components/cards/cardContact/CardContact';
 import { CardMap } from '../components/cards/cardMap/CardMap';
 import { CardsServicios } from '@/components/cards/cardServicios/CardsServicios';
 import { CardsIdentidad } from '../components/cards/cardsIdentidad/CardsIdentidad';
 import CardReview from '@/components/cards/cardsReview/CardReview';
+import Link from 'next/link';
 
 export default function Page() {
   const address =
@@ -33,12 +34,12 @@ export default function Page() {
           </p>
 
           <div className="hero-cta-group">
-            <a href="#contacto" className="button-consulta">
+            <Link href="#contacto" className="button-consulta">
               SOLICITAR CONSULTA
-            </a>
-            <a href="#servicios" className="button-servicios">
+            </Link>
+            <Link href="#servicios" className="button-servicios">
               NUESTROS SERVICIOS
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -70,17 +71,20 @@ export default function Page() {
           </h2>
           <div className="linea-title "></div>
         </div>
-        <CardContact />
 
-        <div className="p-3">
-          <hr className="d-flex justify-content-center" />
-        </div>
-        <Col lg={12} className="container d-flex flex-column flex-lg-row gap-4">
-          <Col lg={6} className="d-flex justify-content-lg-center mb-3 mb-lg-0">
+        <Col lg={12} className="d-flex container">
+          {/* Columna izquierda: Cards apiladas */}
+          <Col lg={6} className="d-flex flex-column ">
+            <CardContact />
             <CardMap />
           </Col>
-          <Col lg={6} className="d-flex justify-content-lg-center">
-            <FormContact />
+          <Col
+            lg={6}
+            className="d-flex flex-column justify-content-center align-items-end p-4"
+          >
+            <div>
+              <FormContact />
+            </div>
           </Col>
         </Col>
       </section>

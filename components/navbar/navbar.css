@@ -71,6 +71,7 @@ nav img {
 
 .nav-link:hover {
   transform: translateY(-2px);
+  color: #b89047;
 }
 
 .btn-contacto {
@@ -84,15 +85,23 @@ nav img {
 
 .btn-contacto.active {
   text-decoration: underline;
+   text-decoration-color:#ffffff; 
+  text-decoration-thickness: 1.5px;
+   text-underline-offset: 2px;
 }
 
 .btn-contacto:hover {
   transform: translateY(-2px);
+ color: #b89047;
 }
 
 .nav-link.active{
   text-decoration: underline;
  text-decoration-color:#c5a059; 
+  text-decoration-thickness: 1.5px;
+   text-underline-offset: 2px;
+
+
 }
 
 /* =========================

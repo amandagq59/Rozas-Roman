@@ -12,6 +12,8 @@ import { PiTiktokLogoLight } from 'react-icons/pi';
 import { IoLogoWhatsapp } from 'react-icons/io5';
 import { Modalprivacity } from '../modals/Modalprivacity';
 import Button from '../button/Button';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const Footer = () => {
   const numero = '623619625';
@@ -29,13 +31,15 @@ export const Footer = () => {
             xs={12}
             className="d-flex flex-column  align-items-center justify-content-center mb-4 mb-md-5"
           >
-            <a href="#inicio">
-              <img
+            <Link href="#inicio">
+              <Image
                 className="footer-logo"
                 src="/images/logos/logoCompleto.png"
                 alt="Logo"
+                width={100}
+                height={40}
               />
-            </a>
+            </Link>
             <p className="text-center">
               Tu confianza es nuestra prioridad. Servicios legales confiables y
               profesionales.
@@ -55,18 +59,18 @@ export const Footer = () => {
                   <div className="d-flex align-items-start">
                     <ul className="nav-list d-flex flex-column gap-3">
                       <li>
-                        <a href="#servicios">Servicios</a>
+                        <Link href="#servicios">Servicios</Link>
                       </li>
                       <li>
-                        <a href="#identidad">La firma</a>
+                        <Link href="#identidad">La firma</Link>
                       </li>
                       <li>
-                        <a href="#contacto">Contacto</a>
+                        <Link href="#contacto">Contacto</Link>
                       </li>
                       <li>
-                        <a className="footer-link" href="#actualidad">
+                        <Link className="footer-link" href="#actualidad">
                           Actualidad
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -94,12 +98,12 @@ export const Footer = () => {
                     </a>
                   </p>
                   <p>
-                    <a href="tel:+34851800710" target="_blank">
+                    <Link href="tel:+34851800710" target="_blank">
                       <span>
                         <BsFillTelephoneFill />
                       </span>{' '}
                       +34 851 80 07 10
-                    </a>
+                    </Link>
                   </p>
                   <p>
                     <a

@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
 import { HiChevronDown } from 'react-icons/hi';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export const NavbarProyect = () => {
   const [active, setActive] = useState('inicio');
@@ -25,7 +27,7 @@ export const NavbarProyect = () => {
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -35,18 +37,22 @@ export const NavbarProyect = () => {
     };
   }, []);
 
+
+
+
   return (
     <nav>
       <div className="navbar-container">
-        <a href="/">
-          <img
+        <Link href="/" onClick={() => setActive('inicio')}>
+          <Image
             src="/images/logos/logoCompleto.png"
             alt="Logo"
             className="navbar-logo"
+            width={100}
+            height={40}
           />
-        </a>
+        </Link>
 
-        {/* Botón hamburguesa */}
         <button
           type="button"
           className="navbar-toggle"
@@ -57,32 +63,24 @@ export const NavbarProyect = () => {
           ☰
         </button>
 
-        {/* Overlay solo si el menú está abierto */}
-        {mobileMenuOpen && (
-          <div className="menu-overlay show" onClick={closeMenu} />
-        )}
+        {mobileMenuOpen && <div className="menu-overlay show" onClick={closeMenu} />}
 
-        {/* Menú lateral */}
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          <button
-            className="menu-close"
-            onClick={closeMenu}
-            aria-label="Cerrar menú"
-          >
+          <button className="menu-close" onClick={closeMenu} aria-label="Cerrar menú">
             ✕
           </button>
 
-          <a
+          {/* INICIO */}
+          <Link
             href="/"
             className={`nav-link ${active === 'inicio' ? 'active' : ''}`}
             onClick={closeMenu}
           >
             INICIO
-          </a>
+          </Link>
 
-          <div
-            className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
-          >
+          {/* SERVICIOS */}
+          <div className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}>
             <span
               className="nav-link"
               onClick={(e) => {
@@ -95,51 +93,90 @@ export const NavbarProyect = () => {
 
             {dropdownOpen && (
               <div className="dropdown-content show">
-                <a href="/#servicios" onClick={closeMenu} >
+                <Link
+                  href="/#servicios"
+                  onClick={() => { setActive('servicios'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
+                >
                   Todos los servicios
-                </a>
-                <a href="/servicio-laboral" onClick={closeMenu} >
+                </Link>
+                <Link
+                  href="/servicio-laboral"
+                  onClick={() => { setActive('servicio-laboral'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-laboral' ? 'active' : ''}`}
+                >
                   Laboral
-                </a>
-                <a href="/servicio-civil-familiar" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-civil-familiar"
+                  onClick={() => { setActive('servicio-civil-familiar'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-civil-familiar' ? 'active' : ''}`}
+                >
                   Civil y Familiar
-                </a>
-                <a href="/servicio-penal" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-penal"
+                  onClick={() => { setActive('servicio-penal'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-penal' ? 'active' : ''}`}
+                >
                   Penal
-                </a>
-                <a href="/servicio-administrativo" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-administrativo"
+                  onClick={() => { setActive('servicio-administrativo'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-administrativo' ? 'active' : ''}`}
+                >
                   Administrativo
-                </a>
-                <a href="/servicio-extranjeria" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-extranjeria"
+                  onClick={() => { setActive('servicio-extranjeria'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-extranjeria' ? 'active' : ''}`}
+                >
                   Extranjería
-                </a>
-                <a href="/servicio-trafico" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-trafico"
+                  onClick={() => { setActive('servicio-trafico'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-trafico' ? 'active' : ''}`}
+                >
                   Tráfico
-                </a>
-                <a href="/servicio-gestion-inmobiliaria" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-gestion-inmobiliaria"
+                  onClick={() => { setActive('servicio-gestion-inmobiliaria'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-gestion-inmobiliaria' ? 'active' : ''}`}
+                >
                   Gestión Inmobiliaria
-                </a>
-                <a href="/servicio-mercantil" onClick={closeMenu}>
+                </Link>
+                <Link
+                  href="/servicio-mercantil"
+                  onClick={() => { setActive('servicio-mercantil'); closeMenu(); }}
+                  className={`nav-link dropdown ${active === 'servicio-mercantil' ? 'active' : ''}`}
+                >
                   Mercantil
-                </a>
+                </Link>
               </div>
             )}
           </div>
 
-          <a
+          {/* LA FIRMA */}
+          <Link
             href="/#identidad"
             className={`nav-link ${active === 'identidad' ? 'active' : ''}`}
             onClick={closeMenu}
           >
             LA FIRMA
-          </a>
+          </Link>
 
-          <a
+          {/* CONTACTO */}
+          <Link
             href="#contacto"
             className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             CONTACTO
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

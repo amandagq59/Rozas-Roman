@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { Modal } from 'react-bootstrap';
 
@@ -37,7 +39,7 @@ export const Modalprivacity: React.FC<ModalProps> = ({
           <strong>Teléfono:</strong> 623 61 96 25 · 851 80 07 10
           <br />
           <strong>Correo electrónico:</strong>{' '}
-          <a href="mailto:legal@rozasroman.com">legal@rozasroman.com</a>
+          <Link href="mailto:legal@rozasroman.com">legal@rozasroman.com</Link>
         </p>
 
         <h5>2. Datos personales recogidos</h5>
@@ -97,7 +99,7 @@ export const Modalprivacity: React.FC<ModalProps> = ({
           ABOGADOS en:
           <br />
           <strong>Correo electrónico:</strong>{' '}
-          <a href="mailto:legal@rozasroman.com">legal@rozasroman.com</a>
+          <Link href="mailto:legal@rozasroman.com">legal@rozasroman.com</Link>
           <br />
           <strong>Teléfono:</strong> 623 61 96 25 · 851 80 07 10
         </p>
@@ -116,10 +118,12 @@ export const Modalprivacity: React.FC<ModalProps> = ({
           sus datos únicamente para los fines descritos.
         </p>
         <div className="d-flex justify-content-center">
-          <img
+          <Image
             src="/images/logos/SELLO.jpg"
             alt="Logo"
             className=" w-50 pb-2"
+            width={600}
+            height={20}
           />
         </div>
       </Modal.Body>
