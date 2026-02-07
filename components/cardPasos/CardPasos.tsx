@@ -4,7 +4,7 @@ import './cardPasos.css';
 
 export const CardPasos = () => {
   return (
-    <div className="d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 ">
+    <div className="d-flex flex-column flex-md-row align-items-center px-5 gap-4 ">
       
       {/* Paso 1 */}
       <Card className="card-pasos text-center">

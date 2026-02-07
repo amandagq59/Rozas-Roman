@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 
 import './../../components/ServicesExplication/pageservice.css';
 import PageService from '@/components/ServicesExplication/PageService';
+import './../../components/ServicesExplication/pageservice.css'
 
 export default function Page() {
   const params = useParams();

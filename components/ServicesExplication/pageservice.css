@@ -2,7 +2,9 @@
   font-size: 15px;
   padding: 4rem 2rem;
 }
-
+span {
+  color: #b89047;
+}
 
 .section-servicios-descripcion h1 {
   max-width: 100%;
@@ -16,10 +18,8 @@
   font-size: 35px;
 }
 
-
 .lista-servicios {
-  border-left: 2px solid #b89047;
-  padding-left: 1rem;
+  border-left: 3px double #b89047;
 }
 
 li {

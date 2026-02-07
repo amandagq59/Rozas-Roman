@@ -86,7 +86,7 @@ export const Footer = () => {
                 <div className="footer-heading-block ms-lg-5">
                   <h5>CONTACTO</h5>
                   <p>
-                    <a
+                    <Link
                       href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export const Footer = () => {
                         <IoMail />
                       </span>{' '}
                       legal@rozasroman.com
-                    </a>
+                    </Link>
                   </p>
                   <p>
                     <Link href="tel:+34851800710" target="_blank">
@@ -106,7 +106,7 @@ export const Footer = () => {
                     </Link>
                   </p>
                   <p>
-                    <a
+                    <Link
                       href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -119,38 +119,42 @@ export const Footer = () => {
                       <span className="direction w-75">
                         C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
                       </span>
-                    </a>
+                    </Link>
                   </p>
 
                   <div className="a-redes d-flex gap-3">
-                    <a
+                    <Link
                       href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className='a-redes'
                     >
                       <IoLogoWhatsapp />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.instagram.com/rozasromanabogados/"
                       target="_blank"
                       rel="noopener noreferrer"
+                         className='a-redes'
                     >
                       <FaInstagram />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.facebook.com/profile.php?id=61584956921125&locale=es_ES"
                       target="_blank"
                       rel="noopener noreferrer"
+                         className='a-redes'
                     >
                       <RiFacebookCircleLine />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.tiktok.com/@rozasromanabogados?_r=1&_t=ZN-939dCSJuElC"
                       target="_blank"
                       rel="noopener noreferrer"
+                         className='a-redes'
                     >
                       <PiTiktokLogoLight />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </Col>
