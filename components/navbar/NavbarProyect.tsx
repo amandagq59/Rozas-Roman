@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import { HiChevronDown } from "react-icons/hi";
+import { HiChevronDown } from 'react-icons/hi';
 
 export const NavbarProyect = () => {
   const [active, setActive] = useState('inicio');
@@ -25,7 +25,7 @@ export const NavbarProyect = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -40,7 +40,7 @@ export const NavbarProyect = () => {
       <div className="navbar-container">
         <a href="/">
           <img
-            src="./images/logos/logoCompleto.png"
+            src="/images/logos/logoCompleto.png"
             alt="Logo"
             className="navbar-logo"
           />
@@ -52,21 +52,23 @@ export const NavbarProyect = () => {
           className="navbar-toggle"
           aria-label="Toggle navigation"
           aria-expanded={mobileMenuOpen}
-          onClick={() => setMobileMenuOpen(true)}
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
           ☰
         </button>
 
-        {/* Overlay */}
-        <div
-          className={`menu-overlay ${mobileMenuOpen ? 'show' : ''}`}
-          onClick={closeMenu}
-        />
+        {/* Overlay solo si el menú está abierto */}
+        {mobileMenuOpen && (
+          <div className="menu-overlay show" onClick={closeMenu} />
+        )}
 
-        {/* Menú */}
+        {/* Menú lateral */}
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          {/* Cruz (solo móvil por CSS) */}
-          <button className="menu-close" onClick={closeMenu} aria-label="Cerrar menú">
+          <button
+            className="menu-close"
+            onClick={closeMenu}
+            aria-label="Cerrar menú"
+          >
             ✕
           </button>
 
@@ -78,26 +80,50 @@ export const NavbarProyect = () => {
             INICIO
           </a>
 
-          {/* Dropdown Servicios */}
           <div
             className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
-            onClick={() => setDropdownOpen((v) => !v)}
           >
-            <span className='nav-link'>SERVICIOS <HiChevronDown /></span>
+            <span
+              className="nav-link"
+              onClick={(e) => {
+                e.stopPropagation();
+                setDropdownOpen((v) => !v);
+              }}
+            >
+              SERVICIOS <HiChevronDown />
+            </span>
 
-            <div className={`dropdown-content ${dropdownOpen ? 'show' : ''}`}>
-              <a href="/#servicios" onClick={closeMenu}>Todos los servicios</a>
-              <a href="/servicio-laboral" onClick={closeMenu}>Laboral</a>
-              <a href="/servicio-civil-familiar" onClick={closeMenu}>Civil y Familiar</a>
-              <a href="/servicio-penal" onClick={closeMenu}>Penal</a>
-              <a href="/servicio-administrativo" onClick={closeMenu}>Administrativo</a>
-              <a href="/servicio-extranjeria" onClick={closeMenu}>Extranjería</a>
-              <a href="/servicio-trafico" onClick={closeMenu}>Tráfico</a>
-              <a href="/servicio-gestion-inmobiliaria" onClick={closeMenu}>
-                Gestión Inmobiliaria
-              </a>
-              <a href="/servicio-mercantil" onClick={closeMenu}>Mercantil</a>
-            </div>
+            {dropdownOpen && (
+              <div className="dropdown-content show">
+                <a href="/#servicios" onClick={closeMenu} >
+                  Todos los servicios
+                </a>
+                <a href="/servicio-laboral" onClick={closeMenu} >
+                  Laboral
+                </a>
+                <a href="/servicio-civil-familiar" onClick={closeMenu}>
+                  Civil y Familiar
+                </a>
+                <a href="/servicio-penal" onClick={closeMenu}>
+                  Penal
+                </a>
+                <a href="/servicio-administrativo" onClick={closeMenu}>
+                  Administrativo
+                </a>
+                <a href="/servicio-extranjeria" onClick={closeMenu}>
+                  Extranjería
+                </a>
+                <a href="/servicio-trafico" onClick={closeMenu}>
+                  Tráfico
+                </a>
+                <a href="/servicio-gestion-inmobiliaria" onClick={closeMenu}>
+                  Gestión Inmobiliaria
+                </a>
+                <a href="/servicio-mercantil" onClick={closeMenu}>
+                  Mercantil
+                </a>
+              </div>
+            )}
           </div>
 
           <a
@@ -108,7 +134,10 @@ export const NavbarProyect = () => {
             LA FIRMA
           </a>
 
-          <a href="#contacto" className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}>
+          <a
+            href="#contacto"
+            className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}
+          >
             CONTACTO
           </a>
         </div>

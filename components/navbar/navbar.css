@@ -9,8 +9,8 @@ nav {
   position: fixed;
   z-index: 1000;
   width: 100vw;
-
-
+  top: 0;
+  left: 0;
 }
 
 nav img {
@@ -57,6 +57,7 @@ nav img {
   display: flex;
   align-items: center;
   gap: 2rem;
+  box-sizing: border-box;
 }
 
 .nav-link{
@@ -66,12 +67,7 @@ nav img {
   color: white;
   cursor: pointer;
   transition: transform 0.2s;
-
 }
-  
-
-
-
 
 .nav-link:hover {
   transform: translateY(-2px);
@@ -84,11 +80,10 @@ nav img {
   border-radius: 5px;
   text-decoration: none;
   transition: transform 0.3s;
-
 }
-  .btn-contacto.active {
-  text-decoration: underline;
 
+.btn-contacto.active {
+  text-decoration: underline;
 }
 
 .btn-contacto:hover {
@@ -97,7 +92,7 @@ nav img {
 
 .nav-link.active{
   text-decoration: underline;
-  color: #b89047;
+ text-decoration-color:#c5a059; 
 }
 
 /* =========================
@@ -131,7 +126,6 @@ nav img {
   color: #06211c;
 }
 
-
 /* =========================
    OVERLAY
 ========================= */
@@ -153,23 +147,26 @@ nav img {
 /* =========================
    CRUZ CERRAR
 ========================= */
-/* Oculta por defecto */
 .menu-close {
   display: none;
 }
+
+.btn-contacto {
+  margin-left: auto;
+}
+
+
 
 /* =========================
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-  /* Navbar container más compacto */
   .navbar-container {
-    margin-inline: 1rem;
+    margin: 0;
     padding: 0.75rem 1rem;
-    width: 100vw;
+    width: 100%;
   }
 
-  /* Mostrar botón hamburguesa */
   .navbar-toggle {
     display: inline-flex;
     align-items: center;
@@ -177,12 +174,11 @@ nav img {
     margin-right: 1rem;
   }
 
-  /* Menú lateral */
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -50vw; /* fuera de pantalla */
-    width: 50vw; /* media pantalla */
+    right: -100vw;
+    width: 100vw;
     height: 100vh;
     background-color: #06211c;
     flex-direction: column;
@@ -190,14 +186,14 @@ nav img {
     padding: 2rem 1.5rem;
     transition: right 0.35s ease;
     z-index: 999;
+    overflow-y: auto;
+    box-sizing: border-box;
   }
 
-  /* Cuando está abierto */
   .navbar-links.open {
     right: 0;
   }
 
-  /* Cruz visible solo en móvil */
   .menu-close {
     display: block;
     background: none;
@@ -213,9 +209,8 @@ nav img {
     color: #c5a059;
   }
 
-  /* Dropdown empuja contenido */
   .dropdown-content {
-    position: static; /* empuja elementos debajo */
+    position: static;
     display: none;
     width: 100%;
     box-shadow: none;
@@ -224,14 +219,10 @@ nav img {
 
   .dropdown-content.show {
     display: flex;
-  
   }
 
-  /* Estilo links dropdown móvil */
   .dropdown-content a {
     padding-left: 1.5rem;
     font-size: 0.95rem;
   }
-
-
 }

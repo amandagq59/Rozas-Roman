@@ -10,8 +10,8 @@ export const CardMap = () => {
   )}&z=16&output=embed`;
 
   return (
-    <div className="card-map d-flex flex-column align-items-center">
-      <div className="d-flex align-items-start gap-2">
+    <div className="card-map d-flex flex-column align-items-start">
+      <div className="d-flex align-content-start gap-2">
         <div className="icons">
           <SiGooglemaps />
         </div>

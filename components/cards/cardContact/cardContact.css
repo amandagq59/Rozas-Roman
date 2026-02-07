@@ -36,12 +36,13 @@ a {
     grid-template-areas:
       'tel redes'
       'email redes';
-    gap: 15px;
+    gap: 10px;
   }
 
   .contact-item:nth-child(1) {
     grid-area: tel;
     padding-left: 1rem;
+
   }
   .contact-item:nth-child(2) {
     grid-area: email;
@@ -50,6 +51,6 @@ a {
   .contact-item.redes {
     grid-area: redes;
     margin: auto;
-    padding-right: 1rem;
+   
   }
 }

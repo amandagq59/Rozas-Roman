@@ -9,6 +9,7 @@
   h3 {
     font-size: 13px;
   }
+
   span {
     display: flex;
     justify-content: center;
@@ -22,9 +23,45 @@
     margin-bottom: 10px;
     font-size: 15px;
   }
+
   .flecha {
     color: #000000;
     display: flex;
     align-items: center;
+    margin: 0 5px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 1rem;
+
+    .flecha {
+      display: none; /* ocultamos flechas en móvil */
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    span {
+      width: 45px;
+      height: 45px;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+/* contenedor de pasos */
+.pasos-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }

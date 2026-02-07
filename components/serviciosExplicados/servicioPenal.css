@@ -14,7 +14,6 @@
 .section-servicios-descripcion h1 span {
   color: #b89047;
   font-size: 35px;
-  
 }
 
 /* LISTA */
@@ -37,15 +36,18 @@ h1 {
   text-underline-offset: 10px;
 }
 
-/* 📱 MOBILE */
 @media (max-width: 768px) {
   .section-servicios-descripcion {
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     text-align: center;
   }
 
   .section-servicios-descripcion h1 {
     font-size: 28px;
+
+    span {
+      font-size: 28px;
+    }
   }
 
   .lista-servicios {
@@ -54,7 +56,6 @@ h1 {
   }
 }
 
-/* 💻 DESKTOP GRANDE */
 @media (min-width: 1200px) {
   .section-servicios-descripcion h1 {
     font-size: 40px;

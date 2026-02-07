@@ -1,50 +1,64 @@
 'use client';
-
-import React from 'react';
-import Image from 'next/image';
+import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
-
+import Image from 'next/image';
 import { AiFillStar } from 'react-icons/ai';
-import dynamic from 'next/dynamic';
+import { GoArrowRight } from 'react-icons/go';
 import { reviews } from '../../../data/reviews';
-import './cardReview.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-import { GoArrowRight } from 'react-icons/go';
-
+import './cardReview.css';
 
 export default function ReviewsCarousel() {
+  const sliderRef = useRef<Slider>(null);
+  const [mounted, setMounted] = useState(false);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  // Detecta ancho de pantalla y ajusta slides
+  useEffect(() => {
+    setMounted(true);
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 768) setSlidesToShow(1);
+      else if (width < 1024) setSlidesToShow(2);
+      else setSlidesToShow(3);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Flechas personalizadas
+  const NextArrow = (props: any) => {
+    const { className, onClick } = props;
+    return <div className={className + ' custom-next'} onClick={onClick} />;
+  };
+
+  const PrevArrow = (props: any) => {
+    const { className, onClick } = props;
+    return <div className={className + ' custom-prev'} onClick={onClick} />;
+  };
+
+  // Configuración slider
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-
-    slidesToShow: 3, // Desktop
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
+    adaptiveHeight: true,
+    centerMode: slidesToShow === 1,
+    centerPadding: '0px',
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
-  
+
+  if (!mounted) return null;
 
   return (
     <div className="reviews-wrapper">
-
       <div className="reviews-carousel-container">
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {reviews.map((review, index) => (
             <div key={index} className="carousel-slide">
               <article className="google-review-card">
@@ -54,9 +68,9 @@ export default function ReviewsCarousel() {
                       <Image
                         src={review?.image || '/placeholder.svg'}
                         alt={review?.name}
-                        className="profile-image"
                         width={60}
                         height={60}
+                        className="profile-image"
                       />
                     </div>
                     <div className="reviewer-info">
@@ -72,12 +86,7 @@ export default function ReviewsCarousel() {
                     </div>
                   </div>
                   <div className="google-badge">
-                    <Image
-                      src="/svg/google.svg"
-                      alt="Google"
-                      width={20}
-                      height={20}
-                    />
+                    <Image src="/svg/google.svg" alt="Google" width={20} height={20} />
                   </div>
                 </div>
                 <div className="review-content">
@@ -88,9 +97,10 @@ export default function ReviewsCarousel() {
           ))}
         </Slider>
       </div>
+
       <div className="button-ppl-wrapper text-center pt-4">
         <a
-          href="https://www.google.com/search?sca_esv=7e3b4dea3a648857&sxsrf=ANbL-n6KCmFUMbyDayifKqDrbwnTtiYgAg:1769692647524&q=rozas+y+roman+&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWvZ8PQ_z0XiwwPRcgcqfW4PHN89g9qHZ7MMhWhN3vmeYKQKXhKg6g89KDeyij5Uwk-L0ZA%3D&uds=ALYpb_mM1P_6lpjjfowRxWEKPgkk-nmoRYjeAFv1jLYZxrjxz0ukshM0BlmO9gmC0qnQmNueD2lAnb-z5Bn9nO51m6fBfoJyFTRG2CjWYcdW-SIEbOSAzTc&sa=X&ved=2ahUKEwj78Pfs6rCSAxUEBNsEHV-ENZ8Q3PALegQIKxAF&biw=1920&bih=911&dpr=1&aic=0"
+          href="https://www.google.com/search?..."
           target="_blank"
           className="button-ppl"
         >

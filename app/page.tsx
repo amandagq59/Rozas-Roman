@@ -45,11 +45,11 @@ export default function Page() {
 
       <section className="section-servicios p-3 p-md-5" id="servicios">
         <h2>
-          <span>NUESTRAS ESPECIALIDADES</span> <br />
+          <span className="p-sm-5">NUESTRAS ESPECIALIDADES</span> <br />
           Servicios Jurídicos Integrales
         </h2>
-        <div className='linea-title '></div>
-     
+        <div className="linea-title "></div>
+
         <CardsServicios />
       </section>
       <section className="section-identidad p-3 p-md-5" id="identidad">
@@ -58,17 +58,17 @@ export default function Page() {
             <span className="p-sm-5">LA FIRMA</span> <br />
             ¿Por qué confiar en nosotros?
           </h2>
-            <div className='linea-title '></div>
+          <div className="linea-title "></div>
           <CardsIdentidad />
         </div>
       </section>
-      <section className="section-contact py-5" id="contacto">
+      <section className="section-contact p-3 p-md-5" id="contacto">
         <div className="d-flex flex-column align-items-center">
           <h2>
             <span>CONTACTO</span> <br />
             Solicita orientación legal
           </h2>
-            <div className='linea-title '></div>
+          <div className="linea-title "></div>
         </div>
         <CardContact />
 
@@ -76,22 +76,21 @@ export default function Page() {
           <hr className="d-flex justify-content-center" />
         </div>
         <Col lg={12} className="container d-flex flex-column flex-lg-row gap-4">
-          <Col lg={6} className="d-flex justify-content-center mb-3 mb-lg-0">
+          <Col lg={6} className="d-flex justify-content-lg-center mb-3 mb-lg-0">
             <CardMap />
           </Col>
-          <Col lg={6} className="d-flex justify-content-center">
+          <Col lg={6} className="d-flex justify-content-lg-center">
             <FormContact />
           </Col>
         </Col>
       </section>
       <section className="section-reseñas py-5">
         <div className="d-flex flex-column align-items-center">
-        
           <h2>
             <span>RESEÑAS</span> <br />
             Experiencias reales
           </h2>
-          <div className='linea-title'></div>
+          <div className="linea-title"></div>
         </div>
         <CardReview />
       </section>

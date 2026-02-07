@@ -14,7 +14,7 @@ export const CardContact = () => {
 
   return (
     <div className="card-contact mt-5">
-      <div className="contact-item d-flex align-items-center justify-content-center gap-2">
+      <div className="contact-item d-flex align-items-center justify-content-start justify-content-lg-center  gap-2">
         <div className="icons">
           <BsFillTelephoneFill />
         </div>
@@ -26,8 +26,8 @@ export const CardContact = () => {
         </div>
       </div>
 
-      <div className="contact-item d-flex align-items-center justify-content-center gap-2">
-        <div className="icons d-flex">
+      <div className="contact-item d-flex align-items-center justify-content-start justify-content-lg-center gap-2">
+        <div className="icons">
           <IoMail />
         </div>
         <div className="d-flex flex-column">
@@ -42,13 +42,13 @@ export const CardContact = () => {
         </div>
       </div>
 
-      <div className="contact-item redes d-flex align-items-center justify-content-center gap-2">
+      <div className="contact-item redes d-flex align-items-center justify-content-center gap-2 mx-3">
         <div className="icons">
           <FaGripLinesVertical />
         </div>
         <div className="d-flex flex-column">
           <span className="text-muted">REDES SOCIALES</span>
-          <div className="d-flex gap-3 a-redes">
+          <div className="d-flex gap-1 a-redes">
             <a
               href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
               target="_blank"

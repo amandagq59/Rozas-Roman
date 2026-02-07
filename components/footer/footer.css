@@ -74,10 +74,11 @@ footer {
     padding: 0;
     margin: 0;
   }
-  a {
+  a, .direction {
     text-decoration: none;
     font-size: 15px;
     color: white;
+    
   }
 
   .a-redes {
@@ -99,3 +100,5 @@ footer {
     margin-top: 2rem;
   }
 }
+
+

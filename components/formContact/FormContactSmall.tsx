@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Col, Form, Row } from 'react-bootstrap'
 
 import './formContact.css'
+import './formContactSmall.css'
 
 export default function FormContactSmall() {
   return (
@@ -9,7 +10,7 @@ export default function FormContactSmall() {
         <Row className="mb-3">
           <Col lg={12} md={6}>
             <Form.Group controlId="nameInput">
-              <Form.Label className="fw-bold">Nombre Completo *</Form.Label>
+              <Form.Label className="fw-bold text-start">Nombre Completo *</Form.Label>
               <Form.Control
                 type="text"
                 name="name"

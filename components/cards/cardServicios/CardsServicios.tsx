@@ -8,11 +8,11 @@ export const CardsServicios = () => {
   const router = useRouter();
 
   return (
-    <div className="container cards-grid-servicio container mt-5">
-      {servicios.map((servicio) => {
-        return (
+    <div className="container mt-5">
+      <div className="cards-grid-servicio">
+        {servicios.map((servicio) => (
           <div className="card-servicio" key={servicio.id}>
-            <img src={servicio.image} alt="" />
+            <img src={servicio.image} alt={servicio.title} />
             <div className="card-body">
               <h3 className="card-title">{servicio.title}</h3>
               <p className="card-text text-muted">{servicio.description}</p>
@@ -25,8 +25,8 @@ export const CardsServicios = () => {
               </div>
             </div>
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };
