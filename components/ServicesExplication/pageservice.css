@@ -2,10 +2,15 @@
   font-size: 15px;
   padding: 4rem 2rem;
 }
-span {
-  color: #b89047;
-}
 
+span{
+  color: #b89047;
+  font-size: 30px;
+ 
+}
+h2{
+ font-size: 30px;
+}
 .section-servicios-descripcion h1 {
   max-width: 100%;
   font-family: 'EB Garamond Variable';
@@ -13,10 +18,7 @@ span {
   font-size: 35px;
 }
 
-.section-servicios-descripcion h1 span {
-  color: #b89047;
-  font-size: 35px;
-}
+
 
 .lista-servicios {
   border-left: 3px double #b89047;
@@ -26,9 +28,7 @@ li {
   padding-top: 0.5rem;
 }
 
-h2 {
-  font-size: 20px;
-}
+
 
 h1 {
   text-decoration: underline;

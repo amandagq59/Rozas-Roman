@@ -4,7 +4,7 @@
   font-size: 20px;
 }
 
-span {
+.text-muted{
   font-size: 12px;
   font-weight: 500;
 }
@@ -22,29 +22,3 @@ a {
 
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .card-contact {
-    grid-template-columns: 1fr auto; 
-    grid-template-rows: auto auto; 
-    grid-template-areas:
-      'tel redes'
-      'email redes';
-    gap: 10px;
-  }
-
-  .contact-item:nth-child(1) {
-    grid-area: tel;
-    padding-left: 1rem;
-
-  }
-  .contact-item:nth-child(2) {
-    grid-area: email;
-    padding-left: 1rem;
-  }
-  .contact-item.redes {
-    grid-area: redes;
-    margin: auto;
-   
-  }
-}

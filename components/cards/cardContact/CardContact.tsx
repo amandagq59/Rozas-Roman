@@ -14,7 +14,7 @@ export const CardContact = () => {
     '¡Hola! Quiero más información sobre los servicios que prestáis';
 
   return (
-    <div className="card-contact mt-5 ">
+    <div className="card-contact">
       <div className=" d-flex gap-2 mb-3">
         <div className="icons">
           <BsFillTelephoneFill />

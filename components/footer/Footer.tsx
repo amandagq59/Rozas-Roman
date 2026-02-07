@@ -36,136 +36,136 @@ export const Footer = () => {
                 className="footer-logo"
                 src="/images/logos/logoCompleto.png"
                 alt="Logo"
-                width={100}
+                width={2000}
                 height={40}
               />
             </Link>
             <p className="text-center">
-              Tu confianza es nuestra prioridad. Servicios legales confiables y
-              profesionales.
+              Tu confianza es nuestra prioridad. <br /> Servicios legales
+              confiables y profesionales.
             </p>
           </Col>
 
-          <Col lg={8} md={12} sm={12}>
-            <Row className="footer-sub-row">
-              <Col
-                lg={4}
-                md={6}
-                xs={6}
-                className="d-flex flex-column align-items-center text-center d-lg-flex"
-              >
-                <div className="footer-heading-block">
-                  <h5>NAVEGACIÓN</h5>
-                  <div className="d-flex align-items-start">
-                    <ul className="nav-list d-flex flex-column gap-3">
-                      <li>
-                        <Link href="#servicios">Servicios</Link>
-                      </li>
-                      <li>
-                        <Link href="#identidad">La firma</Link>
-                      </li>
-                      <li>
-                        <Link href="#contacto">Contacto</Link>
-                      </li>
-                      <li>
-                        <Link className="footer-link" href="#actualidad">
-                          Actualidad
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </Col>
+          <Col
+            lg={4}
+            md={6}
+            xs={6}
+            className=" d-flex flex-column align-items-start"
+          >
+            <div className="footer-heading-block ms-3">
+              <h5>CONTACTO</h5>
+              <p>
+                <Link
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="d-flex gap-1"
+                >
+                  <span>
+                    <IoMail />
+                  </span>{' '}
+                  legal@rozasroman.com
+                </Link>
+              </p>
+              <p>
+                <Link
+                  href="tel:+34851800710"
+                  target="_blank"
+                  className="d-flex gap-1"
+                >
+                  <span>
+                    <BsFillTelephoneFill />
+                  </span>{' '}
+                  +34 851 80 07 10
+                </Link>
+              </p>
+              <p>
+                <Link
+                  href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="maps-button d-flex gap-1"
+                >
+                  <span className="mt-1">
+                    <SiGooglemaps />
+                  </span>
 
-              <Col
-                lg={4}
-                md={6}
-                xs={6}
-                className="d-flex flex-column align-items-center text-center"
-              >
-                <div className="footer-heading-block ms-lg-5">
-                  <h5>CONTACTO</h5>
-                  <p>
-                    <Link
-                      href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>
-                        <IoMail />
-                      </span>{' '}
-                      legal@rozasroman.com
-                    </Link>
-                  </p>
-                  <p>
-                    <Link href="tel:+34851800710" target="_blank">
-                      <span>
-                        <BsFillTelephoneFill />
-                      </span>{' '}
-                      +34 851 80 07 10
-                    </Link>
-                  </p>
-                  <p>
-                    <Link
-                      href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="maps-button d-flex gap-2 w-100"
-                    >
-                      <span className="mt-1">
-                        <SiGooglemaps />
-                      </span>
+                  <span className="direction ">
+                    C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
+                  </span>
+                </Link>
+              </p>
 
-                      <span className="direction w-75">
-                        C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
-                      </span>
+              <div className="a-redes d-flex gap-3">
+                <Link
+                  href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="a-redes"
+                >
+                  <IoLogoWhatsapp />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/rozasromanabogados/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="a-redes"
+                >
+                  <FaInstagram />
+                </Link>
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61584956921125&locale=es_ES"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="a-redes"
+                >
+                  <RiFacebookCircleLine />
+                </Link>
+                <Link
+                  href="https://www.tiktok.com/@rozasromanabogados?_r=1&_t=ZN-939dCSJuElC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="a-redes"
+                >
+                  <PiTiktokLogoLight />
+                </Link>
+              </div>
+            </div>
+          </Col>
+          <Col
+            lg={4}
+            md={6}
+            xs={6}
+            className="d-flex flex-column align-items-center text-lg-center d-lg-flex"
+          >
+            <div className="d-flex flex-column align-items-end ">
+              <h5 className='text-center'>NAVEGACIÓN</h5>
+              
+                <ul className="nav-list d-flex flex-column gap-3">
+                  <li>
+                    <Link href="#servicios">Servicios</Link>
+                  </li>
+                  <li>
+                    <Link href="#identidad">La firma</Link>
+                  </li>
+                  <li>
+                    <Link href="#contacto">Contacto</Link>
+                  </li>
+                  <li>
+                    <Link className="footer-link" href="#actualidad">
+                      Actualidad
                     </Link>
-                  </p>
-
-                  <div className="a-redes d-flex gap-3">
-                    <Link
-                      href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className='a-redes'
-                    >
-                      <IoLogoWhatsapp />
-                    </Link>
-                    <Link
-                      href="https://www.instagram.com/rozasromanabogados/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                         className='a-redes'
-                    >
-                      <FaInstagram />
-                    </Link>
-                    <Link
-                      href="https://www.facebook.com/profile.php?id=61584956921125&locale=es_ES"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                         className='a-redes'
-                    >
-                      <RiFacebookCircleLine />
-                    </Link>
-                    <Link
-                      href="https://www.tiktok.com/@rozasromanabogados?_r=1&_t=ZN-939dCSJuElC"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                         className='a-redes'
-                    >
-                      <PiTiktokLogoLight />
-                    </Link>
-                  </div>
-                </div>
-              </Col>
-            </Row>
+                  </li>
+                </ul>
+        
+            </div>
           </Col>
         </Row>
 
         <hr className="hr" style={{ borderColor: '#333' }} />
         <Col lg={12}>
           <div className="d-flex flex-column flex-lg-row justify-content-center justify-lg-start align-items-center gap-3 gap-lg-5">
-            <p className="mb-2 mb-lg-0">
+            <p className="mb-2 mb-lg-0 text-center text-lg-start">
               © {new Date().getFullYear()} Asesoría Rozas & Román. Todos los
               derechos reservados.
             </p>

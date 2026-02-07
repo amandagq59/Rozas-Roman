@@ -2,11 +2,11 @@
 
 import React from 'react';
 import './../../components/ServicesExplication/pageservice.css';
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import FormContactSmall from '../formContact/FormContactSmall';
 import './pageservice.css'
 import { CardPasos } from '../cardPasos/CardPasos';
-
+import { FormContact } from '../formContact/FormContact';
 
 interface PageServiceProps {
   title: React.ReactNode;
@@ -20,27 +20,39 @@ export default function PageService({
   list,
 }: PageServiceProps) {
   return (
-    <Col lg={12} className=" container d-flex justify-content-center py-5">
+    <Row className="container-lg d-flex flex-column flex-lg-row justify-content-center py-5">
+      
       {/* Primera columna */}
-      <Col lg={6} className="d-flex flex-column">
-        <div className="page-service p-5">
+      <Col
+        lg={6}
+        md={12}
+        xs={12}
+        className="d-flex flex-column align-items-center align-items-lg-start mb-4 mb-lg-0"
+      >
+        <div className="page-service p-lg-5 text-center text-lg-start">
           <h1 className="page-service-title pb-2">{title}</h1>
           <p className="page-service-description">{description}</p>
           {list && list.length > 0 && (
-            <ul className="lista-servicios ps-5">
+            <ul className="lista-servicios ps-lg-5 ps-lg-5">
               {list.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           )}
         </div>
-        <CardPasos/>
+        <CardPasos />
       </Col>
 
       {/* Segunda columna */}
-      <Col lg={6} className="d-flex justify-content-center align-items-center">
-        <FormContactSmall />
+      <Col
+        lg={6}
+        md={12}
+        xs={12}
+        className="d-flex justify-content-center justify-content-lg-center align-items-center align-items-lg-center mt-4 mt-lg-0"
+      >
+        <FormContact />
       </Col>
-    </Col>
+
+    </Row>
   );
 }

@@ -21,25 +21,6 @@ footer {
   background-color: #06211c;
   color: white;
 
-  .footer-heading-block {
-    width: max-content;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-
-    .nav-list {
-      margin: 0;
-      padding-left: 0;
-      text-align: left;
-    }
-  }
-
-  .footer-heading-block p,
-  .footer-heading-block a {
-    text-align: left;
-  }
 
   .footer-logo {
     display: block; /* Asegura que sea bloque */
@@ -63,16 +44,10 @@ footer {
     margin-bottom: 2rem;
     text-underline-offset: 10px;
   }
-  .footer-nav {
-    height: 100%; /* Ocupa toda la altura de la fila */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centrado vertical */
-  }
+
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
+  
   }
   a, .direction {
     text-decoration: none;
@@ -88,7 +63,7 @@ footer {
 
   span {
     color: #c5a059;
-    padding-right: 0.2rem;
+   
   }
 
   .derechos {

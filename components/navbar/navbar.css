@@ -60,7 +60,7 @@ nav img {
   box-sizing: border-box;
 }
 
-.nav-link{
+.nav-link {
   position: relative;
   text-decoration: none;
   font-weight: 300;
@@ -85,23 +85,21 @@ nav img {
 
 .btn-contacto.active {
   text-decoration: underline;
-   text-decoration-color:#ffffff; 
+  text-decoration-color: #ffffff;
   text-decoration-thickness: 1.5px;
-   text-underline-offset: 2px;
+  text-underline-offset: 2px;
 }
 
 .btn-contacto:hover {
   transform: translateY(-2px);
- color: #b89047;
+  color: #b89047;
 }
 
-.nav-link.active{
+.nav-link.active {
   text-decoration: underline;
- text-decoration-color:#c5a059; 
+  text-decoration-color: #c5a059;
   text-decoration-thickness: 1.5px;
-   text-underline-offset: 2px;
-
-
+  text-underline-offset: 2px;
 }
 
 /* =========================
@@ -164,8 +162,6 @@ nav img {
   margin-left: auto;
 }
 
-
-
 /* =========================
    MOBILE
 ========================= */
@@ -187,10 +183,12 @@ nav img {
     position: fixed;
     top: 0;
     right: -100vw;
-    width: 100vw;
+    width: 50%;
     height: 100vh;
     background-color: #06211c;
     flex-direction: column;
+    justify-content: start;
+    align-items: start;
     gap: 1.3rem;
     padding: 2rem 1.5rem;
     transition: right 0.35s ease;
@@ -198,6 +196,12 @@ nav img {
     overflow-y: auto;
     box-sizing: border-box;
   }
+
+  .btn-contacto {
+    margin-left: 0;
+    align-self: flex-start; 
+  }
+
 
   .navbar-links.open {
     right: 0;

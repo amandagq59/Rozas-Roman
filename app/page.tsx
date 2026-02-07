@@ -71,24 +71,30 @@ export default function Page() {
           </h2>
           <div className="linea-title "></div>
         </div>
+        <div className="container-lg p-3 p-md-5">
+          <Row className=" d-flex flex-column flex-lg-row py-lg-0 py-5">
+            <Col
+              lg={6}
+              md={12}
+              xs={12}
+              className="d-flex flex-column align-items-start"
+            >
+              <CardContact />
+              <CardMap />
+            </Col>
 
-        <Col lg={12} className="d-flex container">
-          {/* Columna izquierda: Cards apiladas */}
-          <Col lg={6} className="d-flex flex-column ">
-            <CardContact />
-            <CardMap />
-          </Col>
-          <Col
-            lg={6}
-            className="d-flex flex-column justify-content-center align-items-end p-4"
-          >
-            <div>
+            <Col
+              lg={6}
+              md={12}
+              xs={12}
+              className="d-flex flex-column align-items-end mt-5 mt-lg-0"
+            >
               <FormContact />
-            </div>
-          </Col>
-        </Col>
+            </Col>
+          </Row>
+        </div>
       </section>
-      <section className="section-reseñas py-5">
+      <section className="section-reseñas p-3 p-md-5">
         <div className="d-flex flex-column align-items-center">
           <h2>
             <span>RESEÑAS</span> <br />
@@ -96,6 +102,7 @@ export default function Page() {
           </h2>
           <div className="linea-title"></div>
         </div>
+
         <CardReview />
       </section>
     </main>

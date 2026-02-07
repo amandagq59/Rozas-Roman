@@ -44,7 +44,8 @@ export const FormContact = () => {
         let msg = 'No se pudo enviar el formulario';
         try {
           const data = await res.json();
-          if (typeof data?.error === 'string' && data.error.trim()) msg = data.error;
+          if (typeof data?.error === 'string' && data.error.trim())
+            msg = data.error;
         } catch {
           // ignore
         }
@@ -62,7 +63,7 @@ export const FormContact = () => {
   };
 
   return (
-    <div className=" container card-form d-flex flex-column align-items-start">
+    <div className="card-form d-flex flex-column align-items-start">
       <div className="d-flex justify-content-start gap-2">
         <div className="icons">
           <BsPencil />
@@ -128,13 +129,14 @@ export const FormContact = () => {
                 <option value="" disabled>
                   Selecciona una opción
                 </option>
-                <option value="Buscar-Inmueble">
-                  Penal
-                </option>
-                <option value="Venta/Alquiler">
-                  Administrativo
-                </option>
-                <option value="Otro">Otro</option>
+                <option value="Servicio-Laboral">Laboral</option>
+                <option value="Servicio-Civil-Familiar">Civil y familiar</option>
+                <option value="Servicio-Penal">Penal</option>
+                <option value="Servicio-Administrativo">Administrativo</option>
+                <option value="Servicio-Extranjería">Extranjería</option>
+                <option value="Servicio-Tráfico">Tráfico</option>
+                  <option value="Servicio-Inmobiliaria">Gestión inmobiliaria</option>
+                    <option value="Servicio-Mercantil">Mercantil</option>
               </Form.Select>
             </Form.Group>
           </Col>
@@ -181,7 +183,9 @@ export const FormContact = () => {
         </div>
 
         {submitOk ? (
-          <div className="mt-3 text-success">Mensaje enviado correctamente.</div>
+          <div className="mt-3 text-success">
+            Mensaje enviado correctamente.
+          </div>
         ) : null}
 
         {submitError ? (
