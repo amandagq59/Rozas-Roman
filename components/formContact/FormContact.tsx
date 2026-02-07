@@ -5,6 +5,61 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 import { BsPencil } from 'react-icons/bs';
 
 export const FormContact = () => {
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitError, setSubmitError] = React.useState<string | null>(null);
+  const [submitOk, setSubmitOk] = React.useState(false);
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitError(null);
+    setSubmitOk(false);
+    setIsSubmitting(true);
+
+    try {
+      const form = e.currentTarget;
+      const fd = new FormData(form);
+
+      const payload = {
+        name: String(fd.get('name') ?? ''),
+        email: String(fd.get('email') ?? ''),
+        phone: String(fd.get('phone') ?? ''),
+        contactType: String(fd.get('contactType') ?? ''),
+        details: String(fd.get('details') ?? ''),
+        policy: fd.get('policy') === 'on',
+      };
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        if (res.status === 429) {
+          throw new Error(
+            'Límite de mensajes superado. Inténtelo de nuevo más tarde.',
+          );
+        }
+        let msg = 'No se pudo enviar el formulario';
+        try {
+          const data = await res.json();
+          if (typeof data?.error === 'string' && data.error.trim()) msg = data.error;
+        } catch {
+          // ignore
+        }
+        throw new Error(msg);
+      }
+
+      form.reset();
+      setSubmitOk(true);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : 'Error inesperado';
+      setSubmitError(msg);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className=" container card-form d-flex flex-column align-items-start">
       <div className="d-flex justify-content-start gap-2">
@@ -19,7 +74,7 @@ export const FormContact = () => {
         </div>
       </div>
 
-      <Form className="form-container mt-3">
+      <Form className="form-container mt-3" onSubmit={onSubmit}>
         <Row className="mb-3">
           <Col lg={12} md={6}>
             <Form.Group controlId="nameInput">
@@ -29,6 +84,8 @@ export const FormContact = () => {
                 name="name"
                 placeholder="Nombre"
                 required
+                minLength={1}
+                maxLength={120}
               />
             </Form.Group>
           </Col>
@@ -43,6 +100,7 @@ export const FormContact = () => {
                 name="email"
                 placeholder="Email"
                 required
+                maxLength={254}
               />
             </Form.Group>
           </Col>
@@ -54,6 +112,8 @@ export const FormContact = () => {
                 name="phone"
                 placeholder="Teléfono"
                 required
+                minLength={5}
+                maxLength={30}
               />
             </Form.Group>
           </Col>
@@ -86,6 +146,7 @@ export const FormContact = () => {
             name="details"
             rows={3}
             placeholder="¿Cómo podemos ayudarte?"
+            maxLength={5000}
           />
         </Form.Group>
 
@@ -113,10 +174,18 @@ export const FormContact = () => {
         </Form.Group>
 
         <div className="text-center">
-          <Button type="submit" className="btn-submit">
+          <Button type="submit" className="btn-submit" disabled={isSubmitting}>
             Enviar
           </Button>
         </div>
+
+        {submitOk ? (
+          <div className="mt-3 text-success">Mensaje enviado correctamente.</div>
+        ) : null}
+
+        {submitError ? (
+          <div className="mt-3 text-danger">{submitError}</div>
+        ) : null}
       </Form>
     </div>
   );
