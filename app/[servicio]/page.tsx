@@ -17,8 +17,10 @@ export default function Page() {
   return (
     <main>
       <section style={{ height: '100%', paddingTop: '5rem' }}>
-        {servicio === 'servicio-laboral' && <ServicioLaboral />}
-        {servicio === 'servicio-civil-familiar' && <ServicioCivilFamiliar />}
+        {servicio === 'servicio-laboral' && <ServicioLaboral />}{' '}
+        {/* <PaginaServicio title="Servicio laboral" texto1="Texto 1 mas largo" */}
+        {servicio === 'servicio-civil-familiar' && <ServicioCivilFamiliar />}{' '}
+        {/* <PaginaServicio title="Servicio familiar" texto1="Texto 1 mas largo" */}
         {servicio === 'servicio-penal' && <ServicioPenal />}
         {servicio === 'servicio-administrativo' && <SerivicioAdministrativo />}
         {servicio === 'servicio-extranjeria' && <ServicioExtranjeria />}
