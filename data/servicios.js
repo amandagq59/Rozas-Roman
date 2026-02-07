@@ -1,5 +1,5 @@
-export const servicios = {
-  "servicio-laboral": {
+export const servicios = [
+  {
     id: 1,
     title: 'LABORAL',
     description:
@@ -63,4 +63,4 @@ export const servicios = {
     image: './images/imagenesServices/mercantil.jpg',
     button: '/servicio-mercantil',
   },
-}
+];
