@@ -28,6 +28,15 @@ const BodySchema = z.object({
   policy: z.boolean(),
 });
 
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 async function getClientIp() {
   const h = await headers();
   const xff = h.get("x-forwarded-for");
@@ -116,11 +125,75 @@ export async function POST(req: Request) {
     "",
   ].join("\n");
 
+  const html = `<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>${escapeHtml(subject)}</title>
+  </head>
+  <body style="margin:0; padding:0; background:#f5f7fb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; color:#111827;">
+    <div style="display:none; max-height:0; overflow:hidden; opacity:0;">
+      Nuevo mensaje desde el formulario de Rozas &amp; Román
+    </div>
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+      <tr>
+        <td style="padding:24px 12px;">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse; max-width:640px; margin:0 auto;">
+            <tr>
+              <td style="background:#0c4684; padding:22px 24px; border-radius:14px 14px 0 0;">
+                <div style="font-size:18px; font-weight:700; color:#ffffff; letter-spacing:0.2px;">Rozas &amp; Román</div>
+                <div style="margin-top:6px; font-size:13px; color:rgba(255,255,255,0.9);">Nuevo mensaje desde el formulario web</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background:#ffffff; padding:22px 24px; border-left:1px solid #e5e7eb; border-right:1px solid #e5e7eb;">
+                <div style="font-size:16px; font-weight:700; margin:0 0 10px 0;">${escapeHtml(subject)}</div>
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse; margin-top:12px;">
+                  <tr>
+                    <td style="padding:12px 14px; background:#f8fafc; border:1px solid #e5e7eb; border-radius:12px;">
+                      <div style="font-size:12px; color:#6b7280; text-transform:uppercase; letter-spacing:0.08em;">Datos de contacto</div>
+                      <div style="margin-top:10px; font-size:14px; line-height:1.5;">
+                        <div><strong>Nombre:</strong> ${escapeHtml(name)}</div>
+                        <div><strong>Email:</strong> <a href="mailto:${escapeHtml(email)}" style="color:#0c4684; text-decoration:none;">${escapeHtml(email)}</a></div>
+                        <div><strong>Teléfono:</strong> <a href="tel:${escapeHtml(phone)}" style="color:#0c4684; text-decoration:none;">${escapeHtml(phone)}</a></div>
+                        <div><strong>Servicio:</strong> ${escapeHtml(contactType)}</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+                <div style="margin-top:16px; font-size:12px; color:#6b7280; text-transform:uppercase; letter-spacing:0.08em;">Mensaje</div>
+                <div style="margin-top:10px; padding:14px; background:#ffffff; border:1px solid #e5e7eb; border-radius:12px; font-size:14px; line-height:1.6; white-space:pre-wrap;">${escapeHtml(detailsText)}</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background:#ffffff; padding:16px 24px 22px; border-left:1px solid #e5e7eb; border-right:1px solid #e5e7eb;">
+                <div style="font-size:12px; color:#6b7280;">Responde directamente a este correo para contestar al cliente.</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="background:#f8fafc; padding:16px 24px; border:1px solid #e5e7eb; border-top:0; border-radius:0 0 14px 14px;">
+                <div style="font-size:12px; color:#6b7280;">Enviado automáticamente desde la web.</div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>`;
+
   const { data, error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
     subject,
     replyTo: email,
+    html,
     text,
   });
 
