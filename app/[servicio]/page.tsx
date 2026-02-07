@@ -16,7 +16,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                Servicio <span>laboral</span>
+                SERVICIO <span>LABORAL</span>
               </>
             }
             description="Nuestro servicio de asesoría laboral uno a uno ofrece un

@@ -3,7 +3,14 @@ import { Col } from 'react-bootstrap';
 import { CardPasos } from '../cardPasos/CardPasos';
 import FormContactSmall from '../formContact/FormContactSmall';
 
-export default function PageService({ title, description, list }) {
+// Definimos los tipos de las props
+interface PageServiceProps {
+  title: string;
+  description: string;
+  list?: string[]; // lista opcional de strings
+}
+
+export default function PageService({ title, description, list }: PageServiceProps) {
   return (
     <div>
       <section className="container section-servicios-descripcion">
