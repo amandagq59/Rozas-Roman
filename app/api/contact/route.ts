@@ -116,7 +116,7 @@ export async function POST(req: Request) {
     "",
   ].join("\n");
 
-  await resend.emails.send({
+  const { data, error } = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
     subject,
@@ -124,5 +124,20 @@ export async function POST(req: Request) {
     text,
   });
 
-  return NextResponse.json({ ok: true });
+  if (error) {
+    // eslint-disable-next-line no-console
+    console.error("resend send failed", {
+      message: error.message,
+      name,
+      email,
+      toEmail,
+      fromEmail,
+    });
+    return NextResponse.json({ error: error.message }, { status: 502 });
+  }
+
+  // eslint-disable-next-line no-console
+  console.log("resend send ok", { id: data?.id });
+
+  return NextResponse.json({ ok: true, id: data?.id });
 }
