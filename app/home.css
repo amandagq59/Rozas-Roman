@@ -30,7 +30,7 @@
 
   span {
     color: #b89047;
-    font-size: 35px;
+    font-size: 50px;
 
     /* ANIMACIÓN MÁQUINA DE ESCRIBIR */
     overflow: hidden;
@@ -40,7 +40,7 @@
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'EB Garamond Variable';
     text-decoration: none;
     text-shadow:
