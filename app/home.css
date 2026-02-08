@@ -95,10 +95,10 @@
   /* RESPONSIVE PORTADA*/
   @media (max-width: 768px) {
     padding-top: 3rem;
-    height: 90vh;
+    height: 80vh;
 
     h1 {
-      font-size: 30px;
+      font-size: 35px;
     }
 
     .hero-heading-block p {
