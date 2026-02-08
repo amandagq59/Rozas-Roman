@@ -28,7 +28,14 @@
     align-self: flex-start;
   }
 
-  span {
+  .span-responsive,
+  .span-normal {
+    color: #b89047;
+    font-size: 50px;
+    animation: aparecer 2s forwards;
+  }
+
+  .span-responsive {
     color: #b89047;
     font-size: 50px;
     animation: aparecer 2s forwards;
@@ -44,8 +51,11 @@
       0 0 10px rgba(45, 45, 42, 0.5);
   }
 
-  .salto-responsive {
+  .salto-normal {
     display: block;
+  }
+  .salto-responsive {
+    display: none;
   }
 
   p {
@@ -94,7 +104,7 @@
   @media (max-width: 768px) {
     padding-top: 3rem;
     height: 90vh;
-
+ 
     .hero-heading-block p {
       max-width: 35ch;
     }
@@ -105,6 +115,10 @@
     }
     .salto-responsive {
       display: block;
+    }
+
+    .salto-normal {
+      display: none;
     }
   }
 }

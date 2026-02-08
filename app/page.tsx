@@ -23,8 +23,8 @@ export default function Page() {
       >
         <div className="hero-heading-block">
           <h1>
-            Tu solución legal comienza con<br className='salto-responsive'/> 
-            <span> Rozas & Román</span>
+            Tu solución legal comienza <br className='salto-normal'/> <span className='span-normal'>con</span> <br className='salto-responsive'/> 
+            <span className='span-responsive'> Rozas & Román</span>
           </h1>
           <p>
             Acompañamos a cada cliente con asesoría legal clara y efectiva,
