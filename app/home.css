@@ -31,11 +31,11 @@
   span {
     color: #b89047;
     font-size: 50px;
- animation: aparecer 2s forwards; 
+    animation: aparecer 2s forwards;
   }
 
   h1 {
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'EB Garamond Variable';
     text-decoration: none;
     text-shadow:
@@ -44,9 +44,9 @@
       0 0 10px rgba(45, 45, 42, 0.5);
   }
 
-   .salto-responsive{
-      display: block;
-    }
+  .salto-responsive {
+    display: block;
+  }
 
   p {
     font-size: 18px;
@@ -93,8 +93,7 @@
   /* RESPONSIVE PORTADA*/
   @media (max-width: 768px) {
     padding-top: 3rem;
-    height: 80vh;
-
+    height: 90vh;
 
     .hero-heading-block p {
       max-width: 35ch;
@@ -104,12 +103,11 @@
       width: 100%;
       text-align: center;
     }
-    .salto-responsive{
-      display: none;
-    }
+    .salto-responsive {
+      display: block;
     }
   }
-  
+}
 
 /* ANIMACIÓN MÁQUINA DE ESCRIBIR */
 @keyframes aparecer {
