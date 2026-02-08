@@ -1,4 +1,6 @@
-/* Keyframes para animación fade + slide-up */
+/* =========================
+   KEYFRAMES: fade + slide + scale
+========================= */
 @keyframes slideUpFade {
   0% {
     opacity: 0;
@@ -14,7 +16,9 @@
   }
 }
 
-/* Grid de cards */
+/* =========================
+   GRID DE CARDS
+========================= */
 .cards-grid-identidad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -22,7 +26,20 @@
   padding: 2rem;
 }
 
-/* Card base */
+
+@scroll-timeline myScrollTimeline {
+  source: auto; /* scroll container */
+  orientation: block;
+}
+
+.card-identidad {
+  animation: fadeIn 1s linear both;
+  animation-timeline: myScrollTimeline;
+}
+
+/* =========================
+   CARD BASE
+========================= */
 .card-identidad {
   padding: 2rem 1.5rem;
   border: 0.2px solid #c59f591e;
@@ -30,15 +47,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:transparent;
+  background-color: transparent;
   border-radius: 10px;
-  opacity: 0; /* inicio invisible */
-  transform: translateY(50px);
+
+  /* Animación de entrada */
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
   animation: slideUpFade 0.8s forwards;
+
+  /* Hover smooth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Stagger: aparecer de una en una */
+/* =========================
+   STAGGER: animación en orden
+========================= */
 .card-identidad:nth-child(1) { animation-delay: 0.2s; }
 .card-identidad:nth-child(2) { animation-delay: 0.4s; }
 .card-identidad:nth-child(3) { animation-delay: 0.6s; }
@@ -46,33 +69,26 @@
 .card-identidad:nth-child(5) { animation-delay: 1s; }
 .card-identidad:nth-child(6) { animation-delay: 1.2s; }
 
-
-.card-identidad {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.card-identidad.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Hover */
+/* =========================
+   HOVER
+========================= */
 .card-identidad:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Icono */
+/* =========================
+   ICONO
+========================= */
 .icon-container {
   color: #c5a059;
   font-size: 30px;
   margin-bottom: 1rem;
 }
 
-/* Texto */
+/* =========================
+   TEXTO
+========================= */
 .text-container h3 {
   font-size: 16px;
   font-weight: 500;
@@ -89,7 +105,9 @@
   text-align: center;
 }
 
-/* Responsivo mediano */
+/* =========================
+   RESPONSIVE MEDIANO
+========================= */
 @media (max-width: 992px) {
   .cards-grid-identidad {
     grid-template-columns: repeat(2, 1fr);
@@ -99,7 +117,9 @@
   }
 }
 
-/* Móvil */
+/* =========================
+   RESPONSIVE MÓVIL
+========================= */
 @media (max-width: 768px) {
   .cards-grid-identidad {
     grid-template-columns: 1fr;

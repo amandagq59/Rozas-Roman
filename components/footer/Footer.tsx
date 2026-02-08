@@ -24,12 +24,12 @@ export const Footer = () => {
   return (
     <footer className="py-5 d-flex flex-column">
       <Container>
-        <Row className="footer-main-row">
+        <Row className="footer-main-row ">
           <Col
             lg={4}
             md={12}
             xs={12}
-            className="d-flex flex-column  align-items-center justify-content-center mb-4 mb-md-5"
+            className="d-flex flex-column  align-items-center justify-content-center  mb-md-5"
           >
             <Link href="#inicio">
               <Image
@@ -45,58 +45,89 @@ export const Footer = () => {
               confiables y profesionales.
             </p>
           </Col>
-         
+         <Col
+            lg={4}
+            md={12}
+            xs={12}
+            className="d-flex flex-column align-items-lg-center"
+          >
+            <div className="footer-heading-block mt-5">
+              <h5>NAVEGACIÓN</h5>
+               <ul className="d-flex flex-column align-items-start  gap-3">
+                <li>
+                  <Link href="#servicios">Servicios</Link>
+                </li>
+                <li>
+                  <Link href="#identidad">La firma</Link>
+                </li>
+                <li>
+                  <Link href="#contacto">Contacto</Link>
+                </li>
+                <li>
+                  <Link className="footer-link" href="#actualidad">
+                    Actualidad
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </Col>
+
+
+
+          
+            
           <Col
             lg={4}
-            md={6}
-            xs={6}
+            md={12}
+            xs={12}
             className=" d-flex flex-column align-items-start"
           >
-            <div className="footer-heading-block ms-3">
-              <h5 className="text-center">CONTACTO</h5>
-              <p>
-                <Link
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="d-flex gap-2"
-                >
-                  <span>
-                    <IoMail />
-                  </span>{' '}
-                  legal@rozasroman.com
-                </Link>
-              </p>
-              <p>
-                <Link
-                  href="tel:+34851800710"
-                  target="_blank"
-                  className="d-flex gap-2"
-                >
-                  <span>
-                    <BsFillTelephoneFill />
-                  </span>{' '}
-                  +34 851 80 07 10
-                </Link>
-              </p>
-              <p>
-                <Link
-                  href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="maps-button d-flex gap-2"
-                >
-                  <span>
-                    <SiGooglemaps />
-                  </span>
+            <div className="footer-heading-block mt-5">
+              <h5>CONTACTO</h5>
+              <div className='d-flex  flex-column gap-3'>
+                <p>
+                  <Link
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="d-flex gap-2"
+                  >
+                    <span>
+                      <IoMail />
+                    </span>{' '}
+                    legal@rozasroman.com
+                  </Link>
+                </p>
+                <p>
+                  <Link
+                    href="tel:+34851800710"
+                    target="_blank"
+                    className="d-flex gap-2"
+                  >
+                    <span>
+                      <BsFillTelephoneFill />
+                    </span>{' '}
+                    +34 851 800 710
+                  </Link>
+                </p>
+                <p>
+                  <Link
+                    href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="maps-button d-flex gap-2"
+                  >
+                    <span>
+                      <SiGooglemaps />
+                    </span>
+                    <span className="direction ">
+                      C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
+                    </span>
+                  </Link>
+                </p>
+              </div>
 
-                  <span className="direction ">
-                    C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
-                  </span>
-                </Link>
-              </p>
-
-              <div className="a-redes d-flex gap-3">
+              <div className="d-flex gap-3">
                 <Link
                   href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
                   target="_blank"
@@ -132,33 +163,7 @@ export const Footer = () => {
               </div>
             </div>
           </Col>
-          <Col
-            lg={4}
-            md={6}
-            xs={6}
-            className="d-flex flex-column align-items-center text-lg-center d-lg-flex"
-          >
-            <div className="d-flex flex-column align-items-start ">
-              <h5 className="text-center ms-3">NAVEGACIÓN</h5>
-
-              <ul className="nav-list d-flex flex-column gap-3">
-                <li>
-                  <Link href="#servicios">Servicios</Link>
-                </li>
-                <li>
-                  <Link href="#identidad">La firma</Link>
-                </li>
-                <li>
-                  <Link href="#contacto">Contacto</Link>
-                </li>
-                <li>
-                  <Link className="footer-link" href="#actualidad">
-                    Actualidad
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </Col>
+          
         </Row>
 
         <hr className="hr" style={{ borderColor: '#333' }} />

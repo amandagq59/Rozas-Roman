@@ -5,7 +5,6 @@
   padding: 20px;
 }
 
-
 .card-servicio {
   background: #fff;
   border-radius: 6px;
@@ -13,11 +12,52 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 100%; 
-
+  width: 100%;
   transition:
     transform 0.2s ease-in-out,
     box-shadow 0.2s;
+
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  animation: fadeSlideUpScale 0.6s forwards;
+}
+
+
+.card-servicio:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+@keyframes fadeSlideUpScale {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.card-servicio:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card-servicio:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card-servicio:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card-servicio:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.card-servicio:nth-child(5) {
+  animation-delay: 1s;
+}
+.card-servicio:nth-child(6) {
+  animation-delay: 1.2s;
 }
 
 .card-servicio img {
@@ -26,10 +66,6 @@
   object-fit: cover;
 }
 
-.card-servicio:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
 
 .card-body {
   padding: 18px;
@@ -48,8 +84,8 @@
   color: #333;
   line-height: 1.4;
   margin-bottom: 16px;
-    display: -webkit-box;
-  -webkit-line-clamp: 4;  
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -62,28 +98,23 @@
 }
 
 
-
 @media (max-width: 992px) {
   .cards-grid-servicio {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0;
   }
 
   .cards-grid-servicio > :nth-last-child(2),
   .cards-grid-servicio > :last-child {
     margin-left: 0;
-  }
-
-
-  .cards-grid-servicio > :nth-last-child(2),
-  .cards-grid-servicio > :last-child {
-    justify-self: auto; 
+    justify-self: auto;
   }
 }
 
 @media (max-width: 768px) {
   .cards-grid-servicio {
     grid-template-columns: 1fr;
-    justify-items: center; 
+    justify-items: center;
   }
 
   .card-servicio {
