@@ -1,6 +1,7 @@
 footer {
   background-color: #06211c;
   color: white;
+
 }
 
 .footer-logo {
@@ -44,6 +45,8 @@ footer .direction {
     border-color 0.2s ease,
     opacity 0.2s ease;
 }
+
+
 
 footer a:hover,
 footer .direction:hover {

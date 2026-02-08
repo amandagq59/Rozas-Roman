@@ -22,14 +22,14 @@ export const Footer = () => {
 
   const [showModalPrivacy, setShowModalPrivacy] = React.useState(false);
   return (
-    <footer className="py-5 d-flex flex-column">
-      <Container>
-        <Row className="footer-main-row ">
+    <footer className=" py-5 d-flex flex-column">
+      
+        <Row className="footer-main-row  flex-lg-row">
           <Col
             lg={4}
             md={12}
             xs={12}
-            className="d-flex flex-column  align-items-center justify-content-center  mb-md-5"
+            className="footer-img d-flex flex-column  align-items-center justify-content-center mb-md-5"
           >
             <Link href="#inicio">
               <Image
@@ -40,16 +40,16 @@ export const Footer = () => {
                 height={50}
               />
             </Link>
-            <p className="text-center">
+            <p className='text-center'>
               Tu confianza es nuestra prioridad. <br /> Servicios legales
               confiables y profesionales.
             </p>
           </Col>
           <Col
             lg={4}
-            md={12}
+            md={6}
             xs={12}
-            className="d-flex flex-column align-items-lg-center"
+            className="d-flex flex-column align-items-md-center align-items-lg-center"
           >
             <div className="footer-heading-block mt-5">
               <h5>NAVEGACIÓN</h5>
@@ -74,9 +74,9 @@ export const Footer = () => {
 
           <Col
             lg={4}
-            md={12}
+            md={6}
             xs={12}
-            className=" d-flex flex-column align-items-start"
+            className=" d-flex flex-column align-items-start align-items-md-center align-items-lg-center"
           >
             <div className="footer-heading-block mt-5">
               <h5>CONTACTO</h5>
@@ -182,7 +182,7 @@ export const Footer = () => {
             </div>
           </div>
         </Col>
-      </Container>
+      
     </footer>
   );
 };

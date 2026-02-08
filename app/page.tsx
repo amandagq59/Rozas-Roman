@@ -62,21 +62,21 @@ export default function Page() {
           <CardsIdentidad />
         </div>
       </section>
-      <section className="section-contact p-3 p-md-5" id="contacto">
-        <div className="d-flex flex-column align-items-center">
+      <section className="section-contact p-3 p-md-5 " id="contacto">
+        <div className="d-flex flex-column">
           <h2>
             <span>CONTACTO</span> <br />
             Solicita orientación legal
           </h2>
           <div className="linea-title "></div>
         </div>
-        <div className="container-lg p-3 p-md-5">
-          <Row className=" d-flex flex-column flex-lg-row py-lg-0 py-4">
+        <div className="container-md py-lg-5">
+          <Row className=" d-flex flex-column flex-md-row">
             <Col
               lg={6}
-              md={12}
+              md={6}
               xs={12}
-              className="d-flex flex-column align-items-start"
+              className="d-flex flex-column align-lg-items-center"
             >
               <CardContact />
               <CardMap />
@@ -84,9 +84,9 @@ export default function Page() {
 
             <Col
               lg={6}
-              md={12}
+              md={6}
               xs={12}
-              className="d-flex flex-column align-items-end mt-5 mt-lg-0"
+              className="d-flex flex-column align-items-center justify-content-lg-center"
             >
               <FormContact />
             </Col>

@@ -101,7 +101,7 @@ export const Modalprivacity: React.FC<ModalProps> = ({
           <strong>Correo electrónico:</strong>{' '}
           <Link href="mailto:legal@rozasroman.com">legal@rozasroman.com</Link>
           <br />
-          <strong>Teléfono:</strong> 623 61 96 25 · 851 80 07 10
+          <strong>Teléfono:</strong> 632 14 34 85 · 851 80 07 10
         </p>
 
         <h5>7. Seguridad de los datos</h5>

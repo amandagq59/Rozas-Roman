@@ -63,22 +63,22 @@ export const FormContact = () => {
   };
 
   return (
-    <div className="card-form d-flex flex-column align-items-start">
-      <div className="d-flex justify-content-start gap-2">
+    <div className="form-wrapper pt-md-0 pt-5 ">
+      <div className="d-flex gap-2 form-header">
         <div className="icons">
           <BsPencil />
         </div>
-        <div className="d-flex flex-column">
+
+        <div className="form-text">
           <span className="text-muted">FORMULARIO</span>
           <Link className="cc-data" href="">
             Rellena nuestro formulario
           </Link>
         </div>
       </div>
-
       <Form className="form-container mt-3" onSubmit={onSubmit}>
         <Row className="mb-3">
-          <Col lg={12} md={6}>
+          <Col lg={12} md={12}>
             <Form.Group controlId="nameInput">
               <Form.Label className="fw-bold">Nombre Completo *</Form.Label>
               <Form.Control
@@ -92,8 +92,7 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
-
-        <Row className="mb-3">
+        <Row className="mb-md-3">
           <Col lg={12} md={6}>
             <Form.Group controlId="emailInput">
               <Form.Label className="fw-bold">Email *</Form.Label>
@@ -106,7 +105,7 @@ export const FormContact = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} md={6} className="mt-3">
+          <Col xs={12} md={6} className="mt-lg-3">
             <Form.Group controlId="phoneInput">
               <Form.Label className="fw-bold">Teléfono *</Form.Label>
               <Form.Control
@@ -120,9 +119,8 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
-
         <Row className="mb-3">
-          <Col xs={12} md={6}>
+          <Col xs={12} md={12}>
             <Form.Group controlId="contactTypeInput">
               <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
               <Form.Select name="contactType" required>
@@ -130,18 +128,21 @@ export const FormContact = () => {
                   Selecciona una opción
                 </option>
                 <option value="Servicio-Laboral">Laboral</option>
-                <option value="Servicio-Civil-Familiar">Civil y familiar</option>
+                <option value="Servicio-Civil-Familiar">
+                  Civil y familiar
+                </option>
                 <option value="Servicio-Penal">Penal</option>
                 <option value="Servicio-Administrativo">Administrativo</option>
                 <option value="Servicio-Extranjería">Extranjería</option>
                 <option value="Servicio-Tráfico">Tráfico</option>
-                  <option value="Servicio-Inmobiliaria">Gestión inmobiliaria</option>
-                    <option value="Servicio-Mercantil">Mercantil</option>
+                <option value="Servicio-Inmobiliaria">
+                  Gestión inmobiliaria
+                </option>
+                <option value="Servicio-Mercantil">Mercantil</option>
               </Form.Select>
             </Form.Group>
           </Col>
         </Row>
-
         <Form.Group className="mb-3" controlId="detailsInput">
           <Form.Label className="fw-bold">Añadir detalles</Form.Label>
           <Form.Control
@@ -152,7 +153,6 @@ export const FormContact = () => {
             maxLength={5000}
           />
         </Form.Group>
-
         <Form.Group className="mb-3" controlId="checkbox1">
           <Form.Check
             type="checkbox"
@@ -175,19 +175,16 @@ export const FormContact = () => {
             required
           />
         </Form.Group>
-
         <div className="text-center">
           <button type="submit" className="button-ppl" disabled={isSubmitting}>
             Enviar
           </button>
         </div>
-
         {submitOk ? (
           <div className="mt-3 text-success">
             Mensaje enviado correctamente.
           </div>
         ) : null}
-
         {submitError ? (
           <div className="mt-3 text-danger">{submitError}</div>
         ) : null}
