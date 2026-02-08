@@ -3,22 +3,10 @@
   padding: 4rem 2rem;
 }
 
-span{
+span {
   color: #b89047;
   font-size: 30px;
- 
 }
-h2{
- font-size: 30px;
-}
-.section-servicios-descripcion h1 {
-  max-width: 100%;
-  font-family: 'EB Garamond Variable';
-  color: black;
-  font-size: 35px;
-}
-
-
 
 .lista-servicios {
   border-left: 3px double #b89047;
@@ -28,9 +16,12 @@ li {
   padding-top: 0.5rem;
 }
 
-
+h2 {
+  font-size: 18px;
+}
 
 h1 {
+  font-size: 30px;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 10px;
@@ -54,10 +45,14 @@ h1 {
     text-align: left;
     margin-top: 2rem;
   }
-}
 
-@media (min-width: 1200px) {
-  .section-servicios-descripcion h1 {
-    font-size: 40px;
+  h1,
+  span {
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: 25px;
   }
 }

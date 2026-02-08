@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 export const Whatsapp = () => {
-  const numero = '623619625';
+  const numero = '632143485';
   const mensaje =
     '¡Hola! Quiero más información sobre los servicios que prestáis';
   return (

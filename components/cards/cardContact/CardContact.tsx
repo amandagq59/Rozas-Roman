@@ -9,7 +9,7 @@ import { PiTiktokLogoLight } from 'react-icons/pi';
 import Link from 'next/link';
 
 export const CardContact = () => {
-  const numero = '623619625';
+  const numero = '632143485';
   const mensaje =
     '¡Hola! Quiero más información sobre los servicios que prestáis';
 

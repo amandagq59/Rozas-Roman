@@ -119,7 +119,7 @@ export const Modalprivacity: React.FC<ModalProps> = ({
         </p>
         <div className="d-flex justify-content-center">
           <Image
-            src="/images/logos/SELLO.jpg"
+            src="/images/logos/SELLO.JPG"
             alt="Logo Asesoria Rozas&Román"
             className="w-50 pb-2"
             width={600}

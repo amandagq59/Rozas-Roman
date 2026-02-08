@@ -16,9 +16,9 @@ export default function Page() {
         {servicio === 'servicio-laboral' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>LABORAL</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría laboral uno a uno ofrece un
             acompañamiento integral en todas las áreas del derecho laboral,
@@ -40,9 +40,9 @@ export default function Page() {
         {servicio === 'servicio-civil-familiar' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>CIVIL Y FAMILIAR</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría civil y familiar ofrece un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y garantizar que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley, siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
             list={[
@@ -64,9 +64,9 @@ export default function Page() {
         {servicio === 'servicio-penal' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>PENAL</span>
-              </h2>
+              </>
             }
             description="Ofrecemos asesoría integral y personalizada en materia penal,
             acompañándote en cada etapa del proceso legal. Nuestro enfoque está
@@ -87,9 +87,9 @@ export default function Page() {
         {servicio === 'servicio-administrativo' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>ADMINISTRATIVO</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría administrativa ofrece un acompañamiento integral en todos los aspectos del derecho administrativo. Te ayudamos a gestionar procedimientos con entidades públicas, cumplir con obligaciones legales, resolver conflictos administrativos y tomar decisiones fundamentadas, garantizando que tus trámites y derechos estén protegidos en todo momento."
             list={[
@@ -106,9 +106,9 @@ export default function Page() {
         {servicio === 'servicio-extranjeria' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>EXTRANJERÍA</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría en extranjería ofrece un acompañamiento completo en todos los procedimientos relacionados con la residencia, visados, nacionalidad y permisos de trabajo. Nos aseguramos de que cada trámite cumpla con la normativa vigente, protegiendo tus derechos y facilitando el acceso a soluciones legales claras y efectivas."
             list={[
@@ -124,9 +124,9 @@ export default function Page() {
         {servicio === 'servicio-trafico' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>TRÁFICO</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría en tráfico ofrece un acompañamiento completo en todos los aspectos legales relacionados con sanciones, multas, procedimientos administrativos y reclamaciones de tráfico. Nos aseguramos de proteger tus derechos, tramitar tus recursos correctamente y garantizar que cada decisión esté respaldada por un conocimiento sólido de la normativa vigente."
             list={[
@@ -142,9 +142,9 @@ export default function Page() {
         {servicio === 'servicio-gestion-inmobiliaria' && (
           <PageService
             title={
-              <h2>
+              <>
                 Servicio <span className="text-primary">laboral</span>
-              </h2>
+              </>
             }
             description="Nuestro servicio de asesoría en gestión inmobiliaria ofrece un acompañamiento integral en todos los aspectos legales relacionados con la compra, venta, arrendamiento y administración de inmuebles. Nos aseguramos de proteger tus derechos, garantizar el cumplimiento de la normativa vigente y ofrecer soluciones legales claras y seguras en cada operación inmobiliaria."
             list={[
@@ -160,9 +160,9 @@ export default function Page() {
         {servicio === 'servicio-mercantil' && (
           <PageService
             title={
-              <h2>
+              <>
                 SERVICIO <span>MERCANTIL</span>
-              </h2>
+              </>
             }
             description="Ofrecemos servicios mercantiles enfocados en la intermediación y comercialización de productos tecnológicos, brindando asesoría, distribución y soporte a empresas y consumidores, garantizando eficiencia, cumplimiento legal y satisfacción del cliente."
             list={[
