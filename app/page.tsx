@@ -72,7 +72,7 @@ export default function Page() {
           <div className="linea-title "></div>
         </div>
         <div className="container-lg p-3 p-md-5">
-          <Row className=" d-flex flex-column flex-lg-row py-lg-0 py-5">
+          <Row className=" d-flex flex-column flex-lg-row py-lg-0 py-4">
             <Col
               lg={6}
               md={12}

@@ -45,7 +45,6 @@ export const Footer = () => {
               confiables y profesionales.
             </p>
           </Col>
-
           <Col
             lg={4}
             md={6}
@@ -53,13 +52,13 @@ export const Footer = () => {
             className=" d-flex flex-column align-items-start"
           >
             <div className="footer-heading-block ms-3">
-              <h5>CONTACTO</h5>
+              <h5 className="text-center">CONTACTO</h5>
               <p>
                 <Link
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="d-flex gap-1"
+                  className="d-flex gap-2"
                 >
                   <span>
                     <IoMail />
@@ -71,7 +70,7 @@ export const Footer = () => {
                 <Link
                   href="tel:+34851800710"
                   target="_blank"
-                  className="d-flex gap-1"
+                  className="d-flex gap-2"
                 >
                   <span>
                     <BsFillTelephoneFill />
@@ -84,9 +83,9 @@ export const Footer = () => {
                   href="https://maps.app.goo.gl/RJCCfXfjS529v2pg6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="maps-button d-flex gap-1"
+                  className="maps-button d-flex gap-2"
                 >
-                  <span className="mt-1">
+                  <span>
                     <SiGooglemaps />
                   </span>
 
@@ -138,26 +137,25 @@ export const Footer = () => {
             xs={6}
             className="d-flex flex-column align-items-center text-lg-center d-lg-flex"
           >
-            <div className="d-flex flex-column align-items-end ">
-              <h5 className='text-center'>NAVEGACIÓN</h5>
-              
-                <ul className="nav-list d-flex flex-column gap-3">
-                  <li>
-                    <Link href="#servicios">Servicios</Link>
-                  </li>
-                  <li>
-                    <Link href="#identidad">La firma</Link>
-                  </li>
-                  <li>
-                    <Link href="#contacto">Contacto</Link>
-                  </li>
-                  <li>
-                    <Link className="footer-link" href="#actualidad">
-                      Actualidad
-                    </Link>
-                  </li>
-                </ul>
-        
+            <div className="d-flex flex-column align-items-start ">
+              <h5 className="text-center ms-3">NAVEGACIÓN</h5>
+
+              <ul className="nav-list d-flex flex-column gap-3">
+                <li>
+                  <Link href="#servicios">Servicios</Link>
+                </li>
+                <li>
+                  <Link href="#identidad">La firma</Link>
+                </li>
+                <li>
+                  <Link href="#contacto">Contacto</Link>
+                </li>
+                <li>
+                  <Link className="footer-link" href="#actualidad">
+                    Actualidad
+                  </Link>
+                </li>
+              </ul>
             </div>
           </Col>
         </Row>
