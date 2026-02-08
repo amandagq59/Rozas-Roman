@@ -1,3 +1,15 @@
+/* ============================= */
+/* CONTENEDOR */
+/* ============================= */
+
+.card-pasos-container {
+  width: 100%;
+}
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
 .card-pasos {
   display: flex;
   flex-direction: column;
@@ -6,46 +18,53 @@
   border: none;
 
   transform: rotateY(0deg);
-  animation:
-    giro 2s ease,
-    opacity 2s ease;
+  animation: giro 2s ease, opacity 2s ease;
+}
 
-  h3 {
-    font-size: 13px;
-  }
+.card-pasos h3 {
+  font-size: 13px;
+}
 
-  span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #b89047;
-    color: white;
-    font-weight: bold;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    font-size: 15px;
-  }
+.card-pasos span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #b89047;
+  color: white;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* ============================= */
+/* MOVIL */
+/* ============================= */
+
+@media (max-width: 768px) {
 
   .card-pasos-container {
-    width: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    
   }
 
-  /* MOVIL */
-  .card-pasos {
-    flex: 0 0 calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
+  /* centra los dos últimos */
+  .card-pasos:nth-child(4) {
+    grid-column: 2;
   }
 
-  /* TABLET Y DESKTOP */
-  @media (min-width: 768px) {
-    .card-pasos {
-      flex: 0 0 auto;
-      max-width: none;
-    }
+  .card-pasos:nth-child(5) {
+    grid-column: 3;
   }
 }
+
+
 
 @keyframes giro {
   from {
@@ -58,18 +77,8 @@
   }
 }
 
-.card-pasos:nth-child(1) {
-  animation-delay: 3s;
-}
-.card-pasos:nth-child(2) {
-  animation-delay: 3.2s;
-}
-.card-pasos:nth-child(3) {
-  animation-delay: 3.4s;
-}
-.card-pasos:nth-child(4) {
-  animation-delay: 3.6s;
-}
-.card-pasos:nth-child(5) {
-  animation-delay: 3.8s;
-}
+.card-pasos:nth-child(1) { animation-delay: 3s; }
+.card-pasos:nth-child(2) { animation-delay: 3.2s; }
+.card-pasos:nth-child(3) { animation-delay: 3.4s; }
+.card-pasos:nth-child(4) { animation-delay: 3.6s; }
+.card-pasos:nth-child(5) { animation-delay: 3.8s; }

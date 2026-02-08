@@ -28,7 +28,7 @@ export default function Page() {
           </h1>
           <p>
             Acompañamos a cada cliente con asesoría legal clara y efectiva,
-            protegiendo sus derechos y garantizando soluciones adaptadas a sus
+            protegiendo todos sus derechos y garantizando soluciones adaptadas a sus
             necesidades.
           </p>
 

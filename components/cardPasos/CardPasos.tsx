@@ -3,7 +3,7 @@ import './cardPasos.css';
 
 export const CardPasos = () => {
   return (
-    <div className="card-pasos-container d-flex flex-wrap justify-content-start align-items-start py-3 gap-4">
+    <div className="card-pasos-container d-flex flex-wrap justify-content-center align-items-center py-3 gap-4">
       <div className="card-pasos text-center">
         <span>1</span>
         <h3>Análisis</h3>
