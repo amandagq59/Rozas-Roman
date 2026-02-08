@@ -33,7 +33,6 @@
     font-size: 35px;
 
     /* ANIMACIÓN MÁQUINA DE ESCRIBIR */
-    display: inline-block;
     overflow: hidden;
     white-space: nowrap;
     width: 0;
@@ -97,9 +96,6 @@
     padding-top: 3rem;
     height: 80vh;
 
-    h1 {
-      font-size: 35px;
-    }
 
     .hero-heading-block p {
       max-width: 35ch;

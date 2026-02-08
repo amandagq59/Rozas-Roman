@@ -24,7 +24,7 @@ export default function Page() {
         <div className="hero-heading-block">
           <h1>
             Tu solución legal comienza con
-            <span>Rozas & Román</span>
+            <span> Rozas & Román</span>
           </h1>
           <p>
             Acompañamos a cada cliente con asesoría legal clara y efectiva,
