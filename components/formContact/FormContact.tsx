@@ -92,8 +92,8 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Row className="mb-md-3">
-          <Col lg={12} md={6}>
+        <Row>
+          <Col lg={12} md={6} className="mb-3">
             <Form.Group controlId="emailInput">
               <Form.Label className="fw-bold">Email *</Form.Label>
               <Form.Control
@@ -105,7 +105,7 @@ export const FormContact = () => {
               />
             </Form.Group>
           </Col>
-          <Col xs={12} md={6} className="mt-lg-3">
+          <Col xs={12} md={6} className="mb-3">
             <Form.Group controlId="phoneInput">
               <Form.Label className="fw-bold">Teléfono *</Form.Label>
               <Form.Control
@@ -158,19 +158,20 @@ export const FormContact = () => {
             type="checkbox"
             name="policy"
             label={
-              <>
+              <p>
                 Acepto la{' '}
                 <span
+                className='span-politica'
                   style={{
                     color: '#0c4684ff',
                     textDecoration: 'underline',
                     cursor: 'pointer',
                   }}
                 >
-                  Política de Privacidad
+                  Política de Privacidad *
                 </span>{' '}
-                *
-              </>
+                
+              </p>
             }
             required
           />

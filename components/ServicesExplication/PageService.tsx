@@ -20,46 +20,44 @@ export default function PageService({
   list,
 }: PageServiceProps) {
   return (
-   <div className="container py-5 px-lg-0 px-2">
-  <Row className="justify-content-center align-items-center">
-    <Col
-      lg={6}
-      md={6}
-      xs={12}
-      className="d-flex flex-column align-items-center align-items-lg-start mb-4 mb-lg-0"
-    >
-      <div className="page-service text-lg-start text-center">
-        <h1 className="page-service-title pb-2">
-          {title}
-        </h1>
+    <div className="container py-5 px-lg-0 px-2">
+      <Row className="justify-content-center align-items-center">
+        <Col
+          lg={6}
+          md={6}
+          xs={12}
+          className="d-flex flex-column  align-items-lg-start mb-4 mb-lg-0"
+        >
+          <div className="page-service text-lg-start text-center">
+            <h1 className="page-service-title pb-2">{title}</h1>
 
-        <p className="page-service-description">{description}</p>
+            <p className="page-service-description">{description}</p>
 
-        {list?.length > 0 && (
-          <div className="lista-servicios">
-            <h2 className="text-start ms-4">Áreas de trabajo:</h2>
-            <ul>
-              {list.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
+            {list?.length > 0 && (
+              <div className="lista-servicios">
+                <h2 className="text-start ms-4">Áreas de trabajo:</h2>
+                <ul>
+                  {list.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        )}
+          <div className="d-flex justify-content-center">
+            <CardPasos />
+          </div>
+        </Col>
 
-        <CardPasos />
-      </div>
-    </Col>
-
-    <Col
-      lg={6}
-      md={6}
-      xs={12}
-      className="d-flex justify-content-center align-items-center"
-    >
-      <FormContact />
-    </Col>
-  </Row>
-</div>
-
+        <Col
+          lg={6}
+          md={6}
+          xs={12}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <FormContact />
+        </Col>
+      </Row>
+    </div>
   );
 }

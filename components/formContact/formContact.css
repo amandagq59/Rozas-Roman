@@ -66,10 +66,32 @@
 
 .form-container input[type="text"],
 .form-container input[type="tel"],
-.form-container input[type="email"] {
+.form-container input[type="email"]{
   font-size: 12px;
   width: 100%;
 }
+
+
+/* Estilo base de inputs */
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container textarea,
+.form-container select {
+  font-size: 12px;
+  width: 100%;
+}
+
+/* Checkbox: apuntar al label */
+.form-container .form-check-label {
+ width: 100%;
+}
+
+.span-politica{
+    font-size: 15px;
+}
+
+
 
 .form-container textarea {
   font-size: 13px;

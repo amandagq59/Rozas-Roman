@@ -110,7 +110,7 @@ export default function ReviewsCarousel() {
           target="_blank"
           className="button-ppl"
         >
-          VER TODAS LAS RESEÑAS DE GOOGLE <GoArrowRight />
+          VER TODAS LAS RESEÑAS DE GOOGLE
         </Link>
       </div>
     </div>
