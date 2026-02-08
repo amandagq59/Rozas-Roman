@@ -24,7 +24,6 @@ export default function Page() {
         <div className="hero-heading-block">
           <h1>
             Tu solución legal comienza con
-            <br />
             <span> Rozas & Román</span>
           </h1>
           <p>
