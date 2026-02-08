@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import './footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { BsFillTelephoneFill } from 'react-icons/bs';
@@ -11,7 +11,7 @@ import { RiFacebookCircleLine } from 'react-icons/ri';
 import { PiTiktokLogoLight } from 'react-icons/pi';
 import { IoLogoWhatsapp } from 'react-icons/io5';
 import { Modalprivacity } from '../modals/Modalprivacity';
-import Button from '../button/Button';
+import '@fontsource/montserrat/400.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
