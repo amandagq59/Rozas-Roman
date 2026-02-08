@@ -36,8 +36,8 @@ export const Footer = () => {
                 className="footer-logo"
                 src="/images/logos/logoCompleto.png"
                 alt="Logo"
-                width={2000}
-                height={40}
+                width={250}
+                height={50}
               />
             </Link>
             <p className="text-center">
@@ -45,7 +45,7 @@ export const Footer = () => {
               confiables y profesionales.
             </p>
           </Col>
-         <Col
+          <Col
             lg={4}
             md={12}
             xs={12}
@@ -53,7 +53,7 @@ export const Footer = () => {
           >
             <div className="footer-heading-block mt-5">
               <h5>NAVEGACIÓN</h5>
-               <ul className="d-flex flex-column align-items-start  gap-3">
+              <ul className="d-flex flex-column align-items-start  gap-3">
                 <li>
                   <Link href="#servicios">Servicios</Link>
                 </li>
@@ -72,10 +72,6 @@ export const Footer = () => {
             </div>
           </Col>
 
-
-
-          
-            
           <Col
             lg={4}
             md={12}
@@ -84,7 +80,7 @@ export const Footer = () => {
           >
             <div className="footer-heading-block mt-5">
               <h5>CONTACTO</h5>
-              <div className='d-flex  flex-column gap-3'>
+              <div className="d-flex  flex-column gap-3">
                 <p>
                   <Link
                     href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
@@ -163,7 +159,6 @@ export const Footer = () => {
               </div>
             </div>
           </Col>
-          
         </Row>
 
         <hr className="hr" style={{ borderColor: '#333' }} />

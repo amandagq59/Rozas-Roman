@@ -23,7 +23,7 @@ export default function Page() {
       >
         <div className="hero-heading-block">
           <h1>
-            Tu solución legal comienza con
+            Tu solución legal comienza <br className='salto-responsive'/> con
             <span> Rozas & Román</span>
           </h1>
           <p>

@@ -166,14 +166,23 @@ nav img {
    MOBILE
 ========================= */
 @media (max-width: 768px) {
-  .navbar-container {
-    margin: 0;
-    padding: 0.75rem 1rem;
-    width: 100%;
+  @media (max-width: 768px) {
+  nav {
+    width: 100%; /* asegura que ocupe todo el ancho */
+    left: 0;
   }
 
+  .navbar-container {
+    margin: 0;        /* elimina margen */
+    padding: 1rem;  /* ajusta padding al gusto */
+    width: 100%;      /* asegúrate que el contenedor ocupe todo el nav */
+    box-sizing: border-box; /* incluye padding en el ancho */
+  }
+}
+
+
   .navbar-toggle {
-    font-size: 20px;
+    font-size: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;

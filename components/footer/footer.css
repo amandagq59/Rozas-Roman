@@ -13,11 +13,10 @@ margin-bottom: 0.5rem;
 }
 
 footer img {
-width: 250px;
-max-width: 100%;
-height: auto;
+  width: 100%;       
+  max-width: 250px; 
+  height: auto;   
 }
-
 
 
 footer p {

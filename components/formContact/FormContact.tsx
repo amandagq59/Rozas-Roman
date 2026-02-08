@@ -177,9 +177,9 @@ export const FormContact = () => {
         </Form.Group>
 
         <div className="text-center">
-          <Button type="submit" className="btn-submit" disabled={isSubmitting}>
+          <button type="submit" className="button-ppl" disabled={isSubmitting}>
             Enviar
-          </Button>
+          </button>
         </div>
 
         {submitOk ? (
