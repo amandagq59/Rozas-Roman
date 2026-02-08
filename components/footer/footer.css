@@ -1,113 +1,97 @@
-
-
 footer {
-background-color: #06211c;
-color: white;
+  background-color: #06211c;
+  color: white;
 }
 
-
-
 .footer-logo {
-display: block;
-margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
 footer img {
-  width: 100%;       
-  max-width: 250px; 
-  height: auto;   
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
-
 footer p {
-font-size: 15px;
-margin-bottom: 0.6rem;
+  font-size: 15px;
+  margin-bottom: 0.6rem;
 }
 
 footer h5 {
-font-size: 15px;
-font-family: 'Montserrat Variable', sans-serif;
-text-decoration: underline;
-text-decoration-color: #c5a059;
-text-underline-offset: 10px;
-margin-bottom: 2rem;
+  font-size: 15px;
+  font-family: 'Montserrat Variable', sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #c5a059;
+  text-underline-offset: 10px;
+  margin-bottom: 2rem;
 }
-
-
 
 footer ul {
-list-style: none;
-padding-left: 0;
-margin: 0;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
-
-
 
 footer a,
 footer .direction {
-text-decoration: none;
-font-size: 15px;
-color: white;
-border-bottom: 1px solid transparent;
-transition: border-color 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  border-bottom: 1px solid transparent;
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease;
 }
 
-footer a:hover {
-border-bottom: 1px solid #c5a059;
-opacity: 0.8;
+footer a:hover,
+footer .direction:hover {
+  color: #c5a059;
+ 
 }
-
 
 .a-redes {
-border-bottom: none;
-color: #c5a059;
-font-size: 25px;
+  border-bottom: none;
+  color: #c5a059;
+  font-size: 25px;
 }
-
 
 footer span {
-color: #c5a059;
-font-size: 15px;
+  color: #c5a059;
+  font-size: 15px;
 }
-
 
 .footer-heading-block {
-width: auto;
+  width: auto;
 }
-
 
 .hr {
-margin-top: 2rem;
-border-top: 1px solid #333;
-opacity: 1;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+  opacity: 1;
 }
-
-
 
 .derechos p {
-font-size: 12px;
+  font-size: 12px;
 }
-
-
 
 @media (max-width: 768px) {
+  .footer-main-row {
+    padding-left: 1rem;
+    text-align: left;
+  }
 
-.footer-main-row {
-padding-left: 1rem;
-text-align: left;
-}
+  .footer-main-row .col {
+    align-items: flex-start;
+    text-align: left;
+  }
 
-.footer-main-row .col {
-align-items: flex-start;
-text-align: left;
-}
-
-
-footer h5 {
-text-decoration: none;
-border-bottom: 3px solid #c5a059;
-padding-bottom: 6px;
-width: 100%;
-display: block;
-}
+  footer h5 {
+    text-decoration: none;
+    border-bottom: 3px solid #c5a059;
+    padding-bottom: 6px;
+    width: 100%;
+    display: block;
+  }
 }

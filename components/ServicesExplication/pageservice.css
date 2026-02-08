@@ -10,6 +10,7 @@ span {
 
 .lista-servicios {
   border-left: 3px double #b89047;
+  font-size: 15px;
 }
 
 li {
@@ -25,6 +26,31 @@ h1 {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 10px;
+}
+
+
+.lista-servicios li:nth-child(1) { animation-delay: 0.8s; }
+.lista-servicios li:nth-child(2) { animation-delay: 1s; }
+.lista-servicios li:nth-child(3) { animation-delay: 1.2s; }
+.lista-servicios li:nth-child(4) { animation-delay: 1.4s; }
+.lista-servicios li:nth-child(5) { animation-delay: 1.6s; }
+.lista-servicios li:nth-child(6) { animation-delay: 1.8s; }
+.lista-servicios li:nth-child(7) { animation-delay: 2.2s; }
+.lista-servicios li:nth-child(8) { animation-delay: 2.4s; }
+.lista-servicios li:nth-child(9) { animation-delay: 2.6s; }
+.lista-servicios li:nth-child(10) { animation-delay: 2.7s; }
+.lista-servicios li:nth-child(11) { animation-delay: 2.8s; }
+.lista-servicios li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -44,6 +70,7 @@ h1 {
   .lista-servicios {
     text-align: left;
     margin-top: 2rem;
+    font-size: 15px;
   }
 
   h1,
@@ -55,4 +82,8 @@ h1 {
   h2 {
     font-size: 25px;
   }
+}
+
+.page-service{
+  width: 100%;
 }

@@ -5,7 +5,7 @@
   }
 
   span {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
   }
   a {
@@ -36,7 +36,7 @@
     width: 100%;
   }
   textarea {
-    font-size: 12px;
+    font-size: 13px;
     padding: 6px 8px;
     width: 100%;
   }
@@ -51,7 +51,7 @@
   }
 
   select {
-    font-size: 12px;
+    font-size: 13px;
     padding: 4px 8px;
     width: 100%;
   }

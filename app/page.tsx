@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './home.css';
 import { FormContact } from '../components/formContact/FormContact';
-import { Col, Row, Container } from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import { CardContact } from '../components/cards/cardContact/CardContact';
 import { CardMap } from '../components/cards/cardMap/CardMap';
 import { CardsServicios } from '@/components/cards/cardServicios/CardsServicios';

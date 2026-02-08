@@ -18,7 +18,6 @@ h2,
   font-family: 'Montserrat Variable', sans-serif;
 }
 
-
 body {
   overflow-x: hidden;
 }
@@ -34,25 +33,26 @@ img {
 
 .button-ppl {
   padding: 8px 22px;
-  background:  #06211c;
+  background: #06211c;
   color: white;
   font-size: 14px;
   font-weight: 600;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: opacity 0.2s;
 }
 
+/* Clase que activa el aumento */
+.button-ppl.animate {
+  transform: scale(1.2); /* Aumenta un 20% */
+}
 .btn:hover {
   opacity: 0.9;
 }
 
-
-
 /* TÍTULO COMÚN DE TODAS LAS SECCIONES */
-section{
-   h2 {
+section {
+  h2 {
     font-size: 25px;
     text-align: center;
 
@@ -63,11 +63,10 @@ section{
     }
   }
 
-   .linea-title {
+  .linea-title {
     width: 100px;
     height: 2px;
     background-color: #b89047;
     margin: 10px auto 0;
   }
 }
-

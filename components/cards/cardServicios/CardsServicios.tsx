@@ -8,7 +8,7 @@ export const CardsServicios = () => {
   const router = useRouter();
 
   return (
-    <div className="container mt-5">
+    <div className="container-lg py-5">
       <div className="cards-grid-servicio">
         {servicios.map((servicio) => (
           <div className="card-servicio" key={servicio.id}>
