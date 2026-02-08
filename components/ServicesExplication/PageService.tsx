@@ -20,7 +20,7 @@ export default function PageService({
   list,
 }: PageServiceProps) {
   return (
-   <div className="container py-5">
+   <div className="container py-5 px-lg-0 px-2">
   <Row className="justify-content-center align-items-center">
     <Col
       lg={6}
@@ -37,7 +37,7 @@ export default function PageService({
 
         {list?.length > 0 && (
           <div className="lista-servicios">
-            <h2 className="text-start">Áreas de trabajo:</h2>
+            <h2 className="text-start ms-4">Áreas de trabajo:</h2>
             <ul>
               {list.map((item, index) => (
                 <li key={index}>{item}</li>
