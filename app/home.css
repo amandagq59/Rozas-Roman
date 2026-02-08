@@ -119,6 +119,11 @@
 
     .salto-normal {
       display: none;
+     
+    }
+    .span-normal{
+      color: white;
+      animation: none;
     }
   }
 }
