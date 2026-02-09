@@ -168,11 +168,12 @@
 /* SECCIÓN-PASOS */
 .section-pasos {
   padding-block: 3rem;
-  background-color: rgb(89, 94, 80);
+  background-color: rgba(35, 62, 10, 0.662);
   color: white;
 }
 
 /* SECCIÓN-CONTACTO */
 .section-contact {
   background-color: #f8f7f7;
+  
 }

@@ -94,8 +94,9 @@
   font-weight: 500;
   font-family: 'Montserrat Variable', sans-serif;
   text-align: center;
+    color: white;
   margin-bottom: 0.5rem;
-  color: white;
+ 
 }
 
 .text-container p {

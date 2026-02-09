@@ -4,7 +4,7 @@ import { useParams } from 'next/navigation';
 
 import './../../components/ServicesExplication/pageservice.css';
 import PageService from '@/components/ServicesExplication/PageService';
-import './../../components/ServicesExplication/pageservice.css'
+import './../../components/ServicesExplication/pageservice.css';
 
 export default function Page() {
   const params = useParams();
@@ -17,7 +17,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>LABORAL</span>
+                SERVICIO <span className="span-service">LABORAL</span>
               </>
             }
             description="Nuestro servicio de asesoría laboral uno a uno ofrece un
@@ -38,7 +38,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>CIVIL Y FAMILIAR</span>
+                SERVICIO <span className="span-service">CIVIL Y FAMILIAR</span>
               </>
             }
             description="Te ofrecemos un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
@@ -62,7 +62,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>PENAL</span>
+                SERVICIO <span className="span-service">PENAL</span>
               </>
             }
             description="Ofrecemos asesoría integral y personalizada en materia penal,
@@ -85,7 +85,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>ADMINISTRATIVO</span>
+                SERVICIO <span className="span-service">ADMINISTRATIVO</span>
               </>
             }
             description="Te ayudamos a gestionar procedimientos con entidades públicas, cumplir con obligaciones legales, resolver conflictos administrativos y tomar decisiones fundamentadas, garantizando que tus trámites y derechos estén protegidos en todo momento."
@@ -104,7 +104,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>EXTRANJERÍA</span>
+                SERVICIO <span className="span-service">EXTRANJERÍA</span>
               </>
             }
             description="Te ofrecemos un acompañamiento completo en todos los procedimientos relacionados con la residencia, visados, nacionalidad y permisos de trabajo. Nos aseguramos de que cada trámite cumpla con la normativa vigente, protegiendo tus derechos y facilitando el acceso a soluciones legales claras y efectivas."
@@ -122,7 +122,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>TRÁFICO</span>
+                SERVICIO <span className="span-service">TRÁFICO</span>
               </>
             }
             description="Te ofrecemos un acompañamiento completo en todos los aspectos legales relacionados con sanciones, multas, procedimientos administrativos y reclamaciones de tráfico. Nos aseguramos de proteger tus derechos, tramitar tus recursos correctamente y garantizar que cada decisión esté respaldada por un conocimiento sólido de la normativa vigente."
@@ -136,12 +136,30 @@ export default function Page() {
             ]}
           />
         )}
-      
+        {servicio === 'servicio-gestion-inmobiliaria' && (
+          <PageService
+            title={
+              <>
+                GESTIÓN <span className="span-service">INMOBILIARIA</span>
+              </>
+            }
+            description="Te ofrecemos un acompañamiento completo en todos los aspectos legales y administrativos relacionados con la compraventa, alquiler y gestión de inmuebles. Nos aseguramos de proteger tus intereses, gestionar correctamente cada trámite y garantizar que cada operación esté respaldada por un conocimiento sólido del mercado inmobiliario y de la normativa vigente."
+            list={[
+              'Compraventa de inmuebles',
+              'Arrendamientos y gestión de alquileres',
+              'Conflictos entre propietarios',
+              'Comunidades de propietarios',
+              'Regularización de inmuebles',
+              'Asesoramiento legal inmobiliario',
+            ]}
+          />
+        )}
+
         {servicio === 'servicio-mercantil' && (
           <PageService
             title={
               <>
-                SERVICIO <span className='span-service'>MERCANTIL</span>
+                SERVICIO <span className="span-service">MERCANTIL</span>
               </>
             }
             description="Ofrecemos servicios mercantiles enfocados en la intermediación y comercialización de productos tecnológicos, brindando asesoría, distribución y soporte a empresas y consumidores, garantizando eficiencia, cumplimiento legal y satisfacción del cliente."

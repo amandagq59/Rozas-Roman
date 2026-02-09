@@ -12,8 +12,11 @@
   margin-bottom: 15px;
 }
 
+
+
 .card-pasos h3 {
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .card-pasos span {
