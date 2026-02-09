@@ -128,7 +128,7 @@
   }
 }
 
-@media (max-width: 550px){
+@media (max-width: 300px){
   .section-portada h1{
     font-size: 40px;
   }
@@ -165,7 +165,14 @@
   }
 }
 
+/* SECCIÓN-PASOS */
+.section-pasos {
+  padding-block: 3rem;
+  background-color: rgb(89, 94, 80);
+  color: white;
+}
+
 /* SECCIÓN-CONTACTO */
 .section-contact {
-  background-color: #f8fafc;
+  background-color: #f8f7f7;
 }

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     default: 'Rozas & Román',
     template: '%s | Rozas & Román',
   },
+
   description:
     'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   alternates: {

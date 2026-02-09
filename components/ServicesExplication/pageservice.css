@@ -1,113 +1,128 @@
-
-  .section-servicios-descripcion {
-    font-size: 15px;
-    padding: 4rem 2rem;
-  }
-.span-service{
-  color: #b89047;
-
+.page-service-description p {
+  font-size: 15px;
+  padding: 4rem 2rem;
+  font-weight: 400;
 }
 
-
+.page-service {
   .lista-servicios {
     border-left: 3px double #b89047;
     font-size: 15px;
-  }
 
-  li {
-    padding-top: 0.5rem;
-  }
+    h3 {
+      font-size: 20px;
+    }
 
-  h2 {
-    font-size: 18px;
+    li {
+      padding-top: 0.5rem;
+      font-weight: 400;
+    }
   }
 
   h1 {
     font-size: 30px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 10px;
   }
 
-  .lista-servicios li:nth-child(1) {
-    animation-delay: 0.8s;
+  p {
+    font-weight: 200;
   }
-  .lista-servicios li:nth-child(2) {
-    animation-delay: 1s;
+}
+.span-service {
+  color: #b89047;
+}
+
+.col-services {
+  background-color: #06211c;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.col-services::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px; /* ancho de la onda */
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23b89047" d="M0,0 Q50,50 0,100 L100,100 L100,0 Z"/></svg>')
+    no-repeat;
+  background-size: cover;
+}
+
+.lista-servicios li:nth-child(1) {
+  animation-delay: 0.8s;
+}
+.lista-servicios li:nth-child(2) {
+  animation-delay: 1s;
+}
+.lista-servicios li:nth-child(3) {
+  animation-delay: 1.2s;
+}
+.lista-servicios li:nth-child(4) {
+  animation-delay: 1.4s;
+}
+.lista-servicios li:nth-child(5) {
+  animation-delay: 1.6s;
+}
+.lista-servicios li:nth-child(6) {
+  animation-delay: 1.8s;
+}
+.lista-servicios li:nth-child(7) {
+  animation-delay: 2.2s;
+}
+.lista-servicios li:nth-child(8) {
+  animation-delay: 2.4s;
+}
+.lista-servicios li:nth-child(9) {
+  animation-delay: 2.6s;
+}
+.lista-servicios li:nth-child(10) {
+  animation-delay: 2.7s;
+}
+.lista-servicios li:nth-child(11) {
+  animation-delay: 2.8s;
+}
+.lista-servicios li {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  .lista-servicios li:nth-child(3) {
-    animation-delay: 1.2s;
-  }
-  .lista-servicios li:nth-child(4) {
-    animation-delay: 1.4s;
-  }
-  .lista-servicios li:nth-child(5) {
-    animation-delay: 1.6s;
-  }
-  .lista-servicios li:nth-child(6) {
-    animation-delay: 1.8s;
-  }
-  .lista-servicios li:nth-child(7) {
-    animation-delay: 2.2s;
-  }
-  .lista-servicios li:nth-child(8) {
-    animation-delay: 2.4s;
-  }
-  .lista-servicios li:nth-child(9) {
-    animation-delay: 2.6s;
-  }
-  .lista-servicios li:nth-child(10) {
-    animation-delay: 2.7s;
-  }
-  .lista-servicios li:nth-child(11) {
-    animation-delay: 2.8s;
-  }
-  .lista-servicios li {
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: fadeSlideIn 0.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .section-servicios-descripcion {
+    padding: 2rem 2rem;
+    text-align: center;
   }
 
-  @keyframes fadeSlideIn {
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+  .section-servicios-descripcion h1 {
+    font-size: 28px;
 
-  @media (max-width: 768px) {
-    .section-servicios-descripcion {
-      padding: 2rem 2rem;
-      text-align: center;
-    }
-
-    .section-servicios-descripcion h1 {
-      font-size: 28px;
-
-      span {
-        font-size: 28px;
-      }
-    }
-
-    .lista-servicios {
-      text-align: left;
-      margin-top: 2rem;
-      font-size: 15px;
-    }
-
-    h1,
     span {
-      font-size: 30px;
-      text-decoration: none;
+      font-size: 28px;
     }
-
-    h2 {
-      font-size: 25px;
-    }
-
-  
   }
 
-  .page-service {
-    width: 100%;
+  .lista-servicios {
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 15px;
   }
+
+  h1,
+  span {
+    font-size: 30px;
+    text-decoration: none;
+  }
+}
+
+.page-service {
+  width: 100%;
+}

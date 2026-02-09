@@ -22,10 +22,7 @@ export default function Page() {
             }
             description="Nuestro servicio de asesoría laboral uno a uno ofrece un
             acompañamiento integral en todas las áreas del derecho laboral,
-            tanto para trabajadores como empleadores. Nos enfocamos en proteger
-            tus derechos, resolver conflictos, prevenir problemas legales y
-            garantizar que cada decisión que tomes esté respaldada por un
-            conocimiento sólido de la ley."
+            tanto para trabajadores como empleadores."
             list={[
               'Despidos (disciplinarios, objetivos e improcedentes).',
               'Reclamaciones de cantidad y salarios.',
@@ -44,7 +41,7 @@ export default function Page() {
                 SERVICIO <span className='span-service'>CIVIL Y FAMILIAR</span>
               </>
             }
-            description="Nuestro servicio de asesoría civil y familiar ofrece un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y garantizar que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley, siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
+            description="Te ofrecemos un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
             list={[
               'Contratos civiles y resolución de conflictos contractuales.',
               'Arrendamientos urbanos (desahucios, impagos, redacción y revisión de contratos).',
@@ -91,7 +88,7 @@ export default function Page() {
                 SERVICIO <span className='span-service'>ADMINISTRATIVO</span>
               </>
             }
-            description="Nuestro servicio de asesoría administrativa ofrece un acompañamiento integral en todos los aspectos del derecho administrativo. Te ayudamos a gestionar procedimientos con entidades públicas, cumplir con obligaciones legales, resolver conflictos administrativos y tomar decisiones fundamentadas, garantizando que tus trámites y derechos estén protegidos en todo momento."
+            description="Te ayudamos a gestionar procedimientos con entidades públicas, cumplir con obligaciones legales, resolver conflictos administrativos y tomar decisiones fundamentadas, garantizando que tus trámites y derechos estén protegidos en todo momento."
             list={[
               'Sanciones y multas.',
               'Responsabilidad patrimonial de la Administración.',
@@ -110,7 +107,7 @@ export default function Page() {
                 SERVICIO <span className='span-service'>EXTRANJERÍA</span>
               </>
             }
-            description="Nuestro servicio de asesoría en extranjería ofrece un acompañamiento completo en todos los procedimientos relacionados con la residencia, visados, nacionalidad y permisos de trabajo. Nos aseguramos de que cada trámite cumpla con la normativa vigente, protegiendo tus derechos y facilitando el acceso a soluciones legales claras y efectivas."
+            description="Te ofrecemos un acompañamiento completo en todos los procedimientos relacionados con la residencia, visados, nacionalidad y permisos de trabajo. Nos aseguramos de que cada trámite cumpla con la normativa vigente, protegiendo tus derechos y facilitando el acceso a soluciones legales claras y efectivas."
             list={[
               'Permisos de residencia y trabajo.',
               'Arraigo social, laboral y familiar.',
@@ -128,7 +125,7 @@ export default function Page() {
                 SERVICIO <span className='span-service'>TRÁFICO</span>
               </>
             }
-            description="Nuestro servicio de asesoría en tráfico ofrece un acompañamiento completo en todos los aspectos legales relacionados con sanciones, multas, procedimientos administrativos y reclamaciones de tráfico. Nos aseguramos de proteger tus derechos, tramitar tus recursos correctamente y garantizar que cada decisión esté respaldada por un conocimiento sólido de la normativa vigente."
+            description="Te ofrecemos un acompañamiento completo en todos los aspectos legales relacionados con sanciones, multas, procedimientos administrativos y reclamaciones de tráfico. Nos aseguramos de proteger tus derechos, tramitar tus recursos correctamente y garantizar que cada decisión esté respaldada por un conocimiento sólido de la normativa vigente."
             list={[
               'Accidentes de tráfico.',
               'Reclamación de indemnizaciones.',
