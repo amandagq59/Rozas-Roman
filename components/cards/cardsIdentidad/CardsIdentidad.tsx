@@ -1,11 +1,11 @@
 import React from 'react';
 import './cardsIdentidad.css';
 import { MdOutlineWorkspacePremium } from 'react-icons/md';
-import { GoLaw } from "react-icons/go";
-import { RiShakeHandsFill } from "react-icons/ri";
-import { FaMoneyCheckAlt } from "react-icons/fa";
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { IoStarOutline } from "react-icons/io5";
+import { GoLaw } from 'react-icons/go';
+import { RiShakeHandsFill } from 'react-icons/ri';
+import { FaMoneyCheckAlt } from 'react-icons/fa';
+import { AiOutlineSafetyCertificate } from 'react-icons/ai';
+import { IoStarOutline } from 'react-icons/io5';
 
 export const CardsIdentidad = () => {
   return (
@@ -25,7 +25,7 @@ export const CardsIdentidad = () => {
       </div>
       <div className=" card-identidad d-flex gap-3">
         <div className="icon-container">
-          <AiOutlineSafetyCertificate/>
+          <AiOutlineSafetyCertificate />
         </div>
         <div className="text-container">
           <h3>CONFIDENCIALIDAD GARANTIZADA</h3>
@@ -50,7 +50,7 @@ export const CardsIdentidad = () => {
       </div>
       <div className=" card-identidad d-flex gap-3">
         <div className="icon-container">
-          <FaMoneyCheckAlt/>
+          <FaMoneyCheckAlt />
         </div>
         <div className="text-container">
           <h3> TRANSPARENCIA EN HONORARIOS</h3>
@@ -76,13 +76,13 @@ export const CardsIdentidad = () => {
       </div>
       <div className=" card-identidad d-flex gap-3">
         <div className="icon-container">
-          <IoStarOutline/>
+          <IoStarOutline />
         </div>
         <div className="text-container">
           <h3>COMPROMISO ÉTICO</h3>
           <p>
-            Nuestra práctica legal se rige por los más altos estándares éticos,
-            asegurando una repesentación honesta y comprometida con su éxito.
+            Nuestro objetivo es que cada trámite sea claro, rápido y con
+            respaldo legal, manteniéndote siempre informado en todo momento
           </p>
         </div>
       </div>

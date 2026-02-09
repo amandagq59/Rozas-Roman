@@ -17,14 +17,12 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">LABORAL</span>
+                <span className="span-service">LABORAL</span>
               </>
             }
-            description="Nuestro servicio de asesoría laboral uno a uno ofrece un
-            acompañamiento integral en todas las áreas del derecho laboral,
-            tanto para trabajadores como empleadores."
+            description="Asesoramos a empresas y trabajadores en todas las cuestiones laborales, garantizando el cumplimiento de la ley, la protección de derechos y la resolución eficiente de conflictos."
             list={[
-              'Despidos (disciplinarios, objetivos e improcedentes).',
+              'Impunación de despidos.',
               'Reclamaciones de cantidad y salarios.',
               'Modificación de condiciones de trabajo.',
               'Incapacidades laborales y prestaciones.',
@@ -38,17 +36,16 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">CIVIL Y FAMILIAR</span>
+                <span className="span-service">CIVIL Y FAMILIA</span>
               </>
             }
-            description="Te ofrecemos un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
+            description="Nuestro servicio de asesoría civil ofrece un acompañamiento personalizado en todos los aspectos del derecho civil y  de familia. Nos enfocamos en proteger tus derechos, resolver conflictos familiares, prevenir problemas legales, garantizando que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley, siempre buscando soluciones justas y equilibradas para todas las partes involucradas."
             list={[
               'Contratos civiles y resolución de conflictos contractuales.',
               'Arrendamientos urbanos (desahucios, impagos, redacción y revisión de contratos).',
               'Reclamaciones de deudas.',
               'Responsabilidad civil.',
               'Herencias y sucesiones.',
-              'Derecho de familia.',
               'Separaciones y divorcios.',
               'Medidas paterno-filiales.',
               'Custodia y régimen de visitas.',
@@ -76,7 +73,7 @@ export default function Page() {
               'Delitos leves.',
               'Violencia de género.',
               'Delitos contra las personas y el patrimonio.',
-              'Asistencia al detenido.',
+              'Asistencia al detenido. 24h: 623 61 96 25',
             ]}
           />
         )}
@@ -140,10 +137,10 @@ export default function Page() {
           <PageService
             title={
               <>
-                GESTIÓN <span className="span-service">INMOBILIARIA</span>
+                <span className="span-service">INMOBILIARIO</span>
               </>
             }
-            description="Te ofrecemos un acompañamiento completo en todos los aspectos legales y administrativos relacionados con la compraventa, alquiler y gestión de inmuebles. Nos aseguramos de proteger tus intereses, gestionar correctamente cada trámite y garantizar que cada operación esté respaldada por un conocimiento sólido del mercado inmobiliario y de la normativa vigente."
+            description="Asesoramos en todo tipo de operaciones inmobiliarias, compraventas, arrendamientos y conflictos relacionados con propiedades, garantizando seguridad legal y soluciones efectivas."
             list={[
               'Compraventa de inmuebles',
               'Arrendamientos y gestión de alquileres',
@@ -177,6 +174,7 @@ export default function Page() {
             ]}
           />
         )}
+        
       </section>
     </main>
   );

@@ -12,13 +12,15 @@ export const CardsServicios = () => {
       <div className="cards-grid-servicio">
         {servicios.map((servicio) => (
           <div className="card-servicio" key={servicio.id}>
-            <img src={servicio.image} alt={servicio.title} />
+            <div className="card-image">
+              <img src={servicio.image} alt={servicio.title} />
+            </div>
             <div className="card-body">
               <h3 className="card-title">{servicio.title}</h3>
               <p className="card-text text-muted">{servicio.description}</p>
               <div className="d-flex justify-content-center">
                 <Button
-                  text="SABER MÁS"
+                  text="MÁS INFORMACIÓN"
                   type="primary"
                   onClick={() => router.push(servicio.button)}
                 />

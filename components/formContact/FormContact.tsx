@@ -63,7 +63,7 @@ export const FormContact = () => {
   };
 
   return (
-    <div className="form-wrapper pt-md-0 pt-5 ">
+    <div className="form-wrapper pt-md-0 pt-5">
       <div className="d-flex gap-2 form-header">
         <div className="icons">
           <BsPencil />
@@ -77,6 +77,9 @@ export const FormContact = () => {
         </div>
       </div>
       <Form className="form-container mt-3" onSubmit={onSubmit}>
+        <p>
+          PRIMERA CONSULTA <span className='consulta'>GRATIS</span>
+        </p>
         <Row className="mb-3">
           <Col lg={12} md={12}>
             <Form.Group controlId="nameInput">
@@ -158,10 +161,10 @@ export const FormContact = () => {
             type="checkbox"
             name="policy"
             label={
-              <p>
+              <p className='p-politica'>
                 Acepto la{' '}
                 <span
-                className='span-politica'
+                  className="span-politica"
                   style={{
                     color: '#0c4684ff',
                     textDecoration: 'underline',
@@ -170,7 +173,6 @@ export const FormContact = () => {
                 >
                   Política de Privacidad *
                 </span>{' '}
-                
               </p>
             }
             required

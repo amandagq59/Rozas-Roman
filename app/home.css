@@ -30,19 +30,19 @@
 
   .span-responsive,
   .span-normal {
-    color: #b89047;
-    font-size: 50px;
+    color: #c5a059;
+    font-size: 40px;
     animation: aparecer 2s forwards;
   }
 
   .span-responsive {
-    color: #b89047;
-    font-size: 50px;
+    color: #c5a059;
+    font-size: 40px;
     animation: aparecer 2s forwards;
   }
 
   h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'EB Garamond Variable';
     text-decoration: none;
     text-shadow:
@@ -130,13 +130,13 @@
 
 @media (max-width: 300px){
   .section-portada h1{
-    font-size: 40px;
+    font-size: 30px;
   }
 
    .section-portada .span-responsive,
      .section-portada .span-normal {
     
-    font-size: 40px;
+    font-size: 30px;
     
   }
 }

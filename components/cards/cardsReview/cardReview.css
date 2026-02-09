@@ -53,6 +53,8 @@
 
 .custom-next {
   right: -20px;
+  background-color: transparent;
+  color: #b89047;
 }
 
 .custom-prev::before,

@@ -1,3 +1,4 @@
+
 import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Montserrat } from 'next/font/google';
@@ -5,6 +6,7 @@ import type { Metadata } from 'next';
 import { NavbarProyect } from '../components/navbar/NavbarProyect';
 import { Footer } from '../components/footer/Footer';
 import { Whatsapp } from '../components/elementosFijos/Whatsapp';
+import React from 'react';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -45,6 +47,8 @@ export const metadata: Metadata = {
       'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   },
 };
+
+
 
 export default function RootLayout({
   children,

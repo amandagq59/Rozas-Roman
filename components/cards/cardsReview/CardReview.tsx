@@ -3,12 +3,13 @@ import React, { useEffect, useState, useRef } from 'react';
 import Slider from 'react-slick';
 import Image from 'next/image';
 import { AiFillStar } from 'react-icons/ai';
-import { GoArrowRight } from 'react-icons/go';
 import { reviews } from '../../../data/reviews';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './cardReview.css';
 import Link from 'next/link';
+import { GoChevronRight } from 'react-icons/go';
+import { GoChevronLeft } from 'react-icons/go';
 
 export default function ReviewsCarousel() {
   const sliderRef = useRef<Slider>(null);
@@ -29,10 +30,9 @@ export default function ReviewsCarousel() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Flechas personalizadas
   const NextArrow = (props: any) => {
     const { className, onClick } = props;
-    return <div className={className + ' custom-next'} onClick={onClick} />;
+    return <div className={className + 'custom-next'} onClick={onClick} />;
   };
 
   const PrevArrow = (props: any) => {
@@ -50,8 +50,8 @@ export default function ReviewsCarousel() {
     adaptiveHeight: true,
     centerMode: slidesToShow === 1,
     centerPadding: '0px',
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: <GoChevronRight />,
+    prevArrow: <GoChevronLeft />,
   };
 
   if (!mounted) return null;

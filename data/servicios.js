@@ -3,15 +3,15 @@ export const servicios = [
     id: 1,
     title: 'LABORAL',
     description:
-      'Nuestro servicio de asesoría laboral uno a uno ofrece un acompañamiento integral en todas las áreas del derecho laboral, tanto para trabajadores como empleadores. Nos enfocamos en proteger tus derechos, resolver conflictos, prevenir problemas legales y garantizar que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley.',
+      "Asesoramos a empresas y trabajadores en todas las cuestiones laborales, garantizando el cumplimiento de la ley, la protección de derechos y la resolución eficiente de conflictos.",
     image: './images/imagenesServices/laboral.jpg',
     button: '/servicio-laboral',
   },
   {
     id: 2,
-    title: 'SERVICIO CIVIL Y FAMILIAR',
+    title: 'CIVIL Y FAMILIA',
     description:
-      'Nuestro servicio de asesoría civil y familiar ofrece un acompañamiento personalizado en todos los aspectos del derecho civil y familiar. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y garantizar que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley, siempre buscando soluciones justas y equilibradas para todas las partes involucradas.',
+      'Nuestro servicio de asesoría civil ofrece un acompañamiento personalizado en todos los aspectos del derecho civil y  de familia. Nos enfocamos en proteger tus derechos, resolver conflictos familiares y civiles, prevenir problemas legales y garantizar que cada decisión que tomes esté respaldada por un conocimiento sólido de la ley, siempre buscando soluciones justas y equilibradas para todas las partes involucradas.',
     image: './images/imagenesServices/familia.jpg',
     button: '/servicio-civil-familiar',
   },
@@ -49,9 +49,9 @@ export const servicios = [
   },
   {
     id: 7,
-    title: 'GESTIÓN INMOBILIARIA',
+    title: 'INMOBILIARIO',
     description:
-      'Nuestro servicio de asesoría en gestión inmobiliaria ofrece un acompañamiento integral en todos los aspectos legales relacionados con la compra, venta, arrendamiento y administración de inmuebles. Nos aseguramos de proteger tus derechos, garantizar el cumplimiento de la normativa vigente y ofrecer soluciones legales claras y seguras en cada operación inmobiliaria.',
+      'Asesoramos en todo tipo de operaciones inmobiliarias, compraventas, arrendamientos y conflictos relacionados con propiedades, garantizando seguridad legal y soluciones efectivas.',
     image: './images/imagenesServices/inmobiliaria.jpg',
     button: '/servicio-gestion-inmobiliaria',
   },
@@ -63,4 +63,5 @@ export const servicios = [
     image: './images/imagenesServices/mercantil.jpg',
     button: '/servicio-mercantil',
   },
+
 ];

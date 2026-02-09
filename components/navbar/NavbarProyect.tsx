@@ -107,7 +107,7 @@ export const NavbarProyect = () => {
                   }}
                   className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
                 >
-                  Todos los servicios
+                  Todas las áreas
                 </Link>
                 <Link
                   href="/servicio-laboral"

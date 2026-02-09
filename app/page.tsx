@@ -27,12 +27,11 @@ export default function Page() {
             Tu solución legal comienza <br className="salto-normal" />{' '}
             <span className="span-normal">con</span>{' '}
             <br className="salto-responsive" />
-            <span className="span-responsive"> Rozas & Román</span>
+            <span className="span-responsive"> ROZAS & ROMÁN</span>
           </h1>
           <p>
-            Acompañamos a cada cliente con asesoría legal clara y efectiva,
-            protegiendo todos sus derechos y garantizando soluciones adaptadas a
-            sus necesidades.
+            Nuestro objetivo es que cada trámite sea claro, rápido y con
+            respaldo legal, manteniéndote siempre informado en todo momento.
           </p>
 
           <div className="hero-cta-group">
@@ -48,7 +47,7 @@ export default function Page() {
 
       <section className="section-servicios p-3 p-md-5" id="servicios">
         <h2>
-          <span className="p-sm-5">NUESTRAS ESPECIALIDADES</span> <br />
+          <span className="p-sm-5">ÁREAS</span> <br />
           Servicios Jurídicos Integrales
         </h2>
         <div className="linea-title "></div>
@@ -65,22 +64,12 @@ export default function Page() {
           <CardsIdentidad />
         </div>
       </section>
-       <section className="section-pasos p-3 p-md-5">
-        <div className="mx-2 mx-md-5">
-          <h2>
-            <span>PASOS</span> <br />
-            De la consulta al resultado
-          </h2>
-          <div className="linea-title"></div>
-          <CardPasos />
-        </div>
-      </section>
- 
+
       <section className="section-contact p-3 p-md-5 " id="contacto">
         <div className="d-flex flex-column">
           <h2>
             <span>CONTACTO</span> <br />
-            Solicita orientación legal
+            Solicita asesoramiento legal
           </h2>
           <div className="linea-title "></div>
         </div>
@@ -107,7 +96,7 @@ export default function Page() {
           </Row>
         </div>
       </section>
-          
+
       <section className="section-reseñas p-3 p-md-5">
         <div className="d-flex flex-column align-items-center">
           <h2>
