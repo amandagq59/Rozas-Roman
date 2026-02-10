@@ -13,6 +13,7 @@
 }
 html {
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 h2,
 .navbar-links,
@@ -56,7 +57,11 @@ img {
   opacity: 0.9;
 }
 
-/* TÍTULO COMÚN DE TODAS LAS SECCIONES */
+
+
+
+/* TÍTULO C
+OMÚN DE TODAS LAS SECCIONES */
 section {
   h2 {
     font-size: 25px;
