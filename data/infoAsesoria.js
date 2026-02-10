@@ -10,7 +10,7 @@ export const asesoria = [
       'Vida laboral',
       'Altas y bajas en autónomo (RETA)',
     ],
-    image: './images/imagenesAsesoria/laboral.png',
+    image: './images/ImagenesAsesoria/laboral.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -25,7 +25,7 @@ export const asesoria = [
       'Ingreso mínimo vital',
       'Complemento de ayuda a la infancia',
     ],
-    image: './images/imagenesAsesoria/prestaciones.png',
+    image: './images/ImagenesAsesoria/prestaciones.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -38,7 +38,7 @@ export const asesoria = [
       'Recursos administrativos',
       'Cancelación deudas en ficheros de morosos',
     ],
-    image: './images/imagenesAsesoria/administrativos.png',
+    image: './images/ImagenesAsesoria/administrativos.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -53,7 +53,7 @@ export const asesoria = [
       'Canje',
       'Solicitud de VTC',
     ],
-    image: './images/imagenesAsesoria/trafico.png',
+    image: './images/ImagenesAsesoria/trafico.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -65,7 +65,7 @@ export const asesoria = [
       'Cambio de titularidad de suministros',
       'Certificados y documentación inmobiliaria',
     ],
-    image: './images/imagenesAsesoria/inmobiliaria.png',
+    image: './images/ImagenesAsesoria/inmobiliaria.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -76,7 +76,7 @@ export const asesoria = [
       'Preparación y presentación de solicitudes',
       'Seguimiento y recursos',
     ],
-    image: './images/imagenesAsesoria/penales.png',
+    image: './images/ImagenesAsesoria/penales.png',
     button: 'SOLICITAR CONSULTA',
   },
   { id: 7,
@@ -89,7 +89,7 @@ export const asesoria = [
       'Asistencia en requerimientos de la Agencia Tributaria',
       'Recursos y alegaciones',
     ],
-    image: './images/imagenesAsesoria/fiscal.png',
+    image: './images/ImagenesAsesoria/fiscal.png',
     button: 'SOLICITAR CONSULTA',
   },
   {
@@ -104,7 +104,7 @@ export const asesoria = [
       'Asesoramiento legal a la comunidad',
       'Coordinación con proveedores y mantenimiento',
     ],
-    image: './images/imagenesAsesoria/fincas.png',
+    image: './images/ImagenesAsesoria/fincas.png',
     button: 'SOLICITAR CONSULTA',
   },
 ];

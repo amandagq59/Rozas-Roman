@@ -7,8 +7,17 @@ import { FaMoneyCheckAlt } from 'react-icons/fa';
 import { AiOutlineSafetyCertificate } from 'react-icons/ai';
 import { IoStarOutline } from 'react-icons/io5';
 
+  import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+
 export const CardsIdentidad = () => {
+
+    const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>({
+      threshold: 0.10, // porcentaje del div que debe verse en pantalla para que salte la animacion
+      rootMargin: '0px 0px -10% 0px', // margen negativo para que la animacion se active antes
+      once: true, // si esta a true solo se ejecuta la animacion una vez (el de entrada)
+    });
   return (
+    <div >
     <div className="cards-grid-identidad py-5">
       <div className=" card-identidad d-flex gap-3">
         <div className="icon-container">
@@ -86,6 +95,7 @@ export const CardsIdentidad = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

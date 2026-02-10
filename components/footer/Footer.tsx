@@ -40,7 +40,7 @@ export const Footer = () => {
             />
           </Link>
           <p className="text-center">
-            Asesoría clara. Defensa efectiva. Resultados confiables. <br />
+            Asesoría clara, defensa efectiva y resultados confiables. <br />
             Tu tranquilidad legal, nuestra prioridad.
           </p>
         </Col>
