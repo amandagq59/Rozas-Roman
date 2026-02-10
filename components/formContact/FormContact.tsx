@@ -1,23 +1,36 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './formContact.css';
-import { Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col, Form } from 'react-bootstrap';
 import { BsPencil } from 'react-icons/bs';
 import Link from 'next/link';
 import { Modalprivacity } from '../modals/Modalprivacity';
 
 export const FormContact = () => {
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [submitError, setSubmitError] = React.useState<string | null>(null);
-  const [submitOk, setSubmitOk] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitOk, setSubmitOk] = useState(false);
   const [showModalForm, setShowModalForm] = useState(false);
-
-  // NUEVO: errores por campo
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // =====================
+  // ==================================
+  // ANIMACIÓN SCROLL DEL "PRIMERA CONSULTA GRATIS"
+  // ==================================
+  const [scrolling, setScrolling] = useState(false);
+  const consultaRef = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolling(true);
+      setTimeout(() => setScrolling(false), 500); // vuelve a posición normal
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // ==================================
   // VALIDACIÓN
-  // =====================
+  // ==================================
   const validateForm = (payload: any) => {
     const newErrors: Record<string, string> = {};
 
@@ -49,6 +62,9 @@ export const FormContact = () => {
     return newErrors;
   };
 
+  // ==================================
+  // SUBMIT
+  // ==================================
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitError(null);
@@ -68,9 +84,7 @@ export const FormContact = () => {
         policy: fd.get('policy') === 'on',
       };
 
-      // VALIDACIÓN ANTES DEL FETCH
       const validationErrors = validateForm(payload);
-
       if (Object.keys(validationErrors).length > 0) {
         setErrors(validationErrors);
         setIsSubmitting(false);
@@ -116,7 +130,6 @@ export const FormContact = () => {
         <div className="icons">
           <BsPencil />
         </div>
-
         <div className="form-text">
           <span className="text-muted">FORMULARIO</span>
           <Link className="cc-data" href="">
@@ -124,10 +137,21 @@ export const FormContact = () => {
           </Link>
         </div>
       </div>
+
       <Form className="form-container mt-3" onSubmit={onSubmit} noValidate>
-        <p>
+        {/* =========================
+            PRIMERA CONSULTA GRATIS CON ANIMACIÓN
+        ========================= */}
+        <p
+          ref={consultaRef}
+          className={`consulta-div ${scrolling ? 'scroll-move' : ''}`}
+        >
           PRIMERA CONSULTA <span className="consulta">GRATIS</span>
         </p>
+
+        {/* =========================
+            RESTO DEL FORMULARIO
+        ========================= */}
         <Row className="mb-3">
           <Col lg={12} md={12}>
             <Form.Group controlId="nameInput">
@@ -148,6 +172,7 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
+
         <Row>
           <Col lg={12} md={6} className="mb-3">
             <Form.Group controlId="emailInput">
@@ -185,11 +210,11 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
+
         <Row className="mb-3">
           <Col xs={12} md={12}>
             <Form.Group controlId="contactTypeInput">
               <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
-
               <Form.Select
                 name="contactType"
                 defaultValue=""
@@ -202,7 +227,6 @@ export const FormContact = () => {
                 <option value="" disabled>
                   Selecciona una opción
                 </option>
-
                 <option value="Servicio-Laboral">Laboral</option>
                 <option value="Servicio-Civil-Familiar">
                   Civil y familiar
@@ -225,6 +249,7 @@ export const FormContact = () => {
             </Form.Group>
           </Col>
         </Row>
+
         <Form.Group className="mb-3" controlId="detailsInput">
           <Form.Label className="fw-bold">Añadir detalles</Form.Label>
           <Form.Control
@@ -240,6 +265,7 @@ export const FormContact = () => {
             {errors.details}
           </Form.Control.Feedback>
         </Form.Group>
+
         <Form.Group className="mb-3" controlId="checkbox1">
           <Form.Check
             type="checkbox"
@@ -275,19 +301,21 @@ export const FormContact = () => {
             setShowModalPrivacy={setShowModalForm}
           />
         </Form.Group>
+
         <div className="text-center">
           <button type="submit" className="button-ppl" disabled={isSubmitting}>
             ENVIAR
           </button>
         </div>
-        {submitOk ? (
+
+        {submitOk && (
           <div className="mt-3 text-success">
             Mensaje enviado correctamente.
           </div>
-        ) : null}
-        {submitError ? (
+        )}
+        {submitError && (
           <div className="mt-3 text-danger">{submitError}</div>
-        ) : null}
+        )}
       </Form>
     </div>
   );

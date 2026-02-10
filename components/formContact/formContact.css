@@ -20,7 +20,9 @@
   align-items: flex-start;
   gap: 8px;
   width: 100%;
+  
 }
+
 
 .icons {
   color: #c5a059;
@@ -59,6 +61,7 @@
   padding: 2rem;
 
   p {
+    width: 100%;
     font-weight: 500;
     background-color: #06211c;
     border-radius: 10px;
@@ -66,6 +69,9 @@
     color: white;
     font-size: 15px;
     text-align: center;
+      display: inline-block;
+  transition: transform 0.5s ease-out;
+
     .consulta {
       font-weight: 700;
       color: #c5a059;
@@ -76,6 +82,10 @@
     font-size: 15px;
     font-weight: 300;
   }
+}
+
+.consulta-div.scroll-move {
+  transform: translateY(-15px); /* sube 10px al hacer scroll */
 }
 
 .form-container .form-container input[type='text'],
