@@ -12,6 +12,43 @@ export const FormContact = () => {
   const [submitOk, setSubmitOk] = React.useState(false);
   const [showModalForm, setShowModalForm] = useState(false);
 
+  // NUEVO: errores por campo
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // =====================
+  // VALIDACIÓN
+  // =====================
+  const validateForm = (payload: any) => {
+    const newErrors: Record<string, string> = {};
+
+    if (!payload.name.trim()) {
+      newErrors.name = 'El nombre es obligatorio';
+    } else if (payload.name.length < 2) {
+      newErrors.name = 'El nombre debe tener al menos 2 caracteres';
+    }
+
+    if (!payload.email.trim()) {
+      newErrors.email = 'El email es obligatorio';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+      newErrors.email = 'El email no es válido';
+    }
+
+    if (!payload.phone.trim()) {
+      newErrors.phone = 'El teléfono es obligatorio';
+    } else if (!/^[0-9+\s-]{9,15}$/.test(payload.phone)) {
+      newErrors.phone = 'Formato de teléfono no válido';
+    }
+
+    if (!payload.contactType) {
+      newErrors.contactType = 'Seleccione un tipo de servicio';
+    }
+    if (!payload.policy) {
+      newErrors.policy = 'Debe aceptar la política de privacidad';
+    }
+
+    return newErrors;
+  };
+
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitError(null);
@@ -30,6 +67,17 @@ export const FormContact = () => {
         details: String(fd.get('details') ?? ''),
         policy: fd.get('policy') === 'on',
       };
+
+      // VALIDACIÓN ANTES DEL FETCH
+      const validationErrors = validateForm(payload);
+
+      if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors);
+        setIsSubmitting(false);
+        return;
+      }
+
+      setErrors({});
 
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -76,7 +124,7 @@ export const FormContact = () => {
           </Link>
         </div>
       </div>
-      <Form className="form-container mt-3" onSubmit={onSubmit}>
+      <Form className="form-container mt-3" onSubmit={onSubmit} noValidate>
         <p>
           PRIMERA CONSULTA <span className="consulta">GRATIS</span>
         </p>
@@ -91,7 +139,12 @@ export const FormContact = () => {
                 required
                 minLength={1}
                 maxLength={120}
+                isInvalid={!!errors.name}
+                onChange={() => setErrors((prev) => ({ ...prev, name: '' }))}
               />
+              <Form.Control.Feedback type="invalid">
+                {errors.name}
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
@@ -105,7 +158,12 @@ export const FormContact = () => {
                 placeholder="Email"
                 required
                 maxLength={254}
+                isInvalid={!!errors.email}
+                onChange={() => setErrors((prev) => ({ ...prev, email: '' }))}
               />
+              <Form.Control.Feedback type="invalid">
+                {errors.email}
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
           <Col xs={12} md={6} className="mb-3">
@@ -118,42 +176,53 @@ export const FormContact = () => {
                 required
                 minLength={5}
                 maxLength={30}
+                isInvalid={!!errors.phone}
+                onChange={() => setErrors((prev) => ({ ...prev, phone: '' }))}
               />
+              <Form.Control.Feedback type="invalid">
+                {errors.phone}
+              </Form.Control.Feedback>
             </Form.Group>
           </Col>
         </Row>
         <Row className="mb-3">
           <Col xs={12} md={12}>
-           <Form.Group controlId="contactTypeInput">
-  <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
+            <Form.Group controlId="contactTypeInput">
+              <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
 
-  <Form.Select
-    name="contactType"
-    defaultValue=""
-    required
-  >
-    <option value="" disabled>
-      Selecciona una opción
-    </option>
+              <Form.Select
+                name="contactType"
+                defaultValue=""
+                required
+                isInvalid={!!errors.contactType}
+                onChange={() =>
+                  setErrors((prev) => ({ ...prev, contactType: '' }))
+                }
+              >
+                <option value="" disabled>
+                  Selecciona una opción
+                </option>
 
-    <option value="Servicio-Laboral">Laboral</option>
-    <option value="Servicio-Civil-Familiar">
-      Civil y familiar
-    </option>
-    <option value="Servicio-Penal">Penal</option>
-    <option value="Servicio-Administrativo">
-      Administrativo
-    </option>
-    <option value="Servicio-Extranjería">
-      Extranjería
-    </option>
-    <option value="Servicio-Tráfico">Tráfico</option>
-    <option value="Servicio-Inmobiliaria">
-      Gestión inmobiliaria
-    </option>
-    <option value="Servicio-Mercantil">Mercantil</option>
-  </Form.Select>
-</Form.Group>
+                <option value="Servicio-Laboral">Laboral</option>
+                <option value="Servicio-Civil-Familiar">
+                  Civil y familiar
+                </option>
+                <option value="Servicio-Penal">Penal</option>
+                <option value="Servicio-Administrativo">Administrativo</option>
+                <option value="Servicio-Extranjería">Extranjería</option>
+                <option value="Servicio-Tráfico">Tráfico</option>
+                <option value="Servicio-Inmobiliaria">
+                  Gestión inmobiliaria
+                </option>
+                <option value="Servicio-Mercantil">Mercantil</option>
+                <option value="Servicio-Asesoría">Asesoría</option>
+                <option value="Servicio-Otros">Otra consulta</option>
+              </Form.Select>
+
+              <Form.Control.Feedback type="invalid">
+                {errors.contactType}
+              </Form.Control.Feedback>
+            </Form.Group>
           </Col>
         </Row>
         <Form.Group className="mb-3" controlId="detailsInput">
@@ -164,12 +233,20 @@ export const FormContact = () => {
             rows={3}
             placeholder="¿Cómo podemos ayudarte?"
             maxLength={5000}
+            isInvalid={!!errors.details}
+            onChange={() => setErrors((prev) => ({ ...prev, details: '' }))}
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.details}
+          </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3" controlId="checkbox1">
           <Form.Check
             type="checkbox"
             name="policy"
+            isInvalid={!!errors.policy}
+            feedback={errors.policy}
+            feedbackType="invalid"
             label={
               <p className="p-politica">
                 Acepto la{' '}
@@ -187,8 +264,11 @@ export const FormContact = () => {
                 *
               </p>
             }
-            required
+            onChange={() => setErrors((prev) => ({ ...prev, policy: '' }))}
           />
+          <Form.Control.Feedback type="invalid">
+            {errors.policy}
+          </Form.Control.Feedback>
 
           <Modalprivacity
             show={showModalForm}

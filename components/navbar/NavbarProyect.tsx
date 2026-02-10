@@ -192,10 +192,10 @@ export const NavbarProyect = () => {
                 <Link
                   href="/servicio-asesoria"
                   onClick={() => {
-                    setActive('servicio-mercantil');
+                    setActive('servicio-asesoria');
                     closeMenu();
                   }}
-                  className={`nav-link dropdown ${active === 'servicio-mercantil' ? 'active' : ''}`}
+                  className={`nav-link dropdown ${active === 'servicio-asesoria' ? 'active' : ''}`}
                 >
                   Asesoría
                 </Link>
