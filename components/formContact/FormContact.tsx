@@ -4,6 +4,7 @@ import './formContact.css';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { BsPencil } from 'react-icons/bs';
 import Link from 'next/link';
+import { Modalprivacity } from '../modals/Modalprivacity';
 
 export const FormContact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -78,7 +79,7 @@ export const FormContact = () => {
       </div>
       <Form className="form-container mt-3" onSubmit={onSubmit}>
         <p>
-          PRIMERA CONSULTA <span className='consulta'>GRATIS</span>
+          PRIMERA CONSULTA <span className="consulta">GRATIS</span>
         </p>
         <Row className="mb-3">
           <Col lg={12} md={12}>
@@ -161,7 +162,7 @@ export const FormContact = () => {
             type="checkbox"
             name="policy"
             label={
-              <p className='p-politica'>
+              <p className="p-politica">
                 Acepto la{' '}
                 <span
                   className="span-politica"

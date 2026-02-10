@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     template: '%s | Rozas & Román',
   },
 
+  icons: {
+    icon: '/favicon.ico',
+  },
+
   description:
     'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   alternates: {

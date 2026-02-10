@@ -1,14 +1,38 @@
-'use client';
-
-import { useParams } from 'next/navigation';
-
-import './../../components/ServicesExplication/pageservice.css';
+import { notFound } from 'next/navigation';
 import PageService from '@/components/ServicesExplication/PageService';
-import './../../components/ServicesExplication/pageservice.css';
 
-export default function Page() {
-  const params = useParams();
-  const { servicio } = params;
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ servicio?: string | string[] }>;
+}) {
+  const resolvedParams = await params;
+  const servicio = Array.isArray(resolvedParams.servicio)
+    ? resolvedParams.servicio[0]
+    : resolvedParams.servicio;
+
+  // Un SET es un ARRAY sin duplicados
+  const validServicios = new Set([
+    'servicio-laboral',
+    'servicio-civil-familiar',
+    'servicio-penal',
+    'servicio-administrativo',
+    'servicio-extranjeria',
+    'servicio-trafico',
+    'servicio-gestion-inmobiliaria',
+    'servicio-mercantil'
+  ]);
+
+  // || es un OR lógico
+  // a || b -> es true si a o b es true
+
+  // !servicio -> es true si servicio es null o undefined
+  // !validServicios.has(servicio) -> es true si servicio no está en el SET
+
+  // .has -> verifica si un elemento está en el SET
+  if (!servicio || !validServicios.has(servicio)) { 
+    notFound();
+  }
 
   return (
     <main>
@@ -118,6 +142,7 @@ export default function Page() {
             ]}
           />
         )}
+
         {servicio === 'servicio-trafico' && (
           <PageService
             title={
@@ -136,6 +161,7 @@ export default function Page() {
             ]}
           />
         )}
+        
         {servicio === 'servicio-gestion-inmobiliaria' && (
           <PageService
             title={
