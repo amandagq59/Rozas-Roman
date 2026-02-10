@@ -63,5 +63,13 @@ export const servicios = [
     image: './images/imagenesServices/mercantil.jpg',
     button: '/servicio-mercantil',
   },
+    {
+    id: 9,
+    title: 'ASESORÍA',
+    description:
+     'Ofrecemos asesoría profesional y confiable, analizando su situación de manera detallada, resolviendo sus dudas de forma clara y brindando soluciones adaptadas a sus necesidades.',
+    image: './images/imagenesServices/asesoria.jpg',
+    button: '/servicio-asesoria',
+  },
 
 ];

@@ -127,7 +127,7 @@ export const NavbarProyect = () => {
                   }}
                   className={`nav-link dropdown ${active === 'servicio-civil-familiar' ? 'active' : ''}`}
                 >
-                  Civil y Familiar
+                  Civil y Familia
                 </Link>
                 <Link
                   href="/servicio-penal"
@@ -177,7 +177,7 @@ export const NavbarProyect = () => {
                   }}
                   className={`nav-link dropdown ${active === 'servicio-gestion-inmobiliaria' ? 'active' : ''}`}
                 >
-                  Gestión Inmobiliaria
+                Inmobiliario
                 </Link>
                 <Link
                   href="/servicio-mercantil"
@@ -188,6 +188,16 @@ export const NavbarProyect = () => {
                   className={`nav-link dropdown ${active === 'servicio-mercantil' ? 'active' : ''}`}
                 >
                   Mercantil
+                </Link>
+                <Link
+                  href="/servicio-asesoria"
+                  onClick={() => {
+                    setActive('servicio-mercantil');
+                    closeMenu();
+                  }}
+                  className={`nav-link dropdown ${active === 'servicio-mercantil' ? 'active' : ''}`}
+                >
+                  Asesoría
                 </Link>
               </div>
             )}

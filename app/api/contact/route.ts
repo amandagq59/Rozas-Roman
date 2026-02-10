@@ -141,7 +141,7 @@ export async function POST(req: Request) {
         <td style="padding:24px 12px;">
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse; max-width:640px; margin:0 auto;">
             <tr>
-              <td style="background:#0c4684; padding:22px 24px; border-radius:14px 14px 0 0;">
+              <td style="background:#06211c; padding:22px 24px; border-radius:14px 14px 0 0;">
                 <div style="font-size:18px; font-weight:700; color:#ffffff; letter-spacing:0.2px;">Rozas &amp; Román</div>
                 <div style="margin-top:6px; font-size:13px; color:rgba(255,255,255,0.9);">Nuevo mensaje desde el formulario web</div>
               </td>

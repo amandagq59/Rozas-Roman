@@ -10,6 +10,8 @@
     color: black;
     padding: 0;
     background-color: transparent;
+    text-align: start;
+    margin-left: 0.5rem;
   }
 }
 

@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation';
 import PageService from '@/components/ServicesExplication/PageService';
+import Link from 'next/link';
+import PageAsesoriaCards from '@/components/ServicesExplication/PageAsesoriaCards';
 
 export default async function Page({
   params,
@@ -20,7 +22,8 @@ export default async function Page({
     'servicio-extranjeria',
     'servicio-trafico',
     'servicio-gestion-inmobiliaria',
-    'servicio-mercantil'
+    'servicio-mercantil',
+    'servicio-asesoria'
   ]);
 
   // || es un OR lógico
@@ -30,7 +33,7 @@ export default async function Page({
   // !validServicios.has(servicio) -> es true si servicio no está en el SET
 
   // .has -> verifica si un elemento está en el SET
-  if (!servicio || !validServicios.has(servicio)) { 
+  if (!servicio || !validServicios.has(servicio)) {
     notFound();
   }
 
@@ -87,10 +90,10 @@ export default async function Page({
               </>
             }
             description="Ofrecemos asesoría integral y personalizada en materia penal,
-            acompañándote en cada etapa del proceso legal. Nuestro enfoque está
-            en proteger tus derechos, analizar detalladamente tu situación y
-            diseñar estrategias de defensa efectivas y adaptadas a tus
-            necesidades."
+              acompañándote en cada etapa del proceso legal. Nuestro enfoque está
+              en proteger tus derechos, analizar detalladamente tu situación y
+              diseñar estrategias de defensa efectivas y adaptadas a tus
+              necesidades."
             list={[
               'Defensa y acusación particular.',
               'Juicios rápidos.',
@@ -99,7 +102,9 @@ export default async function Page({
               'Delitos contra las personas y el patrimonio.',
               <>
                 Asistencia al detenido
-                <span className="consulta"> 24h: 623 61 96 25</span>
+                <Link href="tel:+34623619625" target="_blank">
+                  <span className="consulta"> 24h: 623 61 96 25</span>
+                </Link>
               </>,
             ]}
           />
@@ -139,6 +144,7 @@ export default async function Page({
               'Nacionalidad española.',
               'Renovaciones y modificaciones de permisos.',
               'Recursos frente a denegaciones.',
+              'Regularización extraordinaria para inmigrantes en España 2026'
             ]}
           />
         )}
@@ -161,7 +167,7 @@ export default async function Page({
             ]}
           />
         )}
-        
+
         {servicio === 'servicio-gestion-inmobiliaria' && (
           <PageService
             title={
@@ -202,6 +208,9 @@ export default async function Page({
               'Registro y protección de derechos de autor, marcas y nombres comerciales, así como defensa frente a usos indebidos.',
             ]}
           />
+        )}
+         {servicio === 'servicio-asesoria' && (
+        <PageAsesoriaCards/>
         )}
       </section>
     </main>

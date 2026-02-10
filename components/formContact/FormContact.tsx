@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import './formContact.css';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 import { BsPencil } from 'react-icons/bs';
@@ -10,6 +10,7 @@ export const FormContact = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [submitOk, setSubmitOk] = React.useState(false);
+  const [showModalForm, setShowModalForm] = useState(false);
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -47,9 +48,7 @@ export const FormContact = () => {
           const data = await res.json();
           if (typeof data?.error === 'string' && data.error.trim())
             msg = data.error;
-        } catch {
-          // ignore
-        }
+        } catch {}
         throw new Error(msg);
       }
 
@@ -125,26 +124,36 @@ export const FormContact = () => {
         </Row>
         <Row className="mb-3">
           <Col xs={12} md={12}>
-            <Form.Group controlId="contactTypeInput">
-              <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
-              <Form.Select name="contactType" required>
-                <option value="" disabled>
-                  Selecciona una opción
-                </option>
-                <option value="Servicio-Laboral">Laboral</option>
-                <option value="Servicio-Civil-Familiar">
-                  Civil y familiar
-                </option>
-                <option value="Servicio-Penal">Penal</option>
-                <option value="Servicio-Administrativo">Administrativo</option>
-                <option value="Servicio-Extranjería">Extranjería</option>
-                <option value="Servicio-Tráfico">Tráfico</option>
-                <option value="Servicio-Inmobiliaria">
-                  Gestión inmobiliaria
-                </option>
-                <option value="Servicio-Mercantil">Mercantil</option>
-              </Form.Select>
-            </Form.Group>
+           <Form.Group controlId="contactTypeInput">
+  <Form.Label className="fw-bold">Tipo de servicio *</Form.Label>
+
+  <Form.Select
+    name="contactType"
+    defaultValue=""
+    required
+  >
+    <option value="" disabled>
+      Selecciona una opción
+    </option>
+
+    <option value="Servicio-Laboral">Laboral</option>
+    <option value="Servicio-Civil-Familiar">
+      Civil y familiar
+    </option>
+    <option value="Servicio-Penal">Penal</option>
+    <option value="Servicio-Administrativo">
+      Administrativo
+    </option>
+    <option value="Servicio-Extranjería">
+      Extranjería
+    </option>
+    <option value="Servicio-Tráfico">Tráfico</option>
+    <option value="Servicio-Inmobiliaria">
+      Gestión inmobiliaria
+    </option>
+    <option value="Servicio-Mercantil">Mercantil</option>
+  </Form.Select>
+</Form.Group>
           </Col>
         </Row>
         <Form.Group className="mb-3" controlId="detailsInput">
@@ -165,6 +174,7 @@ export const FormContact = () => {
               <p className="p-politica">
                 Acepto la{' '}
                 <span
+                  onClick={() => setShowModalForm(true)}
                   className="span-politica"
                   style={{
                     color: '#0c4684ff',
@@ -172,16 +182,22 @@ export const FormContact = () => {
                     cursor: 'pointer',
                   }}
                 >
-                  Política de Privacidad *
+                  Política de Privacidad
                 </span>{' '}
+                *
               </p>
             }
             required
           />
+
+          <Modalprivacity
+            show={showModalForm}
+            setShowModalPrivacy={setShowModalForm}
+          />
         </Form.Group>
         <div className="text-center">
           <button type="submit" className="button-ppl" disabled={isSubmitting}>
-            Enviar
+            ENVIAR
           </button>
         </div>
         {submitOk ? (
