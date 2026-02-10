@@ -23,7 +23,7 @@
 
 /* Card visible al hacer scroll */
 .card-identidad.show {
-  animation: slideUpFade 0.8s forwards;
+  animation: slideUpFade 0.9s forwards;
 }
 
 /* Hover */
