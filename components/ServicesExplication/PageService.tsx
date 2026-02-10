@@ -8,9 +8,9 @@ import './pageservice.css';
 import { FormContact } from '../formContact/FormContact';
 
 interface PageServiceProps {
-  title: React.ReactNode;
+title: React.ReactNode;
   description: string;
-  list: string[];
+  list: React.ReactNode[];
 }
 
 export default function PageService({

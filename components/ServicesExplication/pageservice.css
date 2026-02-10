@@ -29,6 +29,7 @@
 }
 .span-service {
   color: #b89047;
+ 
 }
 
 .col-services {
@@ -36,6 +37,10 @@
   color: white;
   position: relative;
   overflow: hidden;
+}
+.consulta{
+  color: #b89047;
+   font-weight:700;
 }
 
 .col-services::after {

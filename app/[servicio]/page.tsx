@@ -59,7 +59,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">PENAL</span>
+                <span className="span-service">PENAL</span>
               </>
             }
             description="Ofrecemos asesoría integral y personalizada en materia penal,
@@ -73,7 +73,10 @@ export default function Page() {
               'Delitos leves.',
               'Violencia de género.',
               'Delitos contra las personas y el patrimonio.',
-              'Asistencia al detenido. 24h: 623 61 96 25',
+              <>
+                Asistencia al detenido
+                <span className="consulta"> 24h: 623 61 96 25</span>
+              </>,
             ]}
           />
         )}
@@ -82,7 +85,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">ADMINISTRATIVO</span>
+                <span className="span-service">ADMINISTRATIVO</span>
               </>
             }
             description="Te ayudamos a gestionar procedimientos con entidades públicas, cumplir con obligaciones legales, resolver conflictos administrativos y tomar decisiones fundamentadas, garantizando que tus trámites y derechos estén protegidos en todo momento."
@@ -101,7 +104,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">EXTRANJERÍA</span>
+                <span className="span-service">EXTRANJERÍA</span>
               </>
             }
             description="Te ofrecemos un acompañamiento completo en todos los procedimientos relacionados con la residencia, visados, nacionalidad y permisos de trabajo. Nos aseguramos de que cada trámite cumpla con la normativa vigente, protegiendo tus derechos y facilitando el acceso a soluciones legales claras y efectivas."
@@ -119,7 +122,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">TRÁFICO</span>
+                <span className="span-service">TRÁFICO</span>
               </>
             }
             description="Te ofrecemos un acompañamiento completo en todos los aspectos legales relacionados con sanciones, multas, procedimientos administrativos y reclamaciones de tráfico. Nos aseguramos de proteger tus derechos, tramitar tus recursos correctamente y garantizar que cada decisión esté respaldada por un conocimiento sólido de la normativa vigente."
@@ -156,7 +159,7 @@ export default function Page() {
           <PageService
             title={
               <>
-                SERVICIO <span className="span-service">MERCANTIL</span>
+                <span className="span-service">MERCANTIL</span>
               </>
             }
             description="Ofrecemos servicios mercantiles enfocados en la intermediación y comercialización de productos tecnológicos, brindando asesoría, distribución y soporte a empresas y consumidores, garantizando eficiencia, cumplimiento legal y satisfacción del cliente."
@@ -174,7 +177,6 @@ export default function Page() {
             ]}
           />
         )}
-        
       </section>
     </main>
   );
