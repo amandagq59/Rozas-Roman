@@ -63,6 +63,7 @@ img {
 
 .content {
   min-height: fit-content;
+  overflow-x: hidden;
 }
 
 /* BOTONES*/
