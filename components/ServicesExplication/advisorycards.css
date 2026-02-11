@@ -1,83 +1,97 @@
-.section-advisory {
-  background-color: var(--color-background-tertiary);
-}
-
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-  padding: 20px;
-}
-
-.card-contenido {
-  position: relative;
-  background: white;
-  border-radius: var(--box-border-radius);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
+/* Contenedor de cada fila */.card-contenido {
+  display: flex;
+  padding-block: 2rem;
   width: 100%;
+  overflow: hidden; /* importante para que las imágenes salgan desde fuera */
+}
+
+/* Alterna lado de la imagen y contenido */
+.card-contenido.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Imagen animada */
+.card-image img {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+/* Imagen fila normal (izquierda) → entra desde lateral izquierdo */
+.card-contenido:not(.flex-row-reverse) .card-image img {
+  transform: translateX(20px); /* ahora sí, desde fuera pero cercano */
+}
+
+/* Imagen fila invertida (derecha) → entra desde lateral derecho */
+.card-contenido.flex-row-reverse .card-image img {
+  transform: translateX(-20px);
+}
+
+/* Imagen visible */
+.card-image img.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Contenido fijo */
+.card-info {
+  font-size: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
- 
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  justify-content: center;
 }
 
-.card-contenido:hover {
-  transform: translateY(-2px) scale(1);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+.card-info h3 {
+  font-size: 25px;
+  text-align: start;
+  margin-bottom: 1rem;
 }
 
-.card-contenido img {
-  height: 200px;
-}
-
-.card-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-top-right-radius: 1%;
-  border-bottom-left-radius: var(--none);
-  z-index: 10;
+.card-info .button-asesoria {
+  padding: 0.5rem 0.8rem;
+  background: hsl(150, 82%, 7%);
   color: var(--color-text-primary);
-  background-color: var(--color-text-cards);
-  font-size: 12px;
+  font-size: var(--font-size-xs, 14px);
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  border: transparent;
-  padding: 0.2rem 0.5rem;
-}
-.card-button:hover {
-  color: var(  --color-text-tertiary);
-}
-
-.card-list {
-  text-align: left;
-   padding: 2rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
 }
 
-.card-list li {
-  font-size: var( --font-size-sm);
-  line-height: 1.5;
-  color: black;
- 
-}
-
-
-@media (max-width: 1170px) {
-  .cards-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
-  }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
+
+  .section-advisory{
+ padding: 0;      /* quitar padding */
+    margin: 0;  
+  }
+  .card-contenido,
+  .card-contenido.flex-row-reverse {
+    flex-direction: column;
+    padding: 0;      /* quitar padding */
+    margin: 0;       /* quitar margin */
+  }
+
+  .card-image,
+  .card-info {
+    width: 100%;         /* ocupar todo el ancho */
+    height: auto;        /* altura automática para mantener proporción */
+    margin: 0;           /* quitar margin */
+    padding: 0;          /* quitar padding */
+  }
+
+  .card-image img {
+    width: 500px;        
+    height: auto;      
+ 
+
   }
 }
