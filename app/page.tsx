@@ -91,7 +91,7 @@ export default function Page() {
               xs={12}
               className=" hola d-flex flex-column align-items-center justify-content-lg-center py-lg-0 py-5"
             >
-              <div className="d-flex gap-2 form-header justify-content-center mt-5 mt-lg-0">
+              <div className="d-flex gap-2 form-header justify-content-center ">
                 <div className="icons">
                   <BsPencil />
                 </div>

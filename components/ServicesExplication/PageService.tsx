@@ -51,7 +51,7 @@ export default function PageService({
             lg={6}
             md={6}
             xs={12}
-            className="d-flex justify-content-center  p-lg-5 pt-0 pb-5 px-4"
+            className="d-flex justify-content-start p-lg-5 pt-0 pb-5 px-4"
           >
             <FormContact />
           </Col>

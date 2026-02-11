@@ -115,7 +115,7 @@ export const FormContact = () => {
   };
 
   return (
-    <div className="form-wrapper pt-3">
+    <div className="form-wrapper pt-3 ">
       <Form className="form-container " onSubmit={onSubmit} noValidate>
         <p
           ref={freeConsultRef}

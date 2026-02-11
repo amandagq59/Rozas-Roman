@@ -1,6 +1,35 @@
 export const asesoria = [
-  {
+    {
     id: 1,
+    title: 'Administración de fincas:',
+    list: [
+      'Gestión integral de comunidades de propietarios',
+      'Convocatoria y asistencia a juntas',
+      'Elaboración y seguimiento de presupuestos',
+      'Control de gastos y gestión de pagos',
+      'Reclamación de impagos',
+      'Asesoramiento legal a la comunidad',
+      'Coordinación con proveedores y mantenimiento',
+    ],
+    image: './images/ImagenesAsesoria/fincas.jpg',
+    button: 'SOLICITAR CONSULTA',
+  },
+   {
+    id: 2,
+    title: 'Asesoría Fiscal:',
+    list: [
+      'Declaración de la Renta (IRPF)',
+      'Revisión y optimización de la declaración',
+      'Declaraciones complementarias',
+      'Regularización de situaciones fiscales',
+      'Asistencia en requerimientos de la Agencia Tributaria',
+      'Recursos y alegaciones',
+    ],
+    image: './images/ImagenesAsesoria/fiscal.jpg',
+    button: 'SOLICITAR CONSULTA',
+  },
+  {
+    id: 3,
     title: 'Asesoría laboral:',
     list: [
       'Despidos y finiquitos',
@@ -11,11 +40,11 @@ export const asesoria = [
       'Vida laboral',
       'Altas y bajas en autónomo (RETA)',
     ],
-    image: './images/ImagenesServices/laboral.jpg',
+    image: './images/ImagenesAsesoria/laboral.jpg',
     button: 'SOLICITAR CONSULTA',
   },
   {
-    id: 2,
+    id: 4,
     title: 'Prestaciones, ayudas y subvenciones:',
     list: [
       'Tramitación de ayudas y subvenciones públicas',
@@ -29,21 +58,8 @@ export const asesoria = [
     image: './images/ImagenesAsesoria/prestaciones.jpg',
     button: 'SOLICITAR CONSULTA',
   },
-  {
-    id: 3,
-    title: 'Trámites Administrativos:',
-    list: [
-      'Gestión de certificados oficiales',
-      'Presentación de escritos ante organismos públicos',
-      'Subvenciones y ayudas administrativas',
-      'Recursos administrativos',
-      'Cancelación deudas en ficheros de morosos',
-    ],
-    image: './images/ImagenesAsesoria/administrativos.jpg',
-    button: 'SOLICITAR CONSULTA',
-  },
-  {
-    id: 4,
+   {
+    id: 5,
     title: 'Tráfico y Vehículos:',
     list: [
       'Transferencias de vehículos',
@@ -58,7 +74,21 @@ export const asesoria = [
     button: 'SOLICITAR CONSULTA',
   },
   {
-    id: 5,
+    id: 6,
+    title: 'Trámites Administrativos:',
+    list: [
+      'Gestión de certificados oficiales',
+      'Presentación de escritos ante organismos públicos',
+      'Subvenciones y ayudas administrativas',
+      'Recursos administrativos',
+      'Cancelación deudas en ficheros de morosos',
+    ],
+    image: './images/ImagenesAsesoria/administrativos.jpg',
+    button: 'SOLICITAR CONSULTA',
+  },
+ 
+  {
+    id: 7,
     title: 'Gestión Inmobiliaria y Documental:',
     list: [
       'Contratos de arrendamiento',
@@ -70,7 +100,7 @@ export const asesoria = [
     button: 'SOLICITAR CONSULTA',
   },
   {
-    id: 6,
+    id: 8,
     title: 'Antecedentes penales y policiales:',
     list: [
       'Cancelación de antecedentes penales',
@@ -81,33 +111,6 @@ export const asesoria = [
     image: './images/ImagenesAsesoria/penales.jpg',
     button: 'SOLICITAR CONSULTA',
   },
-  {
-    id: 7,
-    title: 'Asesoría Fiscal:',
-    list: [
-      'Declaración de la Renta (IRPF)',
-      'Revisión y optimización de la declaración',
-      'Declaraciones complementarias',
-      'Regularización de situaciones fiscales',
-      'Asistencia en requerimientos de la Agencia Tributaria',
-      'Recursos y alegaciones',
-    ],
-    image: './images/ImagenesAsesoria/fiscal.jpg',
-    button: 'SOLICITAR CONSULTA',
-  },
-  {
-    id: 8,
-    title: 'Administración de fincas:',
-    list: [
-      'Gestión integral de comunidades de propietarios',
-      'Convocatoria y asistencia a juntas',
-      'Elaboración y seguimiento de presupuestos',
-      'Control de gastos y gestión de pagos',
-      'Reclamación de impagos',
-      'Asesoramiento legal a la comunidad',
-      'Coordinación con proveedores y mantenimiento',
-    ],
-    image: './images/ImagenesAsesoria/fincas.jpg',
-    button: 'SOLICITAR CONSULTA',
-  },
+ 
+
 ];
