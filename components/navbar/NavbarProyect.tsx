@@ -214,7 +214,7 @@ export const NavbarProyect = () => {
 
           {/* CONTACTO */}
           <Link
-            href="#contacto"
+            href="/#contacto"
             className={`btn-contact ${active === 'contacto' ? 'active' : ''}`}
             onClick={closeMenu}
           >

@@ -112,7 +112,7 @@ export default function Page() {
 
       <section className="section-reseñas p-3 p-md-5 p-lg-0">
         <div className="d-flex flex-column align-items-center">
-          <h2>
+          <h2 className=' pt-lg-5'>
             <span>RESEÑAS</span> <br />
             Experiencias reales
           </h2>

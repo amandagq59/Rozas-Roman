@@ -1,7 +1,7 @@
 export const asesoria = [
     {
     id: 1,
-    title: 'Administración de fincas:',
+    title: 'ADMINISTRACIÓN DE FINCAS:',
     list: [
       'Gestión integral de comunidades de propietarios',
       'Convocatoria y asistencia a juntas',
@@ -12,11 +12,11 @@ export const asesoria = [
       'Coordinación con proveedores y mantenimiento',
     ],
     image: './images/ImagenesAsesoria/fincas.jpg',
-    button: 'SOLICITAR CONSULTA',
+    button: 'Solicitar consulta',
   },
    {
     id: 2,
-    title: 'Asesoría Fiscal:',
+    title: 'ASESORÍA FISCAL:',
     list: [
       'Declaración de la Renta (IRPF)',
       'Revisión y optimización de la declaración',
@@ -26,11 +26,11 @@ export const asesoria = [
       'Recursos y alegaciones',
     ],
     image: './images/ImagenesAsesoria/fiscal.jpg',
-    button: 'SOLICITAR CONSULTA',
+    button: 'Solicitar consulta',
   },
   {
     id: 3,
-    title: 'Asesoría laboral:',
+    title: 'ASESORÍA LABORAL:',
     list: [
       'Despidos y finiquitos',
       'Incapacidades laborales',
@@ -41,11 +41,11 @@ export const asesoria = [
       'Altas y bajas en autónomo (RETA)',
     ],
     image: './images/ImagenesAsesoria/laboral.jpg',
-    button: 'SOLICITAR CONSULTA',
+   button: 'Solicitar consulta',
   },
   {
     id: 4,
-    title: 'Prestaciones, ayudas y subvenciones:',
+    title: 'PRESTACIONES, AYUDAS Y SUBVENCIONES:',
     list: [
       'Tramitación de ayudas y subvenciones públicas',
       'Subsidios y prestaciones sociales',
@@ -56,11 +56,11 @@ export const asesoria = [
       'Complemento de ayuda a la infancia',
     ],
     image: './images/ImagenesAsesoria/prestaciones.jpg',
-    button: 'SOLICITAR CONSULTA',
+     button: 'Solicitar consulta',
   },
    {
     id: 5,
-    title: 'Tráfico y Vehículos:',
+    title: 'TRÁFICO Y VEHÍCULOS:',
     list: [
       'Transferencias de vehículos',
       'Altas y bajas en la DGT',
@@ -71,11 +71,11 @@ export const asesoria = [
       'Solicitud de VTC',
     ],
     image: './images/ImagenesAsesoria/trafico.jpg',
-    button: 'SOLICITAR CONSULTA',
+     button: 'Solicitar consulta',
   },
   {
     id: 6,
-    title: 'Trámites Administrativos:',
+    title: 'TRÁMITES ADMINISTRATIVOS:',
     list: [
       'Gestión de certificados oficiales',
       'Presentación de escritos ante organismos públicos',
@@ -84,12 +84,12 @@ export const asesoria = [
       'Cancelación deudas en ficheros de morosos',
     ],
     image: './images/ImagenesAsesoria/administrativos.jpg',
-    button: 'SOLICITAR CONSULTA',
+   button: 'Solicitar consulta',
   },
  
   {
     id: 7,
-    title: 'Gestión Inmobiliaria y Documental:',
+    title: 'GESTIÓN INMOBILIARIA Y DOCUMENTAL:',
     list: [
       'Contratos de arrendamiento',
       'Tramitación de compraventas',
@@ -97,11 +97,11 @@ export const asesoria = [
       'Certificados y documentación inmobiliaria',
     ],
     image: './images/ImagenesAsesoria/inmobiliaria.jpg',
-    button: 'SOLICITAR CONSULTA',
+   button: 'Solicitar consulta',
   },
   {
     id: 8,
-    title: 'Antecedentes penales y policiales:',
+    title: 'ANTECEDENTES PENALES Y POLICIALES:',
     list: [
       'Cancelación de antecedentes penales',
       'Cancelación de antecedentes policiales',
@@ -109,7 +109,7 @@ export const asesoria = [
       'Seguimiento y recursos',
     ],
     image: './images/ImagenesAsesoria/penales.jpg',
-    button: 'SOLICITAR CONSULTA',
+    button: 'Solicitar consulta',
   },
  
 
