@@ -6,18 +6,24 @@ import './advisorycards.css';
 import { HiOutlineCursorClick } from 'react-icons/hi';
 import Link from 'next/link';
 import { Col, Row } from 'react-bootstrap';
+import { teardownTraceSubscriber } from 'next/dist/build/swc/generated-native';
 
 export default function AdvisoryCards() {
-  const [visibleImages, setVisibleImages] = useState([]);
+  const [visibleImages, setVisibleImages] = useState<string[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.dataset.id;
-            setVisibleImages((prev) => [...prev, id]);
-            observer.unobserve(entry.target);
+            const target = entry.target as HTMLElement;
+            const id = target.dataset.id;
+           
+            if(id){
+              setVisibleImages((prev) => [...prev, id]);
+              observer.unobserve(entry.target);
+
+            }
           }
         });
       },
