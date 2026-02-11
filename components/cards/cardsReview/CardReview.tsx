@@ -10,6 +10,7 @@ import './cardReview.css';
 import Link from 'next/link';
 import { GoChevronRight } from 'react-icons/go';
 import { GoChevronLeft } from 'react-icons/go';
+import { HiOutlineCursorClick } from 'react-icons/hi';
 
 export default function ReviewsCarousel() {
   const sliderRef = useRef<Slider>(null);
@@ -110,7 +111,10 @@ export default function ReviewsCarousel() {
           target="_blank"
           className="button-ppl"
         >
-          VER TODAS LAS RESEÑAS DE GOOGLE
+        
+           <HiOutlineCursorClick /> Ver todas las reseñas de Google
+      
+       
         </Link>
       </div>
     </div>

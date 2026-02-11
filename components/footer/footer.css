@@ -43,13 +43,19 @@ footer {
 
     &:hover {
       color: var( --color-text-tertiary);
+      
     }
+    
   }
 
   .social-link {
     border-bottom: none;
     color: var( --color-text-tertiary);
     font-size: 25px;
+
+    &:hover{
+       transform: translateY(-3px);
+    }
   }
 
   span {

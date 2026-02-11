@@ -12,14 +12,23 @@ a {
   text-decoration: var(--none);
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
+
+  &:hover {
+   
+    color: var(--color-text-tertiary);
+  }
 }
 
 .social-links a {
   color: var(--color-text-tertiary);
   font-size: 20px;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 @media (max-width: 768px) {
   .icon-wrapper {
-  font-size: 10px;
+    font-size: 10px;
   }
 }

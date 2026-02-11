@@ -103,6 +103,7 @@
       border: var(--none);
       background-color: transparent;
       color:  var(--color-text-tertiary);
+    
     }
   }
 }
@@ -151,8 +152,14 @@
 
     .button-ppl {
       text-decoration: var(--none);
+      
+    
+    &:hover{
+      color:white;
+
     }
   }
+}
 }
 
 a {
