@@ -4,7 +4,7 @@
     linear-gradient(rgba(29, 29, 33, 0.623)), url('/images/portada/portada.jpg');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: var(--color-text-primary);
   height: 90vh;
 
   .hero-heading-block {
@@ -30,21 +30,21 @@
 
   .span-responsive,
   .span-normal {
-    color: #c5a059;
-    font-size: 40px;
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-lg);
     animation: aparecer 2s forwards;
   }
 
   .span-responsive {
-    color: #c5a059;
-    font-size: 40px;
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-lg);
     animation: aparecer 2s forwards;
   }
 
   h1 {
-    font-size: 40px;
-    font-family: 'EB Garamond Variable';
-    text-decoration: none;
+    font-size: var(--font-size-lg);
+    font-family: var(--font-family-heading);
+    text-decoration: var(--link-text-decoration);
     text-shadow:
       2px 2px 4px rgba(0, 0, 0, 0.3),
       4px 4px 8px rgba(0, 0, 0, 0.2),
@@ -55,12 +55,12 @@
     display: block;
   }
   .salto-responsive {
-    display: none;
+    display: var(--none);
   }
 
   p {
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: var(--font-weight-small);
     margin: 0;
     color: #fff;
   }
@@ -76,22 +76,21 @@
 
   .button-consulta,
   .button-servicios {
-    background-color: hsl(150, 82%, 7%);
     padding: 0.5rem 1rem;
     border-color: transparent;
-    color: white;
-    font-size: 15px;
-    font-weight: 400;
-    font-family: 'Montserrat Variable', sans-serif;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-small);
+    font-family: var(--font-family-primary);
   }
 
   .button-consulta {
-    background-color: #c5a059;
-    text-decoration: none;
+    background-color: var(--color-text-tertiary);
+    text-decoration: var(--none);
   }
   .button-servicios {
     background-color: rgba(255, 255, 255, 0.228);
-    text-decoration: none;
+    text-decoration: var(--none);
   }
 
   .button-consulta:hover,
@@ -104,7 +103,7 @@
   @media (max-width: 768px) {
     padding-top: 3rem;
     height: 90vh;
- 
+
     .hero-heading-block p {
       max-width: 35ch;
     }
@@ -119,29 +118,26 @@
 
     .salto-normal {
       display: none;
-     
     }
-    .span-normal{
-      color: white;
+    .span-normal {
+      color: var(--color-text-primary);
       animation: none;
     }
   }
-}
 
-@media (max-width: 300px){
-  .section-portada h1{
-    font-size: 30px;
-  }
+  @media (max-width: 300px) {
+    .section-portada h1 {
+      font-size: var(--font-size-md);
+    }
 
-   .section-portada .span-responsive,
-     .section-portada .span-normal {
-    
-    font-size: 30px;
-    
+    .section-portada .span-responsive,
+    .section-portada .span-normal {
+      font-size: var(--font-size-md);
+    }
   }
 }
 
-/* ANIMACIÓN MÁQUINA DE ESCRIBIR */
+/* PORTADA: ANIMACIÓN MÁQUINA DE ESCRIBIR */
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -153,27 +149,19 @@
 
 /* SECCIÓN-SERVICIOS */
 .section-servicios {
-  background-color: #fdfcf9;
+  background-color: var(--color-background-tertiary);
 }
 
 /* SECCIÓN-¿PORQUÉ NOSOTROS? */
 .section-identidad {
-  background-color: #06211c;
+  background-color: var(--color-background-primary);
 
   h2 {
-    color: white;
+    color: var(--color-text-primary);
   }
-}
-
-/* SECCIÓN-PASOS */
-.section-pasos {
-  padding-block: 3rem;
-  background-color: rgba(35, 62, 10, 0.662);
-  color: white;
 }
 
 /* SECCIÓN-CONTACTO */
 .section-contact {
-  background-color: #f8f7f7;
-  
+  background-color: var(--color-background-tertiary);
 }

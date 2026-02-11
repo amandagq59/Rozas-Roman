@@ -22,13 +22,13 @@ export const Footer = () => {
 
   const [showModalPrivacy, setShowModalPrivacy] = React.useState(false);
   return (
-    <footer className=" py-5 d-flex flex-column">
-      <Row className="footer-main-row  flex-lg-row">
+    <footer className="py-5 d-flex flex-column">
+      <Row className="footer-main-row flex-lg-row">
         <Col
           lg={4}
           md={12}
           xs={12}
-          className="footer-img d-flex flex-column  align-items-center justify-content-center mb-md-5"
+          className="footer-logo-block d-flex flex-column align-items-center justify-content-center mb-md-5"
         >
           <Link href="#inicio">
             <Image
@@ -44,6 +44,7 @@ export const Footer = () => {
             Tu tranquilidad legal, nuestra prioridad.
           </p>
         </Col>
+
         <Col
           lg={4}
           md={6}
@@ -52,7 +53,7 @@ export const Footer = () => {
         >
           <div className="footer-heading-block mt-5">
             <h5>NAVEGACIÓN</h5>
-            <ul className="d-flex flex-column align-items-start  gap-3">
+            <ul className="d-flex flex-column align-items-start gap-3">
               <li>
                 <Link href="#servicios">Servicios</Link>
               </li>
@@ -75,11 +76,11 @@ export const Footer = () => {
           lg={4}
           md={6}
           xs={12}
-          className=" d-flex flex-column align-items-start align-items-md-center align-items-lg-center"
+          className="d-flex flex-column align-items-start align-items-md-center align-items-lg-center"
         >
           <div className="footer-heading-block mt-5">
             <h5>CONTACTO</h5>
-            <div className="d-flex  flex-column gap-3">
+            <div className="d-flex flex-column gap-3">
               <p>
                 <Link
                   href="https://mail.google.com/mail/?view=cm&fs=1&to=legal@rozasroman.com&su=Información&body=Hola%20quisiera%20tener%20más%20información"
@@ -95,22 +96,18 @@ export const Footer = () => {
               </p>
 
               <div className="d-flex align-items-center gap-3">
-                {/* Icono teléfono */}
                 <span>
                   <BsFillTelephoneFill />
                 </span>
 
-                {/* Números en columna */}
-                <div className="d-flex flex-column">
+                <div className="d-flex flex-column phone-numbers">
                   <Link href="tel:+34851800710" target="_blank">
                     +34 851 800 710
                   </Link>
-
                   <Link href="tel:+34632143485" target="_blank">
-                   +34 632 14 34 85
+                    +34 632 14 34 85
                   </Link>
-
-                  <Link  href="tel:+34623619625" target="_blank">
+                  <Link href="tel:+34623619625" target="_blank">
                     +34 623 61 96 25
                   </Link>
                 </div>
@@ -126,19 +123,19 @@ export const Footer = () => {
                   <span>
                     <SiGooglemaps />
                   </span>
-                  <span className="direction ">
+                  <span className="direction">
                     C/Almería nº1, local 3AB – 29650 Fuengirola (Málaga)
                   </span>
                 </Link>
               </p>
             </div>
 
-            <div className="d-flex gap-3">
+            <div className="d-flex gap-3 social-links">
               <Link
                 href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="a-redes"
+                className="social-link"
               >
                 <IoLogoWhatsapp />
               </Link>
@@ -146,7 +143,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/rozasromanabogados/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="a-redes"
+                className="social-link"
               >
                 <FaInstagram />
               </Link>
@@ -154,7 +151,7 @@ export const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61584956921125&locale=es_ES"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="a-redes"
+                className="social-link"
               >
                 <RiFacebookCircleLine />
               </Link>
@@ -162,7 +159,7 @@ export const Footer = () => {
                 href="https://www.tiktok.com/@rozasromanabogados?_r=1&_t=ZN-939dCSJuElC"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="a-redes"
+                className="social-link"
               >
                 <PiTiktokLogoLight />
               </Link>

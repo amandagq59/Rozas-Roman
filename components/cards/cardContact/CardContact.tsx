@@ -16,8 +16,8 @@ export const CardContact = () => {
   return (
     <div className="card-contact">
     
-      <div className=" d-flex gap-2 mb-3">
-        <div className="icons">
+      <div className="d-flex gap-2 mb-3">
+        <div className="icon-wrapper-contact">
           <BsFillTelephoneFill />
         </div>
         <div className="d-flex flex-column">
@@ -25,17 +25,17 @@ export const CardContact = () => {
           <Link href="tel:+34851800710" target="_blank" rel="noopener noreferrer">
             +34 851 80 07 10 
           </Link>
-           <Link href="tel:+34632143485" target="_blank" rel="noopener noreferrer">
-           +34 632 14 34 85
+          <Link href="tel:+34632143485" target="_blank" rel="noopener noreferrer">
+            +34 632 14 34 85
           </Link>
-           <Link href="tel:+34623619625" target="_blank" rel="noopener noreferrer">
+          <Link href="tel:+34623619625" target="_blank" rel="noopener noreferrer">
             +34 623 61 96 25
           </Link>
         </div>
       </div>
 
       <div className="d-flex gap-2 mb-3">
-        <div className="icons">
+        <div className="icon-wrapper-contact">
           <IoMail />
         </div>
         <div className="d-flex flex-column">
@@ -51,12 +51,12 @@ export const CardContact = () => {
       </div>
 
       <div className="d-flex gap-3 mb-3">
-        <div className="icons">
+        <div className="icon-wrapper-contact">
           <FaGripLinesVertical />
         </div>
         <div className="d-flex flex-column">
           <span className="text-muted">REDES SOCIALES</span>
-          <div className="d-flex gap-2 a-redes">
+          <div className="d-flex gap-2 social-links">
             <Link
               href={`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`}
               target="_blank"
@@ -85,8 +85,6 @@ export const CardContact = () => {
             >
               <PiTiktokLogoLight />
             </Link>
-
-            
           </div>
         </div>
       </div>

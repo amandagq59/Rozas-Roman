@@ -1,24 +1,25 @@
-
-.icons {
-  color: #c5a059;
-  font-size: 20px;
+.icon-wrapper-contact {
+  color: var(--color-text-tertiary);
+  font-size: 1.25rem;
 }
 
-.text-muted{
+.text-muted {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
 }
 
 a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
+  text-decoration: var(--none);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
 }
 
-.a-redes a {
-  color: #c5a059;
+.social-links a {
+  color: var(--color-text-tertiary);
   font-size: 20px;
 }
-
-
-
+@media (max-width: 768px) {
+  .icon-wrapper {
+  font-size: 10px;
+  }
+}

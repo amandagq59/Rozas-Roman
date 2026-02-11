@@ -3,10 +3,12 @@ import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Montserrat } from 'next/font/google';
 import type { Metadata } from 'next';
-import { NavbarProyect } from '../components/navbar/NavbarProyect';
+
 import { Footer } from '../components/footer/Footer';
-import { Whatsapp } from '../components/elementosFijos/Whatsapp';
+import { Whatsapp } from '../components/fixed-elements/Whatsapp';
 import React from 'react';
+import { NavbarProyect } from '@/components/navbar/NavbarProyect';
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -63,7 +65,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={montserrat.className}>
         <div>
-          <NavbarProyect />
+          <NavbarProyect/>
           <Whatsapp />
           <main>{children}</main>
           <Footer />

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import PageService from '@/components/ServicesExplication/PageService';
 import Link from 'next/link';
-import PageAsesoriaCards from '@/components/ServicesExplication/PageAsesoriaCards';
+import AdvisoryCards from '@/components/ServicesExplication/AdvisoryCards';
 
 export default async function Page({
   params,
@@ -23,11 +23,9 @@ export default async function Page({
     'servicio-trafico',
     'servicio-gestion-inmobiliaria',
     'servicio-mercantil',
-    'servicio-asesoria'
+    'servicio-asesoria',
   ]);
 
-  // || es un OR lógico
-  // a || b -> es true si a o b es true
 
   // !servicio -> es true si servicio es null o undefined
   // !validServicios.has(servicio) -> es true si servicio no está en el SET
@@ -49,7 +47,7 @@ export default async function Page({
             }
             description="Asesoramos a empresas y trabajadores en todas las cuestiones laborales, garantizando el cumplimiento de la ley, la protección de derechos y la resolución eficiente de conflictos."
             list={[
-              'Impunación de despidos.',
+              'Impugnación de despidos.',
               'Reclamaciones de cantidad y salarios.',
               'Modificación de condiciones de trabajo.',
               'Incapacidades laborales y prestaciones.',
@@ -144,7 +142,7 @@ export default async function Page({
               'Nacionalidad española.',
               'Renovaciones y modificaciones de permisos.',
               'Recursos frente a denegaciones.',
-              'Regularización extraordinaria para inmigrantes en España 2026'
+              'Regularización extraordinaria para inmigrantes en España 2026',
             ]}
           />
         )}
@@ -209,9 +207,7 @@ export default async function Page({
             ]}
           />
         )}
-         {servicio === 'servicio-asesoria' && (
-        <PageAsesoriaCards/>
-        )}
+        {servicio === 'servicio-asesoria' && <AdvisoryCards />}
       </section>
     </main>
   );

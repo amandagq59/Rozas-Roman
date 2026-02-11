@@ -1,9 +1,8 @@
 'use client';
+
 import React, { useState, useEffect, useRef } from 'react';
 import './formContact.css';
 import { Row, Col, Form } from 'react-bootstrap';
-import { BsPencil } from 'react-icons/bs';
-import Link from 'next/link';
 import { Modalprivacity } from '../modals/Modalprivacity';
 
 export const FormContact = () => {
@@ -13,24 +12,18 @@ export const FormContact = () => {
   const [showModalForm, setShowModalForm] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // ==================================
-  // ANIMACIÓN SCROLL DEL "PRIMERA CONSULTA GRATIS"
-  // ==================================
   const [scrolling, setScrolling] = useState(false);
-  const consultaRef = useRef<HTMLParagraphElement>(null);
+  const freeConsultRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolling(true);
-      setTimeout(() => setScrolling(false), 500); // vuelve a posición normal
+      setTimeout(() => setScrolling(false), 500);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ==================================
-  // VALIDACIÓN
-  // ==================================
   const validateForm = (payload: any) => {
     const newErrors: Record<string, string> = {};
 
@@ -62,9 +55,6 @@ export const FormContact = () => {
     return newErrors;
   };
 
-  // ==================================
-  // SUBMIT
-  // ==================================
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitError(null);
@@ -125,34 +115,16 @@ export const FormContact = () => {
   };
 
   return (
-    <div className="form-wrapper pt-md-0 pt-5">
-      <div className="d-flex gap-2 form-header">
-        <div className="icons">
-          <BsPencil />
-        </div>
-        <div className="form-text">
-          <span className="text-muted">FORMULARIO</span>
-          <Link className="cc-data" href="">
-            Rellena nuestro formulario
-          </Link>
-        </div>
-      </div>
-
-      <Form className="form-container mt-3" onSubmit={onSubmit} noValidate>
-        {/* =========================
-            PRIMERA CONSULTA GRATIS CON ANIMACIÓN
-        ========================= */}
+    <div className="form-wrapper pt-3">
+      <Form className="form-container " onSubmit={onSubmit} noValidate>
         <p
-          ref={consultaRef}
-          className={`consulta-div ${scrolling ? 'scroll-move' : ''}`}
+          ref={freeConsultRef}
+          className={`free-consult-div ${scrolling ? 'scroll-move' : ''}`}
         >
-          PRIMERA CONSULTA <span className="consulta">GRATIS</span>
+          ¡PRIMERA CONSULTA <span className="free-consult">GRATIS!</span>
         </p>
 
-        {/* =========================
-            RESTO DEL FORMULARIO
-        ========================= */}
-        <Row className="mb-3">
+        <Row className="mb-2">
           <Col lg={12} md={12}>
             <Form.Group controlId="nameInput">
               <Form.Label className="fw-bold">Nombre Completo *</Form.Label>
@@ -274,11 +246,11 @@ export const FormContact = () => {
             feedback={errors.policy}
             feedbackType="invalid"
             label={
-              <p className="p-politica">
+              <p className="privacy-text">
                 Acepto la{' '}
                 <span
                   onClick={() => setShowModalForm(true)}
-                  className="span-politica"
+                  className="privacy-span"
                   style={{
                     color: '#0c4684ff',
                     textDecoration: 'underline',
@@ -304,7 +276,7 @@ export const FormContact = () => {
 
         <div className="text-center">
           <button type="submit" className="button-ppl" disabled={isSubmitting}>
-            ENVIAR
+            Enviar
           </button>
         </div>
 
@@ -313,9 +285,7 @@ export const FormContact = () => {
             Mensaje enviado correctamente.
           </div>
         )}
-        {submitError && (
-          <div className="mt-3 text-danger">{submitError}</div>
-        )}
+        {submitError && <div className="mt-3 text-danger">{submitError}</div>}
       </Form>
     </div>
   );

@@ -1,3 +1,6 @@
+.section-page {
+  background-color: var(--color-background-primary);
+}
 .page-service-description p {
   font-size: 15px;
   padding: 4rem 2rem;
@@ -5,7 +8,7 @@
 }
 
 .page-service {
-  .lista-servicios {
+  .services-list {
     border-left: 3px double #b89047;
     font-size: 15px;
 
@@ -27,20 +30,21 @@
     font-weight: 400;
   }
 }
+
 .span-service {
-  color: #b89047;
- 
+  color: var(--color-text-tertiary);
 }
 
 .col-services {
-  background-color: #06211c;
-  color: white;
+  font-weight: 600;
+  color: var(--color-text-primary);
   position: relative;
   overflow: hidden;
 }
-.consulta{
-  color: #b89047;
-   font-weight:700;
+
+.consult {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-bold);
 }
 
 .col-services::after {
@@ -48,47 +52,17 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100px; /* ancho de la onda */
+  width: 100px;
   height: 100%;
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23b89047" d="M0,0 Q50,50 0,100 L100,100 L100,0 Z"/></svg>')
-    no-repeat;
+
   background-size: cover;
 }
 
-.lista-servicios li:nth-child(1) {
-  animation-delay: 0.8s;
+.services-list  {
+  animation-delay: 0.9s;
 }
-.lista-servicios li:nth-child(2) {
-  animation-delay: 1s;
-}
-.lista-servicios li:nth-child(3) {
-  animation-delay: 1.2s;
-}
-.lista-servicios li:nth-child(4) {
-  animation-delay: 1.4s;
-}
-.lista-servicios li:nth-child(5) {
-  animation-delay: 1.6s;
-}
-.lista-servicios li:nth-child(6) {
-  animation-delay: 1.8s;
-}
-.lista-servicios li:nth-child(7) {
-  animation-delay: 2.2s;
-}
-.lista-servicios li:nth-child(8) {
-  animation-delay: 2.4s;
-}
-.lista-servicios li:nth-child(9) {
-  animation-delay: 2.6s;
-}
-.lista-servicios li:nth-child(10) {
-  animation-delay: 2.7s;
-}
-.lista-servicios li:nth-child(11) {
-  animation-delay: 2.8s;
-}
-.lista-servicios li {
+
+.services-list li {
   opacity: 0;
   transform: translateX(-20px);
   animation: fadeSlideIn 0.5s ease forwards;
@@ -102,12 +76,13 @@
 }
 
 @media (max-width: 768px) {
-  .section-servicios-descripcion {
+  .services-description-section {
     padding: 2rem 2rem;
-    text-align: center;
+
+    margin: 0;
   }
 
-  .section-servicios-descripcion h1 {
+  .services-description-section h1 {
     font-size: 28px;
 
     span {
@@ -115,7 +90,7 @@
     }
   }
 
-  .lista-servicios {
+  .services-list {
     text-align: left;
     margin-top: 2rem;
     font-size: 15px;
@@ -124,7 +99,7 @@
   h1,
   span {
     font-size: 30px;
-    text-decoration: none;
+    text-decoration: var(--none);
   }
 }
 

@@ -1,17 +1,17 @@
 .card-map {
   .icons {
-    color: #c5a059;
+    color: var(--color-text-tertiary);
     font-size: 20px;
   }
 
   span {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
   }
   a {
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
+    text-decoration: var(--none);
+    color: var(--color-text-secondary);
+    font-size: var( --font-size-sm);
   }
   .contact-map {
     width: 100%;

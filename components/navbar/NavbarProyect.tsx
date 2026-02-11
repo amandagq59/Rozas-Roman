@@ -177,7 +177,7 @@ export const NavbarProyect = () => {
                   }}
                   className={`nav-link dropdown ${active === 'servicio-gestion-inmobiliaria' ? 'active' : ''}`}
                 >
-                Inmobiliario
+                  Inmobiliario
                 </Link>
                 <Link
                   href="/servicio-mercantil"
@@ -215,7 +215,7 @@ export const NavbarProyect = () => {
           {/* CONTACTO */}
           <Link
             href="#contacto"
-            className={`btn-contacto ${active === 'contacto' ? 'active' : ''}`}
+            className={`btn-contact ${active === 'contacto' ? 'active' : ''}`}
             onClick={closeMenu}
           >
             CONTACTO

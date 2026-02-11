@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react';
-import './cardsIdentidad.css';
+import './cardsIdentity.css';
 import { MdOutlineWorkspacePremium } from 'react-icons/md';
 import { GoLaw } from 'react-icons/go';
 import { RiShakeHandsFill } from 'react-icons/ri';
@@ -8,7 +10,7 @@ import { AiOutlineSafetyCertificate } from 'react-icons/ai';
 import { IoStarOutline } from 'react-icons/io5';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
-export const CardsIdentidad = () => {
+export const CardsIdentity = () => {
   const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>({
     threshold: 0.10,
     rootMargin: '0px 0px -10% 0px',
@@ -44,20 +46,20 @@ export const CardsIdentidad = () => {
     {
       icon: <IoStarOutline />,
       title: 'COMPROMISO ÉTICO',
-      text: 'Nuestro objetivo es que cada trámite sea claro, rápido y con respaldo legal, manteniéndote siempre informado en todo momento',
+      text: 'Nuestro objetivo es que cada trámite sea claro, rápido y con respaldo legal, manteniéndote siempre informado en todo momento.',
     },
   ];
 
   return (
-    <div ref={ref} className="cards-grid-identidad py-5">
+    <div ref={ref} className="cards-grid-identity py-5">
       {cards.map((card, index) => (
         <div
           key={index}
-          className={`card-identidad ${isIntersecting ? 'show' : ''}`}
+          className={`card-identity ${isIntersecting ? 'show' : ''}`}
           style={{ animationDelay: `${0.2 * index}s` }}
         >
-          <div className="icon-container">{card.icon}</div>
-          <div className="text-container">
+          <div className="icon-wrapper-identity">{card.icon}</div>
+          <div className="text-wrapper">
             <h3>{card.title}</h3>
             <p>{card.text}</p>
           </div>

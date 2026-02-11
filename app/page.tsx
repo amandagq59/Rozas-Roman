@@ -6,11 +6,11 @@ import { FormContact } from '../components/formContact/FormContact';
 import { Col, Row } from 'react-bootstrap';
 import { CardContact } from '../components/cards/cardContact/CardContact';
 import { CardMap } from '../components/cards/cardMap/CardMap';
-import { CardsServicios } from '@/components/cards/cardServicios/CardsServicios';
-import { CardsIdentidad } from '../components/cards/cardsIdentidad/CardsIdentidad';
 import CardReview from '@/components/cards/cardsReview/CardReview';
 import Link from 'next/link';
-import { CardPasos } from '@/components/cardPasos/CardPasos';
+import { CardService } from '@/components/cards/cardsService/CardService';
+import { CardsIdentity } from '@/components/cards/cardsIdentity/CardsIdentity';
+import { BsPencil } from 'react-icons/bs';
 
 export default function Page() {
   const address =
@@ -52,7 +52,7 @@ export default function Page() {
         </h2>
         <div className="linea-title "></div>
 
-        <CardsServicios />
+        <CardService />
       </section>
       <section className="section-identidad p-3 p-md-5" id="identidad">
         <div className="mx-2 mx-md-5">
@@ -61,7 +61,7 @@ export default function Page() {
             ¿Por qué confiar en nosotros?
           </h2>
           <div className="linea-title "></div>
-          <CardsIdentidad />
+          <CardsIdentity />
         </div>
       </section>
 
@@ -89,15 +89,28 @@ export default function Page() {
               lg={6}
               md={6}
               xs={12}
-              className="d-flex flex-column align-items-center justify-content-lg-center"
+              className=" hola d-flex flex-column align-items-center justify-content-lg-center py-lg-0 py-5"
             >
-              <FormContact />
+              <div className="d-flex gap-2 form-header justify-content-center mt-5 mt-lg-0">
+                <div className="icons">
+                  <BsPencil />
+                </div>
+                <div className="form-text ">
+                  <span className="text-muted">FORMULARIO</span>
+                  <Link className="text-black" href="">
+                    Rellena nuestro formulario
+                  </Link>
+                  <div >
+                    <FormContact />
+                  </div>
+                </div>
+              </div>
             </Col>
           </Row>
         </div>
       </section>
 
-      <section className="section-reseñas p-3 p-md-5">
+      <section className="section-reseñas p-3 p-md-5 p-lg-0">
         <div className="d-flex flex-column align-items-center">
           <h2>
             <span>RESEÑAS</span> <br />

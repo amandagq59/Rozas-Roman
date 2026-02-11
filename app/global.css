@@ -1,3 +1,38 @@
+/* VARIABLES GLOBALES */
+:root {
+  --color-background-primary: #06211c;
+  --color-background-secondary: #b89047;
+  --color-background-tertiary: #f8f7f7;
+
+  --color-text-primary: white;
+  --color-text-secondary: black;
+  --color-text-tertiary: #b89047;
+  --color-primary-hover: rgb(75, 73, 73);
+  --color-text-cards: #484848;
+
+
+  --font-family-primary: 'Montserrat Variable', sans-serif;
+  --font-family-heading: 'EB Garamond Variable';
+
+  --font-weight-small: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --card-title-font-size: 16px;
+  --font-size-xs: 12px;
+  --font-size-sm: 15px;
+  --font-size-md: 30px;
+  --font-size-lg: 40px;
+
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --box-border-radius: 6px;
+  --none: none;
+  --link-text-decoration-hover: underline;
+
+  --button-padding-y: 0.5rem;
+  --button-padding-x: 1rem;
+}
+
 /* LETRA H1 PORTADA */
 @font-face {
   font-family: 'EB Garamond Variable';
@@ -18,11 +53,7 @@ html {
 h2,
 .navbar-links,
 .btn-contacto {
-  font-family: 'Montserrat Variable', sans-serif;
-}
-
-body {
-  overflow-x: hidden;
+  font-family: var(--font-family-primary);
 }
 
 img {
@@ -34,50 +65,46 @@ img {
   min-height: fit-content;
 }
 
+/* BOTONES*/
 .button-ppl {
-  padding: .4rem .5rem;
-  background: #06211c;
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
-  border: none;
+  padding: 0.4rem 0.5rem;
+  background: hsl(150, 82%, 7%);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: var(--none);
   border-radius: 5px;
   cursor: pointer;
 }
 
-.button-ppl:hover{
-  background-color: rgb(75, 73, 73);
+.button-ppl:hover {
+  background-color: var(--color-primary-hover);
 }
 
-/* Clase que activa el aumento */
 .button-ppl.animate {
-  transform: scale(1.2); /* Aumenta un 20% */
+  transform: scale(1.2);
 }
 .btn:hover {
   opacity: 0.9;
 }
 
-
-
-
-/* TÍTULO C
-OMÚN DE TODAS LAS SECCIONES */
+/* TÍTULO COMÚN DE TODAS LAS SECCIONES */
 section {
   h2 {
     font-size: 25px;
     text-align: center;
 
     span {
-      color: #b89047;
+      color: var(--color-text-tertiary);
       font-size: 15px;
-      font-weight: 400;
+      font-weight: var(--font-weight-small);
     }
   }
 
   .linea-title {
     width: 100px;
     height: 2px;
-    background-color: #b89047;
+    background-color: var(--color-background-secondary);
     margin: 10px auto 0;
   }
 }
