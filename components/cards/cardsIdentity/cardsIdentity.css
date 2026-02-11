@@ -8,11 +8,11 @@
   padding: 2rem 1.5rem;
   overflow: hidden;
   display: flex;
-  box-shadow: var(--box-shadow);
+
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-background-tertiary);
-  color: var(--color-text-secondary);
+  background-color: var(--color-background-primary);
+  border: 1px solid #b8914737;
   border-radius: 10px;
 
   opacity: 0;
@@ -30,15 +30,15 @@
   .text-wrapper h3 {
     font-size: var(--card-title-font-size);
     font-weight: 600;
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
     text-align: center;
     margin-bottom: 0.5rem;
   }
 
   .text-wrapper p {
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-small);
-    color: black;
+    font-weight: 300;
+    color: var(--color-text-primary);
     text-align: center;
   }
 }

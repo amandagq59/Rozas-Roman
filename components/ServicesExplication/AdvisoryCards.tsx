@@ -53,11 +53,13 @@ export default function PageAsesoriaCards() {
               ))}
             </ul>
 
-            {item.button && (
-              <Link href="/#contacto" className="card-button">
-                <HiOutlineCursorClick /> {item.button}
-              </Link>
-            )}
+            <div className='div-button-card d-flex justify-content-center'>
+              {item.button && (
+                <Link href="/#contacto" className="button-ppl">
+                  <HiOutlineCursorClick /> {item.button}
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       ))}

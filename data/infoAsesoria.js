@@ -1,7 +1,7 @@
 export const asesoria = [
     {
     id: 1,
-    title: 'ADMINISTRACIÓN DE FINCAS:',
+    title: 'ADMINISTRACIÓN DE FINCAS',
     list: [
       'Gestión integral de comunidades de propietarios',
       'Convocatoria y asistencia a juntas',
@@ -16,7 +16,7 @@ export const asesoria = [
   },
    {
     id: 2,
-    title: 'ASESORÍA FISCAL:',
+    title: 'ASESORÍA FISCAL',
     list: [
       'Declaración de la Renta (IRPF)',
       'Revisión y optimización de la declaración',
@@ -30,7 +30,7 @@ export const asesoria = [
   },
   {
     id: 3,
-    title: 'ASESORÍA LABORAL:',
+    title: 'ASESORÍA LABORAL',
     list: [
       'Despidos y finiquitos',
       'Incapacidades laborales',
@@ -45,7 +45,7 @@ export const asesoria = [
   },
   {
     id: 4,
-    title: 'PRESTACIONES, AYUDAS Y SUBVENCIONES:',
+    title: 'PRESTACIONES, AYUDAS Y SUBVENCIONES',
     list: [
       'Tramitación de ayudas y subvenciones públicas',
       'Subsidios y prestaciones sociales',
@@ -60,7 +60,7 @@ export const asesoria = [
   },
    {
     id: 5,
-    title: 'TRÁFICO Y VEHÍCULOS:',
+    title: 'TRÁFICO Y VEHÍCULOS',
     list: [
       'Transferencias de vehículos',
       'Altas y bajas en la DGT',
@@ -75,7 +75,7 @@ export const asesoria = [
   },
   {
     id: 6,
-    title: 'TRÁMITES ADMINISTRATIVOS:',
+    title: 'TRÁMITES ADMINISTRATIVOS',
     list: [
       'Gestión de certificados oficiales',
       'Presentación de escritos ante organismos públicos',
@@ -89,7 +89,7 @@ export const asesoria = [
  
   {
     id: 7,
-    title: 'GESTIÓN INMOBILIARIA Y DOCUMENTAL:',
+    title: 'GESTIÓN INMOBILIARIA Y DOCUMENTAL',
     list: [
       'Contratos de arrendamiento',
       'Tramitación de compraventas',
@@ -101,7 +101,7 @@ export const asesoria = [
   },
   {
     id: 8,
-    title: 'ANTECEDENTES PENALES Y POLICIALES:',
+    title: 'ANTECEDENTES PENALES Y POLICIALES',
     list: [
       'Cancelación de antecedentes penales',
       'Cancelación de antecedentes policiales',

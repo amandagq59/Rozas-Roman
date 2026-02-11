@@ -62,18 +62,25 @@ h3 {
     font-weight: 600;
   text-align: center;
 }
+
+
+.div-button-card {
+    margin-top: auto;
 .card-button {
   padding: 0.4rem 0.5rem;
   background: hsl(150, 82%, 7%);
   color: var(--color-text-primary);
-  font-size: var(--font-size-xs);
+  font-size: 13px;
   font-weight: var(--font-weight-medium);
   border: var(--none);
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-  margin-top: auto;
+
+
 }
+}
+
 .card-button:hover {
 background-color: var(--color-primary-hover);
 }

@@ -73,7 +73,7 @@ body {
   padding: 0.4rem 0.5rem;
   background: hsl(150, 82%, 7%);
   color: var(--color-text-primary);
-  font-size: var(--font-size-xs);
+  font-size: 13px;
   font-weight: var(--font-weight-medium);
   border: var(--none);
   border-radius: 5px;
