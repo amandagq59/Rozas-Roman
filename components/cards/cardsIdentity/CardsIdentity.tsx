@@ -51,7 +51,7 @@ export const CardsIdentity = () => {
   ];
 
   return (
-    <div ref={ref} className="cards-grid-identity py-5">
+    <div ref={ref} className="container-lg cards-grid-identity py-5">
       {cards.map((card, index) => (
         <div
           key={index}

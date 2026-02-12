@@ -58,7 +58,7 @@ export default function ReviewsCarousel() {
   if (!mounted) return null;
 
   return (
-    <div className="reviews-wrapper">
+    <div className="reviews-wrapper container">
       <div className="reviews-carousel-container">
         <Slider ref={sliderRef} {...settings}>
           {reviews.map((review, index) => (
