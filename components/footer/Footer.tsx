@@ -30,7 +30,7 @@ export const Footer = () => {
           xs={12}
           className="footer-logo-block d-flex flex-column align-items-center justify-content-center mb-md-5"
         >
-          <Link href="#inicio">
+          <Link href="/">
             <Image
               className="footer-logo"
               src="/images/logos/logoCompleto.png"
@@ -183,6 +183,7 @@ export const Footer = () => {
 
           <div
             style={{ cursor: 'pointer' }}
+            className='private'
             onClick={() => setShowModalPrivacy(true)}
           >
             PRIVACIDAD

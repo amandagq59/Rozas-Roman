@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import PageService from '@/components/ServicesExplication/PageService';
 import Link from 'next/link';
 import AdvisoryCards from '@/components/ServicesExplication/AdvisoryCards';
+import { BsFillTelephoneFill } from 'react-icons/bs';
 
 export default async function Page({
   params,
@@ -99,9 +100,9 @@ export default async function Page({
               'Violencia de género.',
               'Delitos contra las personas y el patrimonio.',
               <>
-                Asistencia al detenido
+                Asistencia al detenido 24h:
                 <Link href="tel:+34623619625" target="_blank">
-                  <span className="consulta"> 24h: 623 61 96 25</span>
+                  <span className="consult"> <BsFillTelephoneFill/> 623 61 96 25</span>
                 </Link>
               </>,
             ]}

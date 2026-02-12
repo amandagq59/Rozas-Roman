@@ -1,3 +1,4 @@
+/* ---------------- NAVBAR GENERAL ---------------- */
 nav {
   font-weight: var(--font-weight-medium);
   font-size: var(--font-size-sm);
@@ -5,28 +6,23 @@ nav {
   color: var(--color-text-primary);
   position: fixed;
   z-index: 1000;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
-
-  img {
-    height: 50px;
-    width: 150px;
-    object-fit: contain;
-  }
 }
 
-.navbar-toggle {
-  display: none;
-  background: transparent;
-
-  color: var(--color-text-primary);
-  padding: 0.35rem 0.6rem;
-
-  font-size: 1.1rem;
-  cursor: pointer;
+/* Logo */
+nav img {
+  height: 50px;
+  width: 150px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+nav img:hover {
+  transform: translateY(-3px);
 }
 
+/* ---------------- CONTAINER ---------------- */
 .navbar-container {
   margin-inline: 2rem;
   display: flex;
@@ -34,196 +30,209 @@ nav {
   justify-content: space-between;
   padding: 1rem 2rem;
   gap: 2rem;
-
-  .navbar-logo {
-    font-weight: var(--font-weight-medium);
-    font-size: 1.2rem;
-  }
 }
 
+/* ---------------- TOGGLE BOTÓN MÓVIL ---------------- */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* ---------------- LINKS ---------------- */
 .navbar-links {
   display: flex;
   align-items: center;
   gap: 2rem;
-  box-sizing: border-box;
-
-  .nav-link {
-    position: relative;
-    text-decoration: var(--none);
-    font-weight: var(--font-weight-small);
-    color: var(--color-text-primary);
-    cursor: pointer;
-    transition: transform 0.2s;
-
-    &:hover {
-      transform: translateY(-2px);
-      color: var(--color-text-tertiary);
-    }
-
-    &.active {
-      text-decoration: underline;
-      text-decoration-color: var(--color-text-tertiary);
-      text-decoration-thickness: 1.5px;
-      text-underline-offset: 2px;
-    }
-  }
-
- 
-
-  .btn-contact {
-    background-color: var(--color-background-secondary);
-    color: var(--color-text-primary);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: var(--none);
-    transition: transform 0.3s;
-
-    &.active {
-      text-decoration: underline;
-      text-decoration-color: var(--color-text-primary);
-      text-decoration-thickness: 1.5px;
-      text-underline-offset: 2px;
-    }
-
-    &:hover {
-      transform: translateY(-2px);
-      color: var(--color-text-primary);
-    text-decoration: underline;
-      text-decoration-color: var(--color-text-primary);
-      text-decoration-thickness: 1.5px;
-      text-underline-offset: 2px;
-    }
-
-    margin-left: auto;
-  }
-
-  .dropdown-content {
-    display: var(--none);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-background-primary);
-    min-width: 180px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    flex-direction: column;
-    z-index: 100;
-
-    &.show {
-      display: flex;
-    }
-
-    a {
-      padding: 0.5rem 1rem;
-      color: var(--color-text-primary);
-      text-decoration: var(--none);
-
-      &:hover {
-        background-color: var(--color-background-secondary);
-        color: var(--color-background-primary);
-      }
-
-    }
-  }
+  position: relative;
 }
 
+/* Links principales y del dropdown */
+.navbar-links > .nav-link,
+.dropdown > .nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: var(--font-weight-small);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Hover efecto para todos los links */
+.navbar-links > .nav-link:hover,
+.dropdown > .nav-link:hover {
+  transform: translateY(-2px);
+  color: var(--color-text-tertiary);
+}
+
+/* ---------------- LÍNEA ANIMADA ---------------- */
+/* Para links principales y dropdown */
+.navbar-links > .nav-link::after,
+.dropdown > .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1.5px;
+  background-color: var(--color-text-tertiary);
+  transition: width 0.25s ease;
+}
+
+/* Hover anima línea */
+.navbar-links > .nav-link:hover::after,
+.dropdown > .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Activo: línea siempre visible */
+.navbar-links > .nav-link.active::after,
+.dropdown > .nav-link.active::after {
+  width: 100%;
+}
+
+/* ---------------- BOTÓN CONTACTO ---------------- */
+.btn-contact {
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.btn-contact:hover {
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: underline;
+}
+.btn-contact.active {
+  text-decoration: underline;
+}
+
+/* ---------------- DROPDOWN ---------------- */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown interno */
+.dropdown-content {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-background-primary);
+  min-width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+
+/* Mostramos dropdown cuando esté abierto */
+.dropdown-content.show {
+  display: flex;
+}
+
+/* Links internos del dropdown */
+.dropdown-content .nav-link {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Hover de sublinks */
+.dropdown-content .nav-link:hover {
+  background-color: var(--color-background-secondary);
+  color: var(--color-background-primary);
+}
+
+/* ---------------- OVERLAY MÓVIL ---------------- */
 .menu-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  pointer-events: var(--none);
+  pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 998;
-
-  &.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
+}
+.menu-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
+/* ---------------- MOBILE ---------------- */
 .menu-close {
-  display: var(--none);
+  display: none;
 }
 
+/* Links principales y sublinks activos */
+.navbar-links > .nav-link.active::after,
+.dropdown > .nav-link.active::after {
+  width: 100%;
+}
+
+/* ---------------- MEDIA QUERIES ---------------- */
 @media (max-width: 768px) {
-  nav {
-    width: 100%;
-    left: 0;
-  }
 
   .navbar-container {
     margin: 0;
     padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
   }
 
   .navbar-toggle {
-    border: none;
-    font-size: 35px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
   }
 
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100vw;
-    width: 50%;
+    right: -100vw; /* oculto por defecto */
+    width: 70%;
     height: 100vh;
     background-color: var(--color-background-primary);
     flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    align-items: flex-start;
     gap: 1.3rem;
     padding: 2rem 1.5rem;
     transition: right 0.35s ease;
     z-index: 999;
     overflow-y: auto;
-    box-sizing: border-box;
+  }
 
-    &.open {
-      right: 0;
-    }
+  .navbar-links.open {
+    right: 0; /* visible */
+  }
 
-    .btn-contact {
-      margin-left: 0;
-      align-self: flex-start;
-    }
+  .menu-close {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 1.6rem;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
 
-    .menu-close {
-      display: block;
-      background: var(--color-background-primary);
-      border: var(--none);
-      color: var(--color-text-primary);
-      font-size: 1.6rem;
-      align-self: flex-end;
-      cursor: pointer;
-      margin-bottom: 1rem;
+  /* Dropdown interno en móvil */
+  .dropdown-content {
+    position: static; /* ya no absoluto */
+    box-shadow: none;
+    width: 100%;
+    padding-left: 1rem;
+  }
 
-      &:hover {
-        color: var(--color-text-tertiary);
-      }
-    }
-
-    .dropdown-content {
-      position: static;
-      display: none;
-      width: 100%;
-      box-shadow: none;
-      margin-top: 0.5rem;
-
-      &.show {
-        display: flex;
-      }
-
-      a {
-        padding-left: 1.5rem;
-        font-size: 0.95rem;
-      }
-    }
+  .dropdown-content .nav-link {
+    padding-left: 1rem;
   }
 }

@@ -11,6 +11,9 @@ footer {
     width: 100%;
     max-width: 250px;
     height: auto;
+      &:hover{
+       transform: translateY(-3px);
+    }
   }
 
   p {
@@ -78,6 +81,15 @@ footer {
     flex-direction: column;
   }
 
+.private{
+  
+     &:hover {
+      color: var( --color-text-tertiary);
+      
+    
+  }
+}
+
   @media (max-width: 768px) {
     .footer-main-row {
       padding-left: 1rem;
@@ -97,4 +109,7 @@ footer {
       display: block;
     }
   }
+
+
+    
 }

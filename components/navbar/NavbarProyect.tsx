@@ -18,6 +18,8 @@ export const NavbarProyect = () => {
     setDropdownOpen(false);
   };
 
+  /* ---------------- ACTIVE SECTION SCROLL ---------------- */
+
   useEffect(() => {
     const sections = document.querySelectorAll('section');
 
@@ -29,7 +31,7 @@ export const NavbarProyect = () => {
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -39,9 +41,13 @@ export const NavbarProyect = () => {
     };
   }, []);
 
+  /* ---------------- JSX ---------------- */
+
   return (
     <nav>
       <div className="navbar-container">
+
+        {/* LOGO */}
         <Link href="/" onClick={() => setActive('inicio')}>
           <Image
             src="/images/logos/logoCompleto.png"
@@ -49,24 +55,29 @@ export const NavbarProyect = () => {
             className="navbar-logo"
             width={150}
             height={50}
+            priority
           />
         </Link>
 
+        {/* MOBILE BUTTON */}
         <button
           type="button"
           className="navbar-toggle"
-          aria-label="Toggle navigation"
+          aria-label="Abrir menú"
           aria-expanded={mobileMenuOpen}
           onClick={() => setMobileMenuOpen((prev) => !prev)}
         >
           <MdMenu />
         </button>
 
+        {/* OVERLAY */}
         {mobileMenuOpen && (
           <div className="menu-overlay show" onClick={closeMenu} />
         )}
 
+        {/* LINKS */}
         <div className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
+
           <button
             className="menu-close"
             onClick={closeMenu}
@@ -88,125 +99,186 @@ export const NavbarProyect = () => {
           </Link>
 
           {/* SERVICIOS */}
-          <div
-            className={`nav-link dropdown ${active === 'servicio' ? 'active' : ''}`}
-          >
-            <span
-              className="nav-link"
-              onClick={(e) => {
-                e.stopPropagation();
-                setDropdownOpen((v) => !v);
-                setActive('servicio');
-              }}
-            >
-              SERVICIOS <HiChevronDown />
-            </span>
+         {/* ------------------- SERVICIOS DROPDOWN ------------------- */}
+<div className="dropdown">
+  {/*
+    Este es el link principal "SERVICIOS".
+    Queremos que se marque como activo (subrayado) no solo cuando el usuario haga clic
+    en él, sino también cuando cualquier sublink del dropdown esté activo.
+    Para esto usamos la clase 'active' condicional.
+  */}
+  <span
+    className={`nav-link ${
+      // Activo si el link principal o cualquier sublink de servicios está activo
+      active === 'servicio' || activeDropdown.startsWith('servicio') ? 'active' : ''
+    }`}
+    onClick={() => {
+      // Al hacer clic se abre/cierra el dropdown
+      setDropdownOpen((prev) => !prev);
 
-            {dropdownOpen && (
-              <div className="dropdown-content show">
-                <Link
-                  href="/#servicios"
-                  onClick={() => {
-                    setActiveDropdown('areas');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown  ${activeDropdown === 'areas' ? 'active' : ''}`}
-                >
-                  Todas las áreas
-                </Link>
-                <Link
-                  href="/servicio-laboral"
-                  onClick={() => {
-                    setActiveDropdown('servicio-laboral');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-laboral' ? 'active' : ''}`}
-                >
-                  Laboral
-                </Link>
-                <Link
-                  href="/servicio-civil-familiar"
-                  onClick={() => {
-                    setActiveDropdown('servicio-civil-familiar');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-civil-familiar' ? 'active' : ''}`}
-                >
-                  Civil y Familia
-                </Link>
-                <Link
-                  href="/servicio-penal"
-                  onClick={() => {
-                    setActiveDropdown('servicio-penal');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-penal' ? 'active' : ''}`}
-                >
-                  Penal
-                </Link>
-                <Link
-                  href="/servicio-administrativo"
-                  onClick={() => {
-                    setActiveDropdown('servicio-administrativo');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-administrativo' ? 'active' : ''}`}
-                >
-                  Administrativo
-                </Link>
-                <Link
-                  href="/servicio-extranjeria"
-                  onClick={() => {
-                    setActiveDropdown('servicio-extranjeria');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-extranjeria' ? 'active' : ''}`}
-                >
-                  Extranjería
-                </Link>
-                <Link
-                  href="/servicio-trafico"
-                  onClick={() => {
-                    setActiveDropdown('servicio-trafico');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-trafico' ? 'active' : ''}`}
-                >
-                  Tráfico
-                </Link>
-                <Link
-                  href="/servicio-gestion-inmobiliaria"
-                  onClick={() => {
-                    setActiveDropdown('servicio-gestion-inmobiliaria');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-gestion-inmobiliaria' ? 'active' : ''}`}
-                >
-                  Inmobiliario
-                </Link>
-                <Link
-                  href="/servicio-mercantil"
-                  onClick={() => {
-                    setActiveDropdown('servicio-mercantil');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-mercantil' ? 'active' : ''}`}
-                >
-                  Mercantil
-                </Link>
-                <Link
-                  href="/servicio-asesoria"
-                  onClick={() => {
-                    setActiveDropdown('servicio-asesoria');
-                    closeMenu();
-                  }}
-                  className={`nav-link dropdown ${activeDropdown === 'servicio-asesoria' ? 'active' : ''}`}
-                >
-                  Asesoría
-                </Link>
-              </div>
-            )}
-          </div>
+      // Marcamos "SERVICIOS" como el link activo principal
+      setActive('servicio');
+    }}
+  >
+    SERVICIOS <HiChevronDown /> {/* Icono de flecha hacia abajo */}
+  </span>
+
+  {/*
+    Contenedor del dropdown que aparece al hacer clic en "SERVICIOS".
+    Se muestra solo si 'dropdownOpen' es true.
+  */}
+  {dropdownOpen && (
+    <div className="dropdown-content show">
+
+      {/*
+        Link para "Todas las áreas":
+        Este link no pertenece a un servicio específico, pero se mantiene dentro del dropdown.
+      */}
+      <Link
+        href="/#servicios"
+        className={`nav-link ${activeDropdown === 'areas' ? 'active' : ''}`}
+        onClick={() => {
+          // Al hacer clic, marcamos este sublink como activo
+          setActiveDropdown('areas');
+
+          // Cerramos menú y dropdown en móvil
+          closeMenu();
+        }}
+      >
+        Todas las áreas
+      </Link>
+
+      {/*
+        Link para "Laboral":
+        Cuando se hace clic, se activa tanto el sublink como el link principal SERVICIOS
+        gracias al condicional en el span de arriba.
+      */}
+      <Link
+        href="/servicio-laboral"
+        className={`nav-link ${activeDropdown === 'servicio-laboral' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-laboral'); // Marca el sublink activo
+          closeMenu(); // Cierra menú/drowdown en móvil
+        }}
+      >
+        Laboral
+      </Link>
+
+      {/*
+        Link para "Civil y Familia"
+      */}
+      <Link
+        href="/servicio-civil-familiar"
+        className={`nav-link ${activeDropdown === 'servicio-civil-familiar' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-civil-familiar');
+          closeMenu();
+        }}
+      >
+        Civil y Familia
+      </Link>
+
+      {/*
+        Link para "Penal"
+      */}
+      <Link
+        href="/servicio-penal"
+        className={`nav-link ${activeDropdown === 'servicio-penal' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-penal');
+          closeMenu();
+        }}
+      >
+        Penal
+      </Link>
+
+      {/*
+        Link para "Administrativo"
+      */}
+      <Link
+        href="/servicio-administrativo"
+        className={`nav-link ${activeDropdown === 'servicio-administrativo' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-administrativo');
+          closeMenu();
+        }}
+      >
+        Administrativo
+      </Link>
+
+      {/*
+        Link para "Extranjería"
+      */}
+      <Link
+        href="/servicio-extranjeria"
+        className={`nav-link ${activeDropdown === 'servicio-extranjeria' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-extranjeria');
+          closeMenu();
+        }}
+      >
+        Extranjería
+      </Link>
+
+      {/*
+        Link para "Tráfico"
+      */}
+      <Link
+        href="/servicio-trafico"
+        className={`nav-link ${activeDropdown === 'servicio-trafico' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-trafico');
+          closeMenu();
+        }}
+      >
+        Tráfico
+      </Link>
+
+      {/*
+        Link para "Inmobiliario"
+      */}
+      <Link
+        href="/servicio-gestion-inmobiliaria"
+        className={`nav-link ${activeDropdown === 'servicio-gestion-inmobiliaria' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-gestion-inmobiliaria');
+          closeMenu();
+        }}
+      >
+        Inmobiliario
+      </Link>
+
+      {/*
+        Link para "Mercantil"
+      */}
+      <Link
+        href="/servicio-mercantil"
+        className={`nav-link ${activeDropdown === 'servicio-mercantil' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-mercantil');
+          closeMenu();
+        }}
+      >
+        Mercantil
+      </Link>
+
+      {/*
+        Link para "Asesoría"
+      */}
+      <Link
+        href="/servicio-asesoria"
+        className={`nav-link ${activeDropdown === 'servicio-asesoria' ? 'active' : ''}`}
+        onClick={() => {
+          setActiveDropdown('servicio-asesoria');
+          closeMenu();
+        }}
+      >
+        Asesoría
+      </Link>
+
+    </div>
+  )}
+</div>
 
           {/* LA FIRMA */}
           <Link
@@ -231,6 +303,7 @@ export const NavbarProyect = () => {
           >
             CONTACTO
           </Link>
+
         </div>
       </div>
     </nav>
