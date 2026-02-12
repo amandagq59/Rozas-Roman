@@ -1,4 +1,4 @@
-
+// app/layout.tsx
 import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Montserrat } from 'next/font/google';
@@ -8,7 +8,6 @@ import { Footer } from '../components/footer/Footer';
 import { Whatsapp } from '../components/fixed-elements/Whatsapp';
 import React from 'react';
 import { NavbarProyect } from '@/components/navbar/NavbarProyect';
-
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -23,11 +22,9 @@ export const metadata: Metadata = {
     default: 'Rozas & Román',
     template: '%s | Rozas & Román',
   },
-
   icons: {
     icon: '/favicon.ico',
   },
-
   description:
     'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   alternates: {
@@ -52,21 +49,13 @@ export const metadata: Metadata = {
     description:
       'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   },
+  viewport: 'width=device-width, initial-scale=1.0', // ✅ esto asegura que no se vea pequeña en prod
 };
 
-
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className={montserrat.className}>
+    <html lang="es" className={montserrat.className}>
+      <body>
         <div>
           <NavbarProyect />
           <Whatsapp />
