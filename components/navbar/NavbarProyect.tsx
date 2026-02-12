@@ -85,13 +85,15 @@ export const NavbarProyect = () => {
 
           {/* SERVICIOS */}
           <div
-            className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
+            className={`nav-link dropdown ${active === 'servicio' ? 'active' : ''}`}
           >
             <span
               className="nav-link"
               onClick={(e) => {
                 e.stopPropagation();
                 setDropdownOpen((v) => !v);
+              
+                
               }}
             >
               SERVICIOS <HiChevronDown />
@@ -102,10 +104,10 @@ export const NavbarProyect = () => {
                 <Link
                   href="/#servicios"
                   onClick={() => {
-                    setActive('servicios');
+                    setActive('areas');
                     closeMenu();
                   }}
-                  className={`nav-link dropdown ${active === 'servicios' ? 'active' : ''}`}
+                  className={`nav-link  ${active === 'areas' ? 'active' : ''}`}
                 >
                   Todas las áreas
                 </Link>
@@ -115,7 +117,7 @@ export const NavbarProyect = () => {
                     setActive('servicio-laboral');
                     closeMenu();
                   }}
-                  className={`nav-link dropdown ${active === 'servicio-laboral' ? 'active' : ''}`}
+                  className={`nav-link  ${active === 'servicio-laboral' ? 'active' : ''}`}
                 >
                   Laboral
                 </Link>

@@ -19,7 +19,7 @@ export default function PageService({
   list,
 }: PageServiceProps) {
   return (
-    <section className="section-page py-3">
+    <section className="section-page py-4">
       <div className="container-lg">
         <Row>
           <Col
@@ -36,7 +36,7 @@ export default function PageService({
 
               {list?.length > 0 && (
                 <div className="services-list">
-                  <h3 className="text-start ms-4">Áreas de trabajo:</h3>
+                  <h3 className="text-start ms-4 ">Áreas de trabajo:</h3>
                   <ul>
                     {list.map((item, index) => (
                       <li key={index}>{item}</li>
