@@ -77,7 +77,7 @@ export default function Page() {
           <Row className=" d-flex flex-column flex-md-row">
             <Col
               lg={6}
-              md={6}
+              md={12}
               xs={12}
               className="d-flex flex-column align-lg-items-center"
             >
@@ -85,13 +85,8 @@ export default function Page() {
               <CardMap />
             </Col>
 
-            <Col
-              lg={6}
-              md={6}
-              xs={12}
-              className=" hola d-flex flex-column align-items-center justify-content-lg-center py-lg-0 py-5"
-            >
-              <div className="d-flex gap-2 form-header justify-content-center ">
+            <Col lg={6} md={12} xs={12} className="  py-lg-0 py-5">
+              <div className="d-flex gap-2 form-header justify-content-lg-center  ">
                 <div className="icons">
                   <BsPencil />
                 </div>
@@ -100,7 +95,7 @@ export default function Page() {
                   <Link className="text-black" href="">
                     Rellena nuestro formulario
                   </Link>
-                  <div >
+                  <div>
                     <FormContact />
                   </div>
                 </div>
@@ -112,7 +107,7 @@ export default function Page() {
 
       <section className="section-reseñas p-3 p-md-5 p-lg-0">
         <div className="d-flex flex-column align-items-center">
-          <h2 className=' pt-lg-5'>
+          <h2 className=" pt-lg-5">
             <span>RESEÑAS</span> <br />
             Experiencias reales
           </h2>

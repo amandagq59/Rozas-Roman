@@ -1,6 +1,8 @@
 .cards-grid-identity {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+  
 }
 
 .card-identity {
@@ -11,6 +13,7 @@
   align-items: center;
   background-color: var(--color-background-primary);
   border: 1px solid #b8914737;
+  border-radius: 6px;
   opacity: 0;
   transform: translateY(50px) scale(0.95);
   transition:

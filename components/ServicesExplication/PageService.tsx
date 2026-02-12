@@ -24,9 +24,9 @@ export default function PageService({
         <Row>
           <Col
             lg={6}
-            md={6}
+            md={12}
             xs={12}
-            className="col-services p-lg-5 d-flex flex-column align-items-lg-start  mb-lg-0 "
+            className="col-services p-md-5  p-4 d-flex flex-column align-items-lg-start   mb-lg-0"
           >
             <div className="page-service text-lg-start">
               <h1 className="page-service-title pb-2 text-center-md">
@@ -49,9 +49,9 @@ export default function PageService({
 
           <Col
             lg={6}
-            md={6}
+            md={12}
             xs={12}
-            className="d-flex justify-content-start p-lg-5 pt-0 pb-5 px-4"
+            className="d-flex justify-content-lg-start justify-content-md-center p-5 pt-0 pb-5 px-4"
           >
             <FormContact />
           </Col>
