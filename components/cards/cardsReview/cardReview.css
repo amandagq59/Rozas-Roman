@@ -1,8 +1,9 @@
+
 .google-review-card {
   width: 100%;
   min-height: 250px;
   background-color: white;
-  border-radius: var( --box-border-radius);
+  border-radius: var(--box-border-radius);
   border: 1px solid #e0e0e0;
   padding: 16px;
   box-shadow: var(--box-shadow);
@@ -37,9 +38,9 @@
         flex-direction: column;
 
         .reviewer-name {
-          margin-top: .5rem;
+          margin-top: 0.5rem;
           font-weight: var(--font-weight-medium);
-          font-size: var( --font-size-sm);
+          font-size: var(--font-size-sm);
         }
 
         .rating-stars {
@@ -80,6 +81,7 @@
   }
 }
 
+
 .reviews-carousel-container {
   width: 100%;
   padding: 2rem;
@@ -101,9 +103,8 @@
     .btn-prev,
     .btn-next {
       border: var(--none);
-      background-color: transparent;
-      color:  var(--color-text-tertiary);
-    
+      background-color: var(--color-text-tertiary);
+      color: var(--color-text-tertiary);
     }
   }
 }
@@ -120,7 +121,7 @@
   align-items: center;
   justify-content: center;
   font-size: 25px;
-  color:var(--color-text-tertiary);
+  color: var(--color-text-tertiary);
   transition: all 0.3s;
 
   &.custom-prev {
@@ -129,37 +130,60 @@
 
   &.custom-next {
     right: -20px;
-    background-color: transparent;
-    color: var(--color-text-tertiary);
-  }
-
-  &::before {
-    font-family: 'slick';
-    font-size: 25px;
-    color: var(--color-text-tertiary);
   }
 }
+
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+  content: '';
+}
+
+
+.slick-prev,
+.slick-next {
+  color: var(--color-text-tertiary);
+  opacity: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-next:focus {
+  color: var(--color-text-tertiary);
+  opacity: 1;
+}
+
+.slick-prev svg,
+.slick-next svg {
+  fill: var(--color-text-tertiary);
+  color: var(--color-text-tertiary);
+}
+
+.slick-prev:hover svg,
+.slick-next:hover svg {
+  fill: var(--color-text-tertiary);
+  color: var(--color-text-tertiary);
+}
+
 
 .reviews-wrapper {
   width: 100%;
   display: block;
 
   .button-ppl-wrapper {
-    padding: 0;
     text-align: center;
     padding-top: 5rem;
     padding-bottom: 5rem;
 
     .button-ppl {
       text-decoration: var(--none);
-      
-    
-    &:hover{
-      color:white;
 
+      &:hover {
+        color: white;
+      }
     }
   }
-}
 }
 
 a {
