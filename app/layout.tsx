@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description:
       'Servicios jurídicos integrales. Asesoría legal clara y efectiva para proteger tus derechos y encontrar soluciones adaptadas a tus necesidades.',
   },
-  viewport: 'width=device-width, initial-scale=1.0', // ✅ esto asegura que no se vea pequeña en prod
+  viewport: 'width=device-width, initial-scale=1.0', 
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

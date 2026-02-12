@@ -17,7 +17,7 @@ type ServicioCardProps = {
 const ServicioCard = ({ servicio, index, onClick }: ServicioCardProps) => {
   const { ref, isIntersecting } = useIntersectionObserver<HTMLDivElement>({
     threshold: 0.1, // porcentaje del div que debe verse en pantalla para que salte la animacion
-    rootMargin: '0px 0px -10% 0px', // margen negativo para que la animacion se active antes
+    rootMargin: '0px 0px -3% 0px', // margen negativo para que la animacion se active antes
     once: true, // si esta a true solo se ejecuta la animacion una vez (el de entrada)
   });
 
