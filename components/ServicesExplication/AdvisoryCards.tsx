@@ -15,13 +15,13 @@ export default function PageAsesoriaCards() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('show');
-            observer.unobserve(entry.target); // solo se anima una vez
+            observer.unobserve(entry.target); 
           }
         });
       },
       {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px', // aparece un poco antes
+        threshold: 0.10,
+        rootMargin: '0px 0px 20px 0px', 
       },
     );
 

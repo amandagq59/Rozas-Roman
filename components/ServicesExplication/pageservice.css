@@ -1,5 +1,15 @@
 .section-page {
   background-color: var(--color-background-primary);
+
+  .consult {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-bold);
+ 
+}
+}
+
+a{
+  text-decoration: none;
 }
 .page-service-description p {
   font-size: 15px;
@@ -43,10 +53,9 @@
   overflow: hidden;
 }
 
-.consult {
-  color: var(--color-text-tertiary);
-  font-weight: var(--font-weight-bold);
-}
+
+
+
 
 .col-services::after {
   content: '';
@@ -79,9 +88,14 @@
 @media (max-width: 768px) {
   .services-description-section {
     padding: 2rem 2rem;
-
     margin: 0;
   }
+
+  .consult {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+}
 
   .services-description-section h1 {
     font-size: 28px;

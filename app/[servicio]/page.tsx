@@ -3,6 +3,7 @@ import PageService from '@/components/ServicesExplication/PageService';
 import Link from 'next/link';
 import AdvisoryCards from '@/components/ServicesExplication/AdvisoryCards';
 import { BsFillTelephoneFill } from 'react-icons/bs';
+import React, { Fragment } from 'react';
 
 export default async function Page({
   params,
@@ -26,7 +27,6 @@ export default async function Page({
     'servicio-mercantil',
     'servicio-asesoria',
   ]);
-
 
   // !servicio -> es true si servicio es null o undefined
   // !validServicios.has(servicio) -> es true si servicio no está en el SET
@@ -89,22 +89,24 @@ export default async function Page({
               </>
             }
             description="Ofrecemos asesoría integral y personalizada en materia penal,
-              acompañándote en cada etapa del proceso legal. Nuestro enfoque está
-              en proteger tus derechos, analizar detalladamente tu situación y
-              diseñar estrategias de defensa efectivas y adaptadas a tus
-              necesidades."
+      acompañándote en cada etapa del proceso legal. Nuestro enfoque está
+      en proteger tus derechos, analizar detalladamente tu situación y
+      diseñar estrategias de defensa efectivas y adaptadas a tus
+      necesidades."
             list={[
               'Defensa y acusación particular.',
               'Juicios rápidos.',
               'Delitos leves.',
               'Violencia de género.',
               'Delitos contra las personas y el patrimonio.',
-              <>
+              <React.Fragment key="telefono">
                 Asistencia al detenido 24h:
                 <Link href="tel:+34623619625" target="_blank">
-                  <span className="consult"> <BsFillTelephoneFill/> 623 61 96 25</span>
+                  <span className="consult ms-2">
+                    <BsFillTelephoneFill /> 623 61 96 25
+                  </span>
                 </Link>
-              </>,
+              </React.Fragment>,
             ]}
           />
         )}

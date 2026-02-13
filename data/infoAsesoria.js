@@ -11,7 +11,7 @@ export const asesoria = [
       'Asesoramiento legal a la comunidad',
       'Coordinación con proveedores y mantenimiento',
     ],
-    image: './images/ImagenesAsesoria/fincas.jpg',
+    image: '/images/ImagenesAsesoria/fincas.jpg',
     button: 'Solicitar consulta',
   },
    {
@@ -25,7 +25,7 @@ export const asesoria = [
       'Asistencia en requerimientos de la Agencia Tributaria',
       'Recursos y alegaciones',
     ],
-    image: './images/ImagenesAsesoria/fiscal.jpg',
+    image: '/images/ImagenesAsesoria/fiscal.jpg',
     button: 'Solicitar consulta',
   },
   {
@@ -40,7 +40,7 @@ export const asesoria = [
       'Vida laboral',
       'Altas y bajas en autónomo (RETA)',
     ],
-    image: './images/ImagenesAsesoria/laboral.jpg',
+    image: '/images/ImagenesAsesoria/laboral.jpg',
    button: 'Solicitar consulta',
   },
   {
@@ -55,7 +55,7 @@ export const asesoria = [
       'Ingreso mínimo vital',
       'Complemento de ayuda a la infancia',
     ],
-    image: './images/ImagenesAsesoria/prestaciones.jpg',
+    image: '/images/ImagenesAsesoria/prestaciones.jpg',
      button: 'Solicitar consulta',
   },
    {
@@ -70,7 +70,7 @@ export const asesoria = [
       'Canje',
       'Solicitud de VTC',
     ],
-    image: './images/ImagenesAsesoria/trafico.jpg',
+    image: '/images/ImagenesAsesoria/trafico.jpg',
      button: 'Solicitar consulta',
   },
   {
@@ -83,7 +83,7 @@ export const asesoria = [
       'Recursos administrativos',
       'Cancelación deudas en ficheros de morosos',
     ],
-    image: './images/ImagenesAsesoria/administrativos.jpg',
+    image: '/images/ImagenesAsesoria/administrativos.jpg',
    button: 'Solicitar consulta',
   },
  
@@ -96,7 +96,7 @@ export const asesoria = [
       'Cambio de titularidad de suministros',
       'Certificados y documentación inmobiliaria',
     ],
-    image: './images/ImagenesAsesoria/inmobiliaria.jpg',
+    image: '/images/ImagenesAsesoria/inmobiliaria.jpg',
    button: 'Solicitar consulta',
   },
   {
@@ -108,7 +108,7 @@ export const asesoria = [
       'Preparación y presentación de solicitudes',
       'Seguimiento y recursos',
     ],
-    image: './images/ImagenesAsesoria/penales.jpg',
+    image: '/images/ImagenesAsesoria/penales.jpg',
     button: 'Solicitar consulta',
   },
  

@@ -9,7 +9,6 @@ type RateLimitEntry = {
 };
 
 declare global {
-  // eslint-disable-next-line no-var
   var __ROZAS_RATE_LIMIT__: Map<string, RateLimitEntry> | undefined;
 }
 
@@ -198,7 +197,7 @@ export async function POST(req: Request) {
   });
 
   if (error) {
-    // eslint-disable-next-line no-console
+    
     console.error("resend send failed", {
       message: error.message,
       name,
@@ -209,7 +208,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: error.message }, { status: 502 });
   }
 
-  // eslint-disable-next-line no-console
+  
   console.log("resend send ok", { id: data?.id });
 
   return NextResponse.json({ ok: true, id: data?.id });

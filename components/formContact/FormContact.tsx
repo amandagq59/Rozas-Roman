@@ -281,8 +281,9 @@ export const FormContact = () => {
         </div>
 
         {submitOk && (
-          <div className="mt-3 text-success">
-            Mensaje enviado correctamente.
+          <div className="mt-2 text-success">
+            <p className='text-success mb-0'>Mensaje enviado correctamente.</p>
+            <p className='text-success mt-0'>Te responderemos lo antes posible.</p>
           </div>
         )}
         {submitError && <div className="mt-3 text-danger">{submitError}</div>}
